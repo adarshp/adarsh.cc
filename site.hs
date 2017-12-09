@@ -29,7 +29,7 @@ static = do
 
 pages :: Rules ()
 pages = do
-  match ("**.md") $ do
+  match ("**.md" .&&. complement "README.md") $ do
     route $ setExtension "html"
     compile $ compiler
       >>= loadAndApplyTemplate "templates/page.html" defaultContext
