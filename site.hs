@@ -4,55 +4,50 @@ module Main where
 
 import Hakyll
 import Text.Pandoc
+import Control.Monad (forM_)
 import Data.Monoid (mappend)
 import qualified Data.Map as M
-import Data.Maybe (isJust)
+import Data.Maybe (isJust, fromMaybe)
 
---------------------------------------------------------------------
--- Rules
---------------------------------------------------------------------
 
-static :: Rules ()
-static = do
-  match "fonts/*" $ do
-    route idRoute
-    compile $ copyFileCompiler
-  match "assets/*" $ do
-    route idRoute
-    compile $ copyFileCompiler
-  match "css/*" $ do
-    route idRoute
-    compile compressCssCompiler
-  match "js/*" $ do
+cfg :: Configuration
+cfg = defaultConfiguration
+    { deployCommand =  "rsync -avz -e 'ssh -p21098' _site/ \ 
+                        \adarycts@server47.web-hosting.com:~/www" }
+
+main :: IO ()
+main = hakyllWith cfg $ do
+  forM_ ["fonts/*", "assets/*", "css/*", "js/*"] $ \x -> match x $ do
     route idRoute
     compile $ copyFileCompiler
 
-pages :: Rules ()
-pages = do
-  match ("**.md" .&&. complement "README.md") $ do
+  match ("**.md" .&&. complement "README.md" .&&. complement "**index.md") $ do
     route $ setExtension "html"
-    compile $ compiler
+    compile $ pandocCompilerWith defaultHakyllReaderOptions withToc
       >>= loadAndApplyTemplate "templates/page.html" defaultContext
       >>= relativizeUrls
 
-templates :: Rules ()
-templates = match "templates/*" $ compile templateCompiler
+  match "**index.md" $ do
+     route $ setExtension "html"
+     compile $ compiler
+      >>= loadAndApplyTemplate "templates/page.html" defaultContext
+      >>= relativizeUrls
 
---------------------------------------------------------------------
--- Configuration
---------------------------------------------------------------------
+  match "templates/*" $ compile templateCompiler
+
+  where
+    withToc= defaultHakyllWriterOptions{ 
+      writerTableOfContents = True,
+      writerTemplate = Just "<h2> Table of Contents </h2> $toc$\n$body$",
+      writerHTMLMathMethod = MathJax "" 
+    }
+
 
 compiler :: Compiler (Item String)
 compiler = pandocCompilerWith defaultHakyllReaderOptions pandocOptions
 
 pandocOptions :: WriterOptions
-pandocOptions = defaultHakyllWriterOptions{ writerHTMLMathMethod = MathJax "" }
+pandocOptions = defaultHakyllWriterOptions{ 
+  writerHTMLMathMethod = MathJax "" 
+  }
 
-cfg :: Configuration
-cfg = defaultConfiguration
-
-main :: IO ()
-main = hakyllWith cfg $ do
-  static
-  pages
-  templates
