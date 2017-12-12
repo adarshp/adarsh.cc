@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "My LaTeX build setup"
-tags:
 ---
 
 My LaTeX Build System

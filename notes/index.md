@@ -18,3 +18,4 @@ Tools
 -----
 
 - [My LaTeX Build System](/notes/latex.html)
+- [Git](/notes/git.html)

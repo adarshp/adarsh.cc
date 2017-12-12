@@ -71,7 +71,7 @@ plt.tight_layout()
 plt.savefig('dirac_binding_energy.png')
 ```
 
-![](/assets/dirac_binding_energy.png) 
+![](/assets/dirac_binding_energy.png){ width=100% }
  
 We can see that the binding energy goes asymptotically to $-\infty$ as
 $Z\rightarrow 137$ (that is, as $\alpha Z\rightarrow 1$). In this regime, the
