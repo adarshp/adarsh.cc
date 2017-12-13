@@ -3,9 +3,6 @@ title: Notes
 layout: page
 ---
 
-Notes
-=====
-
 High Energy Physics (Theory)
 -----------------------------
 
@@ -13,6 +10,9 @@ High Energy Physics (Theory)
 - [Electroweak Symmetry breaking and the Higgs Mechanism (PDF)](/assets/Electroweak Symmetry Breaking.pdf)
 - [Group Factors (PDF)](/assets/Group_factors.pdf)
 - [Dirac Binding Energy for the Hydrogen atom](/notes/dirac_binding_energy.html)
+- [Quantum harmonic oscillator spectrum using supersymmetry](/notes/susy-zero-dims.html)
+- [Group Factors](/notes/group-factors.html)
+
 
 Tools
 -----

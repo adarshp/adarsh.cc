@@ -8,6 +8,7 @@ import Control.Monad (forM_)
 import Data.Monoid (mappend)
 import qualified Data.Map as M
 import Data.Maybe (isJust, fromMaybe)
+import System.Process (callCommand)
 
 
 cfg :: Configuration
@@ -30,7 +31,7 @@ main = hakyllWith cfg $ do
   match "**index.md" $ do
      route $ setExtension "html"
      compile $ compiler
-      >>= loadAndApplyTemplate "templates/page.html" defaultContext
+      >>= loadAndApplyTemplate "templates/index.html" defaultContext
       >>= relativizeUrls
 
   match "templates/*" $ compile templateCompiler

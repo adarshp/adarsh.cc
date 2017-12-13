@@ -11,3 +11,4 @@ executable site
     , containers >= 0.5 && <0.6
     , pandoc     >= 1.11
     , hakyll     >= 4.3
+    , process     >= 1.4

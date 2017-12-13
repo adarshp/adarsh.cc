@@ -3,9 +3,6 @@ layout: post
 title: "My LaTeX build setup"
 ---
 
-My LaTeX Build System
-========================
-
 Over the years I've had to wrestle with the $\LaTeX$ typesetting system
 a *lot*. Along the way, I've tried to automate and refine the build
 process as much as possible, while including plots created with

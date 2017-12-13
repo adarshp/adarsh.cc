@@ -7,9 +7,6 @@ tags:
     - notebook
 --- 
 
-Dirac Binding Energy for the Hydrogen atom
-==========================================
-
 Here we shall plot the electron binding energy predicted by the Dirac equation for the hydrogen atom:
 
 $$E_{nj}=mc^2\left\{\left[1+\left(\frac{\alpha

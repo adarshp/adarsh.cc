@@ -1,9 +1,13 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
   $partial("templates/head.html")$
   <body>
     $partial("templates/nav.html")$
-    <div class="container"> $body$ </div>
+    <div class="container"> 
+      <h1>$title$</h1>
+      $body$ 
+    </div>
     $partial("templates/js.html")$
   </body>
 </html>
+
