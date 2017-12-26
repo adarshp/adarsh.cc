@@ -19,3 +19,11 @@ Tools
 
 - [My LaTeX Build System](/notes/latex.html)
 - [Git](/notes/git.html)
+- [Misc.](/notes/tools.html)
+
+
+Misc.
+-----
+
+- [A simple Haskell program to create diary entries](/notes/haskelldiary.html)
+- [A tutorial for setting up a Jekyll site](/notes/jekylltutorial.html)

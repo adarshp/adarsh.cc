@@ -25,7 +25,8 @@ I am a postdoctoral researcher jointly affiliated with the School of Information
 ## Research
 <hr class="featurette-divider">
 
-I am interested in theories beyond the standard model of physics and their signatures at particle colliders.
+Broadly speaking, I am interested in machine learning and artificial
+intelligence. In particular, I am interested in Bayesian generative approaches.
 
 * My PhD Dissertation [(PDF)](http://arizona.openrepository.com/arizona/handle/10150/624536) [(Github)](https://github.com/adarshp/dissertation)
 * Light Charged Higgs Bosons to AW/HW via Top Decay [(JHEP)](https://link.springer.com/article/10.1007%2FJHEP11%282015%29051) [(arXiv)](http://arxiv.org/abs/1504.06624)

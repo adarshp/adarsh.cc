@@ -39,7 +39,8 @@ main = hakyllWith cfg $ do
   where
     withToc= defaultHakyllWriterOptions{ 
       writerTableOfContents = True,
-      writerTemplate = Just "<h2> Table of Contents </h2> $toc$\n$body$",
+      writerTemplate = Just "$if(toc)$\n<h2>Table of Contents</h2>$toc$\n\
+        \$endif$\n$body$",
       writerHTMLMathMethod = MathJax "" 
     }
 
@@ -48,7 +49,5 @@ compiler :: Compiler (Item String)
 compiler = pandocCompilerWith defaultHakyllReaderOptions pandocOptions
 
 pandocOptions :: WriterOptions
-pandocOptions = defaultHakyllWriterOptions{ 
-  writerHTMLMathMethod = MathJax "" 
-  }
+pandocOptions = defaultHakyllWriterOptions{ writerHTMLMathMethod = MathJax "" }
 
