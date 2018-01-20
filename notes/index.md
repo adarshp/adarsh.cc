@@ -27,3 +27,4 @@ Misc.
 
 - [A simple Haskell program to create diary entries](/notes/haskelldiary.html)
 - [A tutorial for setting up a Jekyll site](/notes/jekylltutorial.html)
+- [A 1D random walk demo in Python](/notes/randomWalkDemo.html)
