@@ -1,15 +1,3 @@
----
-layout: post
-title: "Simple 1D random walk animation in Python"
-tags:
-    - python
---- 
-
-This is a demo I created as part of teaching Physics 105 (Scientific
-Computation) at the University of Arizona in the Spring of 2017.
-
-
-```python
 """ 
 A 1D randomwalk program - A. Pyarelal 
 Usage:
@@ -40,6 +28,8 @@ fig, axes = plt.subplots()
 # Set the x and y limits of the plot
 axes.set_ylim(-20,20)
 axes.set_xlim(0,nsteps)
+axes.set_xlabel('Steps')
+axes.set_ylabel('Position')
 
 """
 The line below is an instance of a 'list comprehension', which is a nice
@@ -95,11 +85,3 @@ if __name__ == '__main__':
         ani.save('1D_randomwalk.mp4', writer='ffmpeg', dpi = 150, fps = 2)
     else:
         for i in range(nsteps): update_lines(i)
-```
-
-You can check out an animation of the random walk below: 
-
-<video width="600" height="400" controls>
-  <source src="/assets/1D_randomwalk.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
