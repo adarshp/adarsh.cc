@@ -27,11 +27,13 @@ texfiles := $(patsubst python_scripts/texfiles/%.py,\
                     build/texfiles/%.tex,\
                   $(wildcard python_scripts/texfiles/*.py))
 
-build/plots/%.pdf: python_scripts/plots/%.py $(wildcard data/*)
+data := $(wildcard data/*)
+
+build/plots/%.pdf: python_scripts/plots/%.py $(data) 
 	mkdir -p build/plots
 	python $< $@
 
-build/texfiles/%.tex: python_scripts/texfiles/%.py $(wildcard data/*)
+build/texfiles/%.tex: python_scripts/texfiles/%.py $(data)
 	mkdir -p build/texfiles
 	python $< $@
 

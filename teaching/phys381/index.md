@@ -1,8 +1,10 @@
 ---
 layout: page
 title: Advanced Lab
-mathjax: 1
 ---
+
+Advanced Lab
+============
 
 I've written up some tips and provided some resources for Advanced Lab - I hope you find them useful, and please don't hesitate to contact me with comments/corrections/additions.
 

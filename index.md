@@ -6,10 +6,15 @@ layout: page
 <div class="row">
 <div class="col-sm-8">
 </br>
-I am a postdoctoral researcher jointly affiliated with the School of Information and the Department of Computer Science at the University of Arizona. I'm interested in the intersection of physics and machine learning. 
 
-<a href="/assets/cv_adarsh.pdf">Curriculum Vitae</a>
-</br>
+I am a postdoctoral researcher jointly affiliated with the School of Information
+and the Department of Computer Science at the University of Arizona. I'm
+interested in the intersection of physics and machine learning. 
+
+[Curriculum Vitae](/assets/cv_adarsh.pdf)
+
+[email: adarsh@email.arizona.edu](mailto:adarsh@email.arizona.edu)
+
 </br>
 </div>
   <div class="col-sm-4">
@@ -22,18 +27,33 @@ I am a postdoctoral researcher jointly affiliated with the School of Information
 </div>
 </div>
 
-## Research
 <hr class="featurette-divider">
+### Research
 
 Broadly speaking, I am interested in machine learning and artificial
-intelligence. In particular, I am interested in Bayesian generative approaches.
+intelligence. In particular, I am interested in Bayesian generative approaches
+to inference problems.
 
-* My PhD Dissertation [(PDF)](http://arizona.openrepository.com/arizona/handle/10150/624536) [(Github)](https://github.com/adarshp/dissertation)
-* Light Charged Higgs Bosons to AW/HW via Top Decay [(JHEP)](https://link.springer.com/article/10.1007%2FJHEP11%282015%29051) [(arXiv)](http://arxiv.org/abs/1504.06624)
-* [Reed College Senior Thesis](/assets/reedthesis.pdf)
+#### Current research
+I am currently working on the automated assembly of executable causal models for
+complex systems from textual evidence, as part of DARPA's Big Mechanism and
+World Modelers programs.
 
-## Teaching
+I am a co-PI on the [AutoMATES](https://ml4ai.github.io/automates) project and
+the primary developer of [Delphi](https://github.com/ml4ai/delphi), a
+framework to automatically assemble causal, probabilistic model from machine
+reading of textual evidence and formal analysis of source code structure.
+
+#### Previous Work
+
+* [Hidden Higgses and Dark Matter at Current and Future Colliders](http://arizona.openrepository.com/arizona/handle/10150/624536)
+* [Light Charged Higgs Bosons to AW/HW via Top Decay](https://link.springer.com/article/10.1007%2FJHEP11%282015%29051)
+* [A Reggeized model for *η* meson production in high energy proton/proton
+    collisions. ](/assets/reedthesis.pdf)
+
+</br>
 <hr class="featurette-divider">
+## Teaching
 
 Some of the courses I have taught in the past:
 
@@ -42,4 +62,7 @@ Some of the courses I have taught in the past:
 * [Introductory Mechanics Lab](/teaching/phys141/)
 * [Introductory Electricity and Mechanism Lab](/teaching/phys241/)
 
-I also write about physics, programming, productivity and other random stuff sometimes. You can find my previous posts [here](/archive.html).
+I also write about physics, programming, productivity and other random stuff
+sometimes. You can find my previous posts [here](/notes/).
+
+[Colophon](https://typekit.com/colophons/teo1mav)
