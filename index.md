@@ -46,6 +46,7 @@ reading of textual evidence and formal analysis of source code structure.
 
 #### Previous Work
 
+* [Exotic Higgs Decays in Type-II 2HDMs at the LHC and Future 100 TeV Hadron Colliders](https://arxiv.org/abs/1812.01633)
 * [Hidden Higgses and Dark Matter at Current and Future Colliders](http://arizona.openrepository.com/arizona/handle/10150/624536)
 * [Light Charged Higgs Bosons to AW/HW via Top Decay](https://link.springer.com/article/10.1007%2FJHEP11%282015%29051)
 * [A Reggeized model for *η* meson production in high energy proton/proton
