@@ -1,0 +1,346 @@
+\documentclass[final,oneside,12pt]{memoir}
+
+% Silence some noisy warnings temporarily
+\usepackage{silence}
+\WarningFilter{fontaxes}{I don't know how to decode}
+\usepackage[tracking]{microtype}
+\usepackage{amsmath}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\setmainfont[%
+  Ligatures = {Common, TeX},Numbers = {OldStyle, Proportional},
+  %ItalicFeatures={Style=Swash},
+  SmallCapsFeatures={Letters=SmallCaps,LetterSpace=2},
+]{Arno Pro}
+\setsansfont[%
+Numbers = {OldStyle, Proportional},
+BoldFont={ScalaSans Bold},
+]{Scala Sans}
+\setmonofont{Menlo}[Scale=MatchLowercase]
+\newcommand{\name}{Adarsh Pyarelal}
+% =============================================================================
+% Colors
+% =============================================================================
+
+\usepackage[dvipsnames, table]{xcolor}
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webbrown}{rgb}{.6,0,0}
+\definecolor{Maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{RoyalBlue}{cmyk}{1, 0.50, 0, 0}
+\definecolor{Black}{cmyk}{0, 0, 0, 0}
+\definecolor{shadecolor}{gray}{0.9}
+
+% =============================================================================
+% Set up hyperlinks
+% =============================================================================
+
+\PassOptionsToPackage{pdftex,hyperfootnotes=false,pdfpagelabels=true}{hyperref}
+    \usepackage{hyperref}  % backref linktocpage pagebackref
+\pdfcompresslevel=9
+\pdfadjustspacing=1 
+
+\hypersetup{%
+    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%nesting=true,%frenchlinks,%
+    urlcolor=RoyalBlue, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+    pdftitle={Curriculum Vitae - \name{}},%
+    pdfauthor={\name{}},%
+    pdfsubject={},%
+    pdfkeywords={},%
+    pdfcreator={luaLaTeX},%
+    pdfproducer={LaTeX}%
+}   
+
+% =============================================================================
+% Metadata
+% =============================================================================
+
+\def\mytitle{Curriculum Vitae}
+\def\myaffiliation{University of Arizona}
+\def\myaddress{Department of Physics}
+\def\myemail{adarsh@email.arizona.edu}
+\def\myweb{adarsh.cc}
+\date{} % not used (revision control instead)
+
+% =============================================================================
+% Memoir package - layout and styling
+% =============================================================================
+
+% Here we set typeblock widths for the main body and the footnotes
+\setlxvchars[\normalfont] % about 66 characters per column
+\setxlvchars[\normalfont\footnotesize] % about 45 characters per column
+
+%\renewcommand\midrule{\arrayrulecolor{gray}\midrule}
+% Original
+% With Arno Pro 12 pt - lxvchars = 4.235 in
+% 8.5 - 4.235 = 4.265
+% Year col = 1.265in 
+% lrmargins + year col should add up to 4.265
+\setlrmarginsandblock{1.2in}{1.2in}{} 
+\setulmarginsandblock{1.22in}{1.22in}{*}
+
+% From cover letter
+%\setlrmarginsandblock{2.15in}{2.15in}{}
+%\setlrmarginsandblock{2.55in}{1.15in}{}
+%% Set upper and lower margins
+%\setulmarginsandblock{1.22in}{1.22in}{*}
+%\sidebarmargin{left}
+%\setsidebars{*}{1.75in}{*}{*}{*}{*}
+%\renewcommand*{\sidebarform}{\raggedright}
+
+\tightlists % Reduce spacing between list items
+
+\setsecheadstyle{\large\scshape\hspace{0.0in}\MakeTextLowercase}
+
+\newcommand{\heading}[1]{%
+  \midrule[0.5pt]
+  \multicolumn{2}{l}{\large\textsc{\MakeTextLowercase{#1}}}\\
+  &\\
+}
+%\setafterparaskip{-0.5em}
+\newcolumntype{Y}{>{\raggedright}p{1.265in}}
+\newcolumntype{R}[1]{>{\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright}p{#1}}
+
+\checkandfixthelayout
+
+% =============================================================================
+% Custom macros
+% =============================================================================
+
+\newcommand{\customsection}[1]{%
+  {\centering \color{gray} \hrule}
+  \section*{#1}%
+}
+
+% =============================================================================
+% Misc layout commands
+
+\linespread{1.05}
+% =============================================================================
+
+\begin{document}
+% =============================================================================
+% Address and contact block
+% =============================================================================
+
+\pagestyle{empty}
+
+% Sidebar style
+%{\centering\LARGE\color{Maroon}\scshape adarsh pyarelal}
+%\bigskip
+
+%\sidebar{
+  %%{\large\color{Maroon}\scshape adarsh pyarelal}\\
+  %%\bigskip
+  %{
+    %\normalsize
+    %847 N 2$^{\text{nd}}$ Ave\\
+    %Tucson, Arizona 85705\\
+    %\bigskip
+    %{\footnotesize\faEnvelope}~~\href{mailto:\myemail}{\texttt{\myemail}}\\
+  %}
+  %\bigskip\bigskip\bigskip 
+%}
+
+% Header style
+{\centering
+{
+  {\LARGE\scshape\color{Maroon}{\MakeTextLowercase\name{}}\\
+    \bigskip
+}}
+
+School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizona $\cdot$ USA $\cdot$ 85719
+
+\faEnvelope~~\texttt{\href{mailto:\myemail}{\myemail}}\hspace{0.3in}\faGlobe~~\texttt{\href{\myweb}{\myweb}}
+
+\bigskip
+\medskip
+}
+
+\newcommand{\entry}[2]{\emph{#1} & #2}
+\newcommand{\degree}[5]{
+  \emph{#1} & {\bfseries \sffamily #2}
+  \hfill {\sffamily #3}\\
+  & Thesis: \href{#4}{\emph{#5}}
+}
+
+\newcommand{\appointment}[4]{
+  \emph{#1} & {\bfseries \sffamily #2}\\
+            & #3, #4
+}
+
+\newcommand{\me}{\textbf{A. Pyarelal}}
+\newcommand{\publication}[4]{
+  \emph{#1} & #3, {\itshape #2}, #4
+}
+
+\newcommand{\grant}[5]{\emph{#1} & #2, \emph{#3}, #4, (#5)}
+
+\newcommand{\talk}[4]{
+  \emph{#1} & \emph{#2}\\
+  & #3, #4
+}
+
+\newcommand{\research}[1]{ & #1 }
+
+\newcommand{\project}[1]{\medskip\textit{#1}\medskip}
+
+\newcommand{\teaching}[1]{&#1\\}
+
+\newcommand{\skill}[1]{ & #1}
+
+\newcommand{\affiliation}[2]{\textsc{#1} & #2}
+
+\begin{ctabular}{Yp{4.235in}}
+  \heading{education}
+  \degree{2017}%
+    {Ph. D. in Physics}%
+    {University of Arizona}%
+    {https://github.com/adarshp/dissertation}%
+    {Hidden Higgses and Dark Matter at Current and Future
+    Colliders}\\\addlinespace \degree{2011}%
+    {B. A. in Physics}%
+    {Reed College}%
+    {https://adarsh.netlify.com/reedthesis.pdf}%
+    {Contribution of the neutral pion Regge trajectory to the exclusive central
+    production of $\eta$(548) mesons in high energy proton/proton collisions}\\&\\
+    \heading{Professional Appointments}
+    \appointment{Jan 2019 - present}%
+    {Research Scientist}%
+    {School of Information}%
+    {University of Arizona}\\&\\
+    \appointment{Oct 2017 - Dec 2018}%
+    {Postdoctoral Research Associate}%
+    {School of Information}%
+    {University of Arizona}\\&\\
+  \heading{Publications}
+  \publication{2018}{A Razor Search for Bino Dark Matter at 100 TeV}%
+      {\me{} and S. Su}%
+      {(in preparation)}\\\addlinespace
+  \publication{}{Exotic Higgs Decays in Type-II 2HDMs at the LHC and Future 100
+  TeV Hadron Colliders}%
+      {F. Kling, H. Li, \me{}, H. Song, and S. Su}%
+      {\href{https://arxiv.org/abs/1812.01633}{\texttt{[arXiv:1812.01633]}} (submitted to
+    JHEP)}\\\addlinespace
+  \publication{2015}{Light Charged Higgs Bosons to AW/HW via Top Decay}%
+      {F. Kling, \me{}, and S. Su}%
+      {\href{http://link.springer.com/article/10.1007\%2FJHEP11\%282015\%29051}{Journal
+        of High Energy Physics, \textbf{11} (2015) 051}}\\&\\
+  \heading{Honors and Awards}
+  \entry{2016,17}{Dept. of Physics Publications/Presentations Award}\\
+  \entry{2014,17}{Outstanding Graduate Student Colloquium Presentation}\\
+  \entry{2016}{Galileo Circle Scholarship}\\
+  \entry{2015}{Graduate and Professional Student Council Travel Award}\\
+  \entry{}{Professor C. Y. Fan `FanFare' Travel Award}\\
+  \entry{}{Graduate College Fellowship in Physics}\\
+  \entry{2014-16}{APS 4CS Student Travel Grant}\\&\\
+  \heading{Grants}
+  \grant{2018-20}%
+  {Co-Investigator}%
+  {\href{https://ml4ai.github.io/automates/}{AutoMATES: Automated Model Assembly from Text, Equations, and Software}}
+  {Defense Advanced Research Projects Agency}%
+  {\$967,678}\\&\\
+  \heading{Talks}
+  \talk{2018}{Causal Analysis Graphs from Text}%
+             {DARPA World Modelers PI Meeting}
+             {Arlington, VA}\\\addlinespace
+  \talk{2016}{Machine Learning and Particle Physics}%
+             {Tucson Data Science Meetup}
+             {Tucson, AZ}\\\addlinespace
+  \talk{}{A Razor Search for Dark Matter at a Future 100 TeV Collider}%
+             {Joint Meeting of the Four Corners and Texas Sections of the American Physical Society}
+             {Las Cruces, NM}\\\addlinespace
+  \talk{2015}{Light Charged Higgs Bosons in Single-Top Production}%
+             {Phenomenology 2015 Symposium}
+             {University of Pittsburgh}\\\addlinespace
+  \talk{}{Light Charged Higgs Bosons in Two Higgs Doublet Models}%
+             {Annual Meeting of the APS Four Corners Section}
+             {Tempe, AZ}\\\addlinespace
+  \talk{2014}{Light Charged Higgs Bosons in Single-Top Production}%
+             {Annual Meeting of the APS Four Corners Section}
+             {Orem, UT}\\\addlinespace
+  \talk{}{Light Charged Higgs Bosons to AW/HW via Top Decay}%
+  {23$^{\text{rd}}$ International Conference on Supersymmetry and Unification of Fundamental Interactions}
+  {Lake Tahoe, CA}\\&\\
+    \heading{Research Experience}
+    \textit{2017 - present} & \textsf{\textbf{Postdoctoral Research Associate}},
+    \textsf{University of Arizona}\\
+    \research{
+      \project{Big Mechanism}\\
+  &    As part of DARPA's Big Mechanism program, I am currently developing and
+      implementing algorithms to infer the structure of chemical reaction pathways
+      within cells, using data automatically extracted from biomedical research
+      papers. \\
+  &    \project{World Modelers}\\
+  &    For DARPA's World Modelers program, I am designing algorithms to
+       assemble and parameterize quantitative models of food security from machine
+       reading of texts such as agency reports and news articles.\\
+  &    \project{ASKE - Automated Scientific Knowledge Extraction}\\
+  &    As a co-PI on the UA effort for DARPA's ASKE program, I am responsible
+  for developing algorithms to translate crop models written in Fortran into
+  dynamic Bayes networks that are semantically enriched with provenance from the
+  scientific literature related to the models. 
+  } 
+  \\\addlinespace
+    \textit{2016-17} & \textsf{\textbf{Research Assistant}}, \textsf{ University of Arizona}\\
+  &    During the course of my doctoral research, I developed three analyses
+  aimed at discovering or constraining new physics models in high-energy
+  particle collision experiments.\\
+  &\project{Exotic Higgs Decays at 14 and 100 TeV}\\
+  &    This analysis aims to determine the prospects of exotic Higgs decay modes
+  at a 100 TeV collider for all physically viable Two-Higgs Doublet Models,
+  using boosted decision tree classifiers and physics-motivated input
+  features.\\
+  &    \project{A Razor Search for Bino Dark Matter at 100 TeV}\\
+  &    I designed an analysis to examined the prospects of finding bino-like
+  dark matter resulting from the decay of pair-produced higgsinos at a 100 TeV
+  collider, using razor variables and boosted decision trees.\\
+  &    \project{Light Charged Higgs Bosons to AW/HW via Top Decay}\\
+  &    This analysis is designed to find a charged Higgs produced via the decay
+  of a top quark at the 14 TeV \textsc{lhc}, in the context of a Type-II Two
+  Higgs Doublet Model, using a unique kinematical angle to discriminate between
+  signal and background events.\\&\\
+  \heading{Teaching Experience}
+  \textit{2011-17} & \textsf{\textbf{Teaching Assistant}}, \textsf{ University of Arizona}\\
+  \teaching{Introduction to Scientific Computing (Spring 2017)}
+  \teaching{Advanced Lab, (Fall 2013-Fall 2016).}
+  \teaching{Introductory Physics for non-majors - Lecturer (Fall 2012).}
+  \teaching{Introductory Electricity and Magnetism (2011-12).}
+  \teaching{Introductory Physics for non-majors - Lab (Summer 2012 \& Summer
+  2014).}\\&\\
+  \heading{Service}
+  \entry{2015}{GPSC Travel Grant Judge }\\
+  \entry{2012-13}{Member of Physics Grad Council}\\
+  \entry{}{Member of the Associated Graduate Council for the College of Science}\\
+  \entry{}{Organized the weekly departmental graduate student seminar series}\\
+  \entry{}{Arizona Assurance Mentor}\\&\\
+  \heading{Skills}
+  \skill{Data analysis with \textsc{c++} and \textsc{python}.}\\
+  \skill{Software version control with \textsc{git} and \href{http://www.github.com/adarshp}{Github}}\\
+  \skill{Website design with \textsc{html} and \textsc{css}, static site generation.}\\
+  \skill{Writing and typesetting scientific manuscripts with \LaTeX}\\
+  \skill{Languages: English (native), Hindi, Malayalam}\\&\\
+  \heading{Professional Affiliations}
+  \affiliation{}{American Physical Society}
+\end{ctabular}
+
+%\customsection{References}
+%\begin{ctabular}{Yp{4.235in}}
+%& Kobus Barnard\\
+%& Professor, Department of Computer Science\\
+%& University of Arizona\\
+%& \texttt{\href{mailto:kobus@cs.arizona.edu}{kobus@cs.arizona.edu}}\\\addlinespace
+%& Clayton Morrison\\
+%& Associate Professor, School of Information\\
+%& University of Arizona\\
+%& \texttt{\href{mailto:claytonm@email.arizona.edu}{claytonm@email.arizona.edu}}\\\addlinespace
+%& Shufang Su\\
+%& Professor, Department of Physics\\
+%& University of Arizona\\
+%& \texttt{\href{mailto:shufang@physics.arizona.edu}{shufang@physics.arizona.edu}}\\
+%\end{ctabular}
+
+\end{document}
