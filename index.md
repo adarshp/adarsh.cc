@@ -7,9 +7,10 @@ layout: page
 <div class="col-sm-8">
 </br>
 
-I am a postdoctoral researcher jointly affiliated with the School of Information
-and the Department of Computer Science at the University of Arizona. I'm
-interested in the intersection of physics and machine learning. 
+I am a research scientist in the School of Information at the University of
+Arizona. Broadly speaking, I am interested in machine learning and artificial
+intelligence. In particular, I am interested in Bayesian generative approaches
+to inference problems.
 
 [Curriculum Vitae](/assets/cv_adarsh.pdf)
 
@@ -28,11 +29,6 @@ interested in the intersection of physics and machine learning.
 </div>
 
 <hr class="featurette-divider">
-### Research
-
-Broadly speaking, I am interested in machine learning and artificial
-intelligence. In particular, I am interested in Bayesian generative approaches
-to inference problems.
 
 #### Current research
 I am currently working on the automated assembly of executable causal models for
