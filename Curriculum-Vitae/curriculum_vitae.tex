@@ -1,4 +1,4 @@
-\documentclass[final,oneside,12pt]{memoir}
+\documentclass[final,oneside,11pt]{memoir}
 
 % Silence some noisy warnings temporarily
 \usepackage{silence}
@@ -9,13 +9,12 @@
 \usepackage{fontspec}
 \setmainfont[%
   Ligatures = {Common, TeX},Numbers = {OldStyle, Proportional},
-  %ItalicFeatures={Style=Swash},
+  ItalicFeatures={Style=Swash},
   SmallCapsFeatures={Letters=SmallCaps,LetterSpace=2},
-]{Arno Pro}
+]{Alegreya}
 \setsansfont[%
 Numbers = {OldStyle, Proportional},
-BoldFont={ScalaSans Bold},
-]{Scala Sans}
+]{Alegreya Sans}
 \setmonofont{Menlo}[Scale=MatchLowercase]
 \newcommand{\name}{Adarsh Pyarelal}
 % =============================================================================
@@ -74,7 +73,7 @@ BoldFont={ScalaSans Bold},
 
 %\renewcommand\midrule{\arrayrulecolor{gray}\midrule}
 % Original
-% With Arno Pro 12 pt - lxvchars = 4.235 in
+% With Alegreya 9 pt - lxvchars = 4.235 in
 % 8.5 - 4.235 = 4.265
 % Year col = 1.265in 
 % lrmargins + year col should add up to 4.265
@@ -221,9 +220,8 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
       {
         R. Sharp, \me{}, B. M. Gyori, K. Alcock, E. Laparra, M. A.
         Valenzuela-Esc\'arcega, A. Nagesh, V. Yadav, J. A. Bachman, Z. Tang, H.
-        Lent, F. Luo, M. Paul, S. Bethard, K. Barnard, C. T. Morrison, M. Surdeanu
-      }%
-      {(submitted to NAACL-HLT 2019)}\\\addlinespace
+        Lent, F. Luo, M. Paul, S. Bethard, K. Barnard, C. T. Morrison, M. Surdeanu}%
+      {(accepted to NAACL-HLT 2019)}\\\addlinespace
   \publication{2018}{A Razor Search for Bino Dark Matter at 100 TeV}%
       {\me{} and S. Su}%
       {(in preparation)}\\\addlinespace
@@ -277,20 +275,20 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
     \textit{2017 - present} & \textsf{\textbf{Postdoctoral Research Associate}},
     \textsf{University of Arizona}\\
     \research{
-      \project{Big Mechanism}\\
-  &    As part of DARPA's Big Mechanism program, I am currently developing and
-      implementing algorithms to infer the structure of chemical reaction pathways
-      within cells, using data automatically extracted from biomedical research
-      papers. \\
+      \project{ASKE - Automated Scientific Knowledge Extraction}\\
+  &    As a co-PI on the UA effort for DARPA's ASKE program, I am responsible
+  for developing algorithms to translate crop models written in Fortran into
+  dynamic Bayes networks that are semantically enriched with provenance from the
+  scientific literature related to the models.\\
   &    \project{World Modelers}\\
   &    For DARPA's World Modelers program, I am designing algorithms to
        assemble and parameterize quantitative models of food security from machine
        reading of texts such as agency reports and news articles.\\
-  &    \project{ASKE - Automated Scientific Knowledge Extraction}\\
-  &    As a co-PI on the UA effort for DARPA's ASKE program, I am responsible
-  for developing algorithms to translate crop models written in Fortran into
-  dynamic Bayes networks that are semantically enriched with provenance from the
-  scientific literature related to the models. 
+  &   \project{Big Mechanism}\\
+  &    As part of DARPA's Big Mechanism program, I am currently developing and
+      implementing algorithms to infer the structure of chemical reaction pathways
+      within cells, using data automatically extracted from biomedical research
+      papers.
   } 
   \\\addlinespace
     \textit{2016-17} & \textsf{\textbf{Research Assistant}}, \textsf{ University of Arizona}\\
