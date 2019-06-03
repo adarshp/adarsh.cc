@@ -5,17 +5,51 @@
 \WarningFilter{fontaxes}{I don't know how to decode}
 \usepackage[tracking]{microtype}
 \usepackage{amsmath}
+\usepackage[
+  eprint=false,
+  sorting=ydnt,
+  url=false,
+  doi=false,
+  isbn=false,
+  maxnames=100,
+  giveninits=true,
+  hyperref,
+]{biblatex}
+\newbibmacro{string+doiurlisbn}[1]{%
+  \iffieldundef{doi}{%
+    \iffieldundef{url}{%
+      \iffieldundef{isbn}{%
+        \iffieldundef{issn}{%
+          #1%
+        }{%
+          \href{http://books.google.com/books?vid=ISSN\thefield{issn}}{#1}%
+        }%
+      }{%
+        \href{http://books.google.com/books?vid=ISBN\thefield{isbn}}{#1}%
+      }%
+    }{%
+      \href{\thefield{url}}{#1}%
+    }%
+  }{%
+    \href{http://dx.doi.org/\thefield{doi}}{#1}%
+  }%
+}
+
+\DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
+\DeclareFieldFormat[article,incollection,inproceedings]{title}%
+    {\usebibmacro{string+doiurlisbn}{\mkbibquote{#1}}}
+\addbibresource{bibliography.bib}
 \usepackage{fontawesome}
 \usepackage{fontspec}
 \setmainfont[%
   Ligatures = {Common, TeX},Numbers = {OldStyle, Proportional},
-  ItalicFeatures={Style=Swash},
   SmallCapsFeatures={Letters=SmallCaps,LetterSpace=2},
-]{Alegreya}
+]{Arno Pro}
 \setsansfont[%
 Numbers = {OldStyle, Proportional},
-]{Alegreya Sans}
+]{Myriad Pro Semibold}
 \setmonofont{Menlo}[Scale=MatchLowercase]
+
 \newcommand{\name}{Adarsh Pyarelal}
 % =============================================================================
 % Colors
@@ -43,7 +77,7 @@ Numbers = {OldStyle, Proportional},
     breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
     plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
     hypertexnames=true, pdfhighlight=/O,%nesting=true,%frenchlinks,%
-    urlcolor=RoyalBlue, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+    urlcolor=RoyalBlue, linkcolor=RoyalBlue, citecolor=RoyalBlue,
     pdftitle={Curriculum Vitae - \name{}},%
     pdfauthor={\name{}},%
     pdfsubject={},%
@@ -95,8 +129,7 @@ Numbers = {OldStyle, Proportional},
 
 \newcommand{\heading}[1]{%
   \midrule[0.5pt]
-  \multicolumn{2}{l}{\large\textsc{\MakeTextLowercase{#1}}}\\
-  &\\
+  \multicolumn{2}{l}{\large\textsc{\MakeTextLowercase{#1}}}\\\addlinespace
 }
 %\setafterparaskip{-0.5em}
 \newcolumntype{Y}{>{\raggedright}p{1.265in}}
@@ -216,25 +249,13 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
     {School of Information}%
     {University of Arizona}\\&\\
   \heading{Publications}
-  \publication{2019}{Eidos \& Delphi: From Free Text to Executable Causal Models}%
-      {
-        R. Sharp, \me{}, B. M. Gyori, K. Alcock, E. Laparra, M. A.
-        Valenzuela-Esc\'arcega, A. Nagesh, V. Yadav, J. A. Bachman, Z. Tang, H.
-        Lent, F. Luo, M. Paul, S. Bethard, K. Barnard, C. T. Morrison, M. Surdeanu}%
-      {(accepted to NAACL-HLT 2019)}\\\addlinespace
-  \publication{2018}{A Razor Search for Bino Dark Matter at 100 TeV}%
-      {\me{} and S. Su}%
-      {(in preparation)}\\\addlinespace
-  \publication{}{Exotic Higgs Decays in Type-II 2HDMs at the LHC and Future 100
-  TeV Hadron Colliders}%
-      {F. Kling, H. Li, \me{}, H. Song, and S. Su}%
-      {\href{https://arxiv.org/abs/1812.01633}{\texttt{[arXiv:1812.01633]}} (submitted to
-    JHEP)}\\\addlinespace
-  \publication{2015}{Light Charged Higgs Bosons to AW/HW via Top Decay}%
-      {F. Kling, \me{}, and S. Su}%
-      {\href{http://link.springer.com/article/10.1007\%2FJHEP11\%282015\%29051}{Journal
-        of High Energy Physics, \textbf{11} (2015)
-      051}}\\&\\\addlinespace\addlinespace
+  \multicolumn{2}{p{6in}}{\nocite{*}{\printbibliography[heading=none]}}\\
+  \heading{Grants}
+  \grant{2018-20}%
+  {Co-Investigator}%
+  {\href{https://ml4ai.github.io/automates/}{AutoMATES: Automated Model Assembly from Text, Equations, and Software}}
+  {Defense Advanced Research Projects Agency}%
+    {\$967,678}\\\addlinespace
   \heading{Honors and Awards}
   \entry{2016,17}{Dept. of Physics Publications/Presentations Award}\\
   \entry{2014,17}{Outstanding Graduate Student Colloquium Presentation}\\
@@ -243,13 +264,10 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
   \entry{}{Professor C. Y. Fan `FanFare' Travel Award}\\
   \entry{}{Graduate College Fellowship in Physics}\\
   \entry{2014-16}{APS 4CS Student Travel Grant}\\&\\
-  \heading{Grants}
-  \grant{2018-20}%
-  {Co-Investigator}%
-  {\href{https://ml4ai.github.io/automates/}{AutoMATES: Automated Model Assembly from Text, Equations, and Software}}
-  {Defense Advanced Research Projects Agency}%
-  {\$967,678}\\&\\
   \heading{Talks}
+  \talk{May 2019}{Eidos, INDRA, \& Delphi: From Free Text to Executable Causal Models}%
+             {TRIPODS 2nd Southwest Summer Conference}
+             {Tucson, AZ}\\\addlinespace
   \talk{2018}{Causal Analysis Graphs from Text}%
              {DARPA World Modelers PI Meeting}
              {Arlington, VA}\\\addlinespace
