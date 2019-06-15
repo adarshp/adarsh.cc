@@ -50,4 +50,3 @@ compiler = pandocCompilerWith defaultHakyllReaderOptions pandocOptions
 
 pandocOptions :: WriterOptions
 pandocOptions = defaultHakyllWriterOptions{ writerHTMLMathMethod = MathJax "" }
-

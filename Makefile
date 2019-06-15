@@ -1,5 +1,5 @@
 rebuild:
-	cd Curriculum-Vitae; lualatex curriculum_vitae.tex;
+	cd Curriculum-Vitae; make
 	mv Curriculum-Vitae/curriculum_vitae.pdf assets/cv_adarsh.pdf
 	stack exec site rebuild
 
