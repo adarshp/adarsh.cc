@@ -6,15 +6,21 @@
 \usepackage[tracking]{microtype}
 \usepackage{amsmath}
 \usepackage[
-  eprint=false,
-  sorting=ydnt,
+  eprint=true,
   url=false,
   doi=false,
   isbn=false,
   maxnames=100,
   giveninits=true,
   hyperref,
+  bibstyle=publist,
+  plauthorhandling=highlight,
+  plnumbered=true,
+  boldyear=false,
 ]{biblatex}
+\plauthorname[Adarsh][]{Pyarelal}
+
+
 \newbibmacro{string+doiurlisbn}[1]{%
   \iffieldundef{doi}{%
     \iffieldundef{url}{%
@@ -366,5 +372,4 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
 %& University of Arizona\\
 %& \texttt{\href{mailto:shufang@physics.arizona.edu}{shufang@physics.arizona.edu}}\\
 %\end{ctabular}
-
 \end{document}
