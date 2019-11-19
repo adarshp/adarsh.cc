@@ -7,10 +7,13 @@ layout: page
 <div class="col-sm-8">
 </br>
 
-I am a research scientist in the School of Information at the University of
-Arizona. Broadly speaking, I am interested in machine learning and artificial
-intelligence. In particular, I am interested in Bayesian generative approaches
-to inference problems.
+I am a research scientist in the [School of
+Information](https://ischool.arizona.edu) at the [University of
+Arizona](https://www.arizona.edu). My research interests include the
+development of [socially-aware AI teammates](https://ml4ai.github.io/tomcat),
+and the automated assembly of executable causal models of complex systems from
+[text](https://ml4ai.github.io/) and
+[software](https://ml4ai.github.io/automates).
 
 [Curriculum Vitae](/assets/cv_adarsh.pdf)
 
@@ -27,26 +30,6 @@ to inference problems.
     src="/assets/photo.jpg"/>
 </div>
 </div>
-
-<hr class="featurette-divider">
-
-## Current research
-I am currently working on the automated assembly of executable causal models for
-complex systems from textual evidence, as part of DARPA's Big Mechanism and
-World Modelers programs.
-
-I am a co-PI on the [AutoMATES](https://ml4ai.github.io/automates) project and
-the primary developer of [Delphi](https://github.com/ml4ai/delphi), a
-framework to automatically assemble causal, probabilistic model from machine
-reading of textual evidence and formal analysis of source code structure.
-
-## Previous Work
-
-* [Exotic Higgs Decays in Type-II 2HDMs at the LHC and Future 100 TeV Hadron Colliders](https://arxiv.org/abs/1812.01633)
-* [Hidden Higgses and Dark Matter at Current and Future Colliders](http://arizona.openrepository.com/arizona/handle/10150/624536)
-* [Light Charged Higgs Bosons to AW/HW via Top Decay](https://link.springer.com/article/10.1007%2FJHEP11%282015%29051)
-* [A Reggeized model for *η* meson production in high energy proton/proton
-    collisions. ](/assets/reedthesis.pdf)
 
 </br>
 <hr class="featurette-divider">

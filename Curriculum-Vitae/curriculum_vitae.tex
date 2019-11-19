@@ -120,15 +120,6 @@ Numbers = {OldStyle, Proportional},
 \setlrmarginsandblock{1.2in}{1.2in}{} 
 \setulmarginsandblock{1.22in}{1.22in}{*}
 
-% From cover letter
-%\setlrmarginsandblock{2.15in}{2.15in}{}
-%\setlrmarginsandblock{2.55in}{1.15in}{}
-%% Set upper and lower margins
-%\setulmarginsandblock{1.22in}{1.22in}{*}
-%\sidebarmargin{left}
-%\setsidebars{*}{1.75in}{*}{*}{*}{*}
-%\renewcommand*{\sidebarform}{\raggedright}
-
 \tightlists % Reduce spacing between list items
 
 \setsecheadstyle{\large\scshape\hspace{0.0in}\MakeTextLowercase}
@@ -138,7 +129,8 @@ Numbers = {OldStyle, Proportional},
   \multicolumn{2}{l}{\large\textsc{\MakeTextLowercase{#1}}}\\\addlinespace
 }
 %\setafterparaskip{-0.5em}
-\newcolumntype{Y}{>{\raggedright}p{1.265in}}
+\newcolumntype{Y}{>{\raggedleft}p{1in}}
+%\newcolumntype{Y}{>{\raggedleft}p{1.265in}}
 \newcolumntype{R}[1]{>{\raggedleft}p{#1}}
 \newcolumntype{L}[1]{>{\raggedright}p{#1}}
 
@@ -185,10 +177,11 @@ Numbers = {OldStyle, Proportional},
 
 % Header style
 {\centering
-{
-  {\LARGE\scshape\color{Maroon}{\MakeTextLowercase\name{}}\\
+  {
+    {\LARGE\scshape\color{Maroon}{\MakeTextLowercase\name{}}\\
     \bigskip
-}}
+  }
+}
 
 School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizona $\cdot$ USA $\cdot$ 85719
 
@@ -206,8 +199,8 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
 }
 
 \newcommand{\appointment}[4]{
-  \emph{#1} & {\bfseries \sffamily #2}\\
-            & #3, #4
+  \emph{#1} & {\bfseries \sffamily #2}\newline
+            #3, #4
 }
 
 \newcommand{\me}{\textbf{A. Pyarelal}}
@@ -232,7 +225,7 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
 
 \newcommand{\affiliation}[2]{\textsc{#1} & #2}
 
-\begin{ctabular}{Yp{4.235in}}
+\begin{ctabular}{Yp{4.5in}}
   \heading{education}
   \degree{2017}%
     {Ph. D. in Physics}%
@@ -246,17 +239,23 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
     {Contribution of the neutral pion Regge trajectory to the exclusive central
     production of $\eta$(548) mesons in high energy proton/proton collisions}\\&\\
     \heading{Professional Appointments}
-    \appointment{Jan 2019 - present}%
+    \appointment{01/2019 - present}%
     {Research Scientist}%
     {School of Information}%
     {University of Arizona}\\&\\
-    \appointment{Oct 2017 - Dec 2018}%
+    \appointment{10/2017 - 12/2018}%
     {Postdoctoral Research Associate}%
     {School of Information}%
     {University of Arizona}\\&\\
   \heading{Publications}
   \multicolumn{2}{p{6in}}{\nocite{*}{\printbibliography[heading=none]}}\\
-  \heading{Grants}
+  \heading{Grants}\\
+  \grant{2019-23}%
+  {Principal Investigator}%
+  {\href{https://ml4ai.github.io/tomcat}{ToMCAT: Theory of Mind-based Cognitive
+  Architecture for Teams}}%
+  {Defense Advanced Research Projects Agency}%
+    {\$7,497,548}\\
   \grant{2018-20}%
   {Co-Investigator}%
   {\href{https://ml4ai.github.io/automates/}{AutoMATES: Automated Model Assembly from Text, Equations, and Software}}
@@ -296,27 +295,43 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
   {23$^{\text{rd}}$ International Conference on Supersymmetry and Unification of Fundamental Interactions}
   {Lake Tahoe, CA}\\&\\
     \heading{Research Experience}
-    \textit{2017 - present} & \textsf{\textbf{Postdoctoral Research Associate}},
-    \textsf{University of Arizona}\\
-    \research{
-      \project{ASKE - Automated Scientific Knowledge Extraction}\\
-  &    As a co-PI on the UA effort for DARPA's ASKE program, I am responsible
-  for developing algorithms to translate crop models written in Fortran into
-  dynamic Bayes networks that are semantically enriched with provenance from the
-  scientific literature related to the models.\\
-  &    \project{World Modelers}\\
-  &    For DARPA's World Modelers program, I am designing algorithms to
-       assemble and parameterize quantitative models of food security from machine
-       reading of texts such as agency reports and news articles.\\
-  &   \project{Big Mechanism}\\
-  &    As part of DARPA's Big Mechanism program, I am currently developing and
-      implementing algorithms to infer the structure of chemical reaction pathways
-      within cells, using data automatically extracted from biomedical research
-      papers.
-  } 
+    \emph{01/2018 - present} & \textsf{\textbf{Research Scientist}}\hfill \textsf{University of Arizona}\newline
+
+      \emph{ASIST: Artificial Social Intelligence for Successful Teams}\newline
+
+        As the principal investigator on the ToMCAT project, I am responsible
+        for leading the UA effort in DARPA's ASIST program, in which we are
+        developing technologies to enable socially-aware AI agents and test
+        theories of human-machine teaming in a virtual testbed based on
+        Minecraft.\\
+
+    \emph{10/2017 - 12/2018} & \textsf{\textbf{Postdoctoral Research Associate}}\hfill \textsf{University of Arizona}\newline
+
+
+      \emph{ASKE - Automated Scientific Knowledge Extraction}\newline
+
+        As a co-PI on the UA effort for DARPA's ASKE program, I am responsible
+        for developing algorithms to translate crop models written in Fortran into
+        dynamic Bayes networks that are semantically enriched with provenance from the
+        scientific literature related to the models.\newline
+
+      \emph{World Modelers}\newline
+
+        For DARPA's World Modelers program, I am designing algorithms to
+        assemble and parameterize quantitative models of food security from machine
+        reading of texts such as agency reports and news
+        articles.\newline
+
+      \emph{Big Mechanism}\newline
+
+        As part of DARPA's Big Mechanism program, I developed and
+        implemented algorithms to infer the structure of chemical reaction pathways
+        within cells, using data automatically extracted from biomedical research
+        papers.
+  %} 
   \\\addlinespace
-    \textit{2016-17} & \textsf{\textbf{Research Assistant}}, \textsf{ University of Arizona}\\
-  &    During the course of my doctoral research, I developed three analyses
+    \textit{2016-17} & \textsf{\textbf{Research Assistant}}\hfill \textsf{ University of Arizona}\\
+  During the course of my doctoral research, I developed three analyses
   aimed at discovering or constraining new physics models in high-energy
   particle collision experiments.\\
   &\project{Exotic Higgs Decays at 14 and 100 TeV}\\
