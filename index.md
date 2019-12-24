@@ -27,7 +27,7 @@ and the automated assembly of executable causal models of complex systems from
       object-fit:cover;
       border-radius:50%;
       margin-top: 1.5rem;"
-    src="/assets/photo.jpg"/>
+    src="/assets/headshot.png"/>
 </div>
 </div>
 
