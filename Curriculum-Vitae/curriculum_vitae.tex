@@ -14,6 +14,7 @@
   giveninits=true,
   hyperref,
   bibstyle=publist,
+  sorting=ddt,
   plauthorhandling=highlight,
   plnumbered=true,
   boldyear=false,
@@ -42,8 +43,10 @@
 }
 
 \DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
+\DeclareFieldFormat[article,online]{journaltitle}{#1}
+\DeclareFieldFormat[inproceedings]{booktitle}{#1}
 \DeclareFieldFormat[article,incollection,inproceedings]{title}%
-    {\usebibmacro{string+doiurlisbn}{\mkbibquote{#1}}}
+    {\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
 \addbibresource{bibliography.bib}
 \usepackage{fontawesome}
 \usepackage{fontspec}
@@ -129,7 +132,7 @@ Numbers = {OldStyle, Proportional},
   \multicolumn{2}{l}{\large\textsc{\MakeTextLowercase{#1}}}\\\addlinespace
 }
 %\setafterparaskip{-0.5em}
-\newcolumntype{Y}{>{\raggedleft}p{1in}}
+\newcolumntype{Y}{>{\raggedleft}p{0.5in}}
 %\newcolumntype{Y}{>{\raggedleft}p{1.265in}}
 \newcolumntype{R}[1]{>{\raggedleft}p{#1}}
 \newcolumntype{L}[1]{>{\raggedright}p{#1}}
@@ -225,7 +228,7 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
 
 \newcommand{\affiliation}[2]{\textsc{#1} & #2}
 
-\begin{ctabular}{Yp{4.5in}}
+\begin{ctabular}{Yp{5.5in}}
   \heading{education}
   \degree{2017}%
     {Ph. D. in Physics}%
@@ -239,16 +242,19 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
     {Contribution of the neutral pion Regge trajectory to the exclusive central
     production of $\eta$(548) mesons in high energy proton/proton collisions}\\&\\
     \heading{Professional Appointments}
-    \appointment{01/2019 - present}%
+    \appointment{2019 - }%
     {Research Scientist}%
     {School of Information}%
     {University of Arizona}\\&\\
-    \appointment{10/2017 - 12/2018}%
+    \appointment{2017 - 18}%
     {Postdoctoral Research Associate}%
     {School of Information}%
     {University of Arizona}\\&\\
   \heading{Publications}
-  \multicolumn{2}{p{6in}}{\nocite{*}{\printbibliography[heading=none]}}\\
+\end{ctabular}
+  \nocite{*}\printbibliography[heading=none]
+  %\multicolumn{2}{p{6in}}{\nocite{*}{\printbibliography[heading=none]}}\\
+\begin{ctabular}{Yp{5.5in}}
   \heading{Grants}\\
   \grant{2019-23}%
   {Principal Investigator}%
@@ -364,13 +370,13 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
   \entry{}{Organized the weekly departmental graduate student seminar series}\\
   \entry{}{Arizona Assurance Mentor}\\&\\
   \heading{Skills}
-  \skill{Data analysis with \textsc{c++} and \textsc{python}.}\\
+  \skill{Data analysis with \textsc{c++} and Python.}\\
   \skill{Software version control with \textsc{git} and \href{http://www.github.com/adarshp}{Github}}\\
   \skill{Website design with \textsc{html} and \textsc{css}, static site generation.}\\
   \skill{Writing and typesetting scientific manuscripts with \LaTeX}\\
   \skill{Languages: English (native), Hindi, Malayalam}\\&\\
-  \heading{Professional Affiliations}
-  \affiliation{}{American Physical Society}
+  %\heading{Professional Affiliations}
+  %\affiliation{}{American Physical Society}
 \end{ctabular}
 
 %\customsection{References}
