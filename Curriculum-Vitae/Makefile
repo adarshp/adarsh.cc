@@ -1,5 +1,5 @@
 all: curriculum_vitae.tex bibliography.bib
-	latexmk -lualatex curriculum_vitae.tex -interaction=batchmode
+	latexmk -lualatex -g -interaction=nonstopmode curriculum_vitae.tex 
 
 clean:
-	latexmk -c curriculum_vitae
+	latexmk -C *.tex

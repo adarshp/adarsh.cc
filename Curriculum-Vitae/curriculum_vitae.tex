@@ -16,8 +16,9 @@
   bibstyle=publist,
   sorting=ddt,
   plauthorhandling=highlight,
-  plnumbered=true,
-  boldyear=false,
+  plnumbered=false,
+  boldyear=true,
+  marginyear=false
 ]{biblatex}
 \plauthorname[Adarsh][]{Pyarelal}
 
@@ -48,6 +49,7 @@
 \DeclareFieldFormat[article,incollection,inproceedings]{title}%
     {\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
 \addbibresource{bibliography.bib}
+
 \usepackage{fontawesome}
 \usepackage{fontspec}
 \setmainfont[%
@@ -116,20 +118,17 @@ Numbers = {OldStyle, Proportional},
 
 %\renewcommand\midrule{\arrayrulecolor{gray}\midrule}
 % Original
-% With Alegreya 9 pt - lxvchars = 4.235 in
-% 8.5 - 4.235 = 4.265
-% Year col = 1.265in 
 % lrmargins + year col should add up to 4.265
-\setlrmarginsandblock{1.2in}{1.2in}{} 
-\setulmarginsandblock{1.22in}{1.22in}{*}
+\setlrmarginsandblock{0.5in}{1in}{} 
+\setulmarginsandblock{1.2in}{1.2in}{*}
 
 \tightlists % Reduce spacing between list items
 
 \setsecheadstyle{\large\scshape\hspace{0.0in}\MakeTextLowercase}
 
 \newcommand{\heading}[1]{%
-  \midrule[0.5pt]
-  \multicolumn{2}{l}{\large\textsc{\MakeTextLowercase{#1}}}\\\addlinespace
+  \cmidrule{2-2}
+  &{\large\textsc{\MakeTextLowercase{#1}}}\\\addlinespace
 }
 %\setafterparaskip{-0.5em}
 \newcolumntype{Y}{>{\raggedleft}p{0.5in}}
@@ -251,11 +250,8 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
     {School of Information}%
     {University of Arizona}\\&\\
   \heading{Publications}
-\end{ctabular}
-  \nocite{*}\printbibliography[heading=none]
-  %\multicolumn{2}{p{6in}}{\nocite{*}{\printbibliography[heading=none]}}\\
-\begin{ctabular}{Yp{5.5in}}
-  \heading{Grants}\\
+  & {\nocite{*}{\printbibliography[heading=none]}}\\
+  \heading{Grants}
   \grant{2019-23}%
   {Principal Investigator}%
   {\href{https://ml4ai.github.io/tomcat}{ToMCAT: Theory of Mind-based Cognitive
@@ -375,8 +371,6 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
   \skill{Website design with \textsc{html} and \textsc{css}, static site generation.}\\
   \skill{Writing and typesetting scientific manuscripts with \LaTeX}\\
   \skill{Languages: English (native), Hindi, Malayalam}\\&\\
-  %\heading{Professional Affiliations}
-  %\affiliation{}{American Physical Society}
 \end{ctabular}
 
 %\customsection{References}
