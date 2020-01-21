@@ -16,3 +16,5 @@ bigmech
 stack.yaml.lock
 
 *.pdf
+
+.DS_Store
