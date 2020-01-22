@@ -5,20 +5,22 @@
 \WarningFilter{fontaxes}{I don't know how to decode}
 \usepackage[tracking]{microtype}
 \usepackage{amsmath}
+\newcommand*\publistbasestyle{numeric}
 \usepackage[
   eprint=true,
   url=false,
   doi=false,
   isbn=false,
   maxnames=100,
-  giveninits=true,
+  giveninits=false,
   hyperref,
   bibstyle=publist,
   sorting=ddt,
   plauthorhandling=highlight,
   plnumbered=false,
-  boldyear=true,
-  marginyear=false
+  boldyear=false,
+  marginyear=false,
+  nameorder=given-family
 ]{biblatex}
 \plauthorname[Adarsh][]{Pyarelal}
 
@@ -250,7 +252,12 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
     {School of Information}%
     {University of Arizona}\\&\\
   \heading{Publications}
-  & {\nocite{*}{\printbibliography[heading=none]}}\\
+  %& {\nocite{*}{\printbibliography[heading=none]}}\\
+  2020 & \fullcite{Pyarelal:2020higgsino}\\\addlinespace
+       & \fullcite{pyarelal2020automates}\\\addlinespace
+  2019 & \fullcite{sharp-etal-2019-eidos}\\\addlinespace
+       & \fullcite{Kling2019}\\\addlinespace
+  2015 & \fullcite{Kling:2015uba}\\\addlinespace\addlinespace
   \heading{Grants}
   \grant{2019-23}%
   {Principal Investigator}%
