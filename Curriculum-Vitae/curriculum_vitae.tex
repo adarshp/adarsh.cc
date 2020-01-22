@@ -5,14 +5,14 @@
 \WarningFilter{fontaxes}{I don't know how to decode}
 \usepackage[tracking]{microtype}
 \usepackage{amsmath}
-\newcommand*\publistbasestyle{numeric}
+%\newcommand*\publistbasestyle{numeric}
 \usepackage[
   eprint=true,
   url=false,
   doi=false,
   isbn=false,
   maxnames=100,
-  giveninits=false,
+  giveninits=true,
   hyperref,
   bibstyle=publist,
   sorting=ddt,
@@ -20,7 +20,8 @@
   plnumbered=false,
   boldyear=false,
   marginyear=false,
-  nameorder=given-family
+  nameorder=given-family,
+  mergedate=true
 ]{biblatex}
 \plauthorname[Adarsh][]{Pyarelal}
 
@@ -129,8 +130,9 @@ Numbers = {OldStyle, Proportional},
 \setsecheadstyle{\large\scshape\hspace{0.0in}\MakeTextLowercase}
 
 \newcommand{\heading}[1]{%
-  \cmidrule{2-2}
-  &{\large\textsc{\MakeTextLowercase{#1}}}\\\addlinespace
+  \\
+  &{\Large\textsc{\MakeTextLowercase{#1}}}\\\addlinespace
+  \cmidrule{2-2}\addlinespace
 }
 %\setafterparaskip{-0.5em}
 \newcolumntype{Y}{>{\raggedleft}p{0.5in}}
@@ -197,8 +199,7 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
 
 \newcommand{\entry}[2]{\emph{#1} & #2}
 \newcommand{\degree}[5]{
-  \emph{#1} & {\bfseries \sffamily #2}
-  \hfill {\sffamily #3}\\
+  \emph{#1} & {\bfseries \sffamily #2}, #3\\
   & Thesis: \href{#4}{\emph{#5}}
 }
 
@@ -215,8 +216,7 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
 \newcommand{\grant}[5]{\emph{#1} & #2, \emph{#3}, #4, (#5)}
 
 \newcommand{\talk}[4]{
-  \emph{#1} & \emph{#2}\\
-  & #3, #4
+  \emph{#1} & \emph{#2}, #3, #4
 }
 
 \newcommand{\research}[1]{ & #1 }
@@ -241,7 +241,7 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
     {Reed College}%
     {https://adarsh.netlify.com/reedthesis.pdf}%
     {Contribution of the neutral pion Regge trajectory to the exclusive central
-    production of $\eta$(548) mesons in high energy proton/proton collisions}\\&\\
+    production of $\eta$(548) mesons in high energy proton/proton collisions}\\\addlinespace
     \heading{Professional Appointments}
     \appointment{2019 - }%
     {Research Scientist}%
@@ -250,11 +250,10 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
     \appointment{2017 - 18}%
     {Postdoctoral Research Associate}%
     {School of Information}%
-    {University of Arizona}\\&\\
+    {University of Arizona}\\\addlinespace
   \heading{Publications}
   %& {\nocite{*}{\printbibliography[heading=none]}}\\
   2020 & \fullcite{Pyarelal:2020higgsino}\\\addlinespace
-       & \fullcite{pyarelal2020automates}\\\addlinespace
   2019 & \fullcite{sharp-etal-2019-eidos}\\\addlinespace
        & \fullcite{Kling2019}\\\addlinespace
   2015 & \fullcite{Kling:2015uba}\\\addlinespace\addlinespace
@@ -357,21 +356,20 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
   &    This analysis is designed to find a charged Higgs produced via the decay
   of a top quark at the 14 TeV \textsc{lhc}, in the context of a Type-II Two
   Higgs Doublet Model, using a unique kinematical angle to discriminate between
-  signal and background events.\\&\\
+  signal and background events.\\
   \heading{Teaching Experience}
   \textit{2011-17} & \textsf{\textbf{Teaching Assistant}}, \textsf{ University of Arizona}\\
   \teaching{Introduction to Scientific Computing (Spring 2017)}
   \teaching{Advanced Lab, (Fall 2013-Fall 2016).}
   \teaching{Introductory Physics for non-majors - Lecturer (Fall 2012).}
   \teaching{Introductory Electricity and Magnetism (2011-12).}
-  \teaching{Introductory Physics for non-majors - Lab (Summer 2012 \& Summer
-  2014).}\\&\\
+  \teaching{Introductory Physics for non-majors - Lab (Summer 2012 \& Summer 2014).}
   \heading{Service}
   \entry{2015}{GPSC Travel Grant Judge }\\
   \entry{2012-13}{Member of Physics Grad Council}\\
   \entry{}{Member of the Associated Graduate Council for the College of Science}\\
   \entry{}{Organized the weekly departmental graduate student seminar series}\\
-  \entry{}{Arizona Assurance Mentor}\\&\\
+  \entry{}{Arizona Assurance Mentor}\\
   \heading{Skills}
   \skill{Data analysis with \textsc{c++} and Python.}\\
   \skill{Software version control with \textsc{git} and \href{http://www.github.com/adarshp}{Github}}\\
