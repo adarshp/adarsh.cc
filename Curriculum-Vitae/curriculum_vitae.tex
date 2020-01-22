@@ -1,11 +1,10 @@
-\documentclass[final,oneside,11pt]{memoir}
+\documentclass[final,oneside,12pt]{memoir}
 
 % Silence some noisy warnings temporarily
 \usepackage{silence}
 \WarningFilter{fontaxes}{I don't know how to decode}
 \usepackage[tracking]{microtype}
 \usepackage{amsmath}
-%\newcommand*\publistbasestyle{numeric}
 \usepackage[
   eprint=true,
   url=false,
@@ -61,7 +60,8 @@
 ]{Arno Pro}
 \setsansfont[%
 Numbers = {OldStyle, Proportional},
-]{Myriad Pro Semibold}
+BoldFont=* Semibold
+]{Myriad Pro}
 \setmonofont{Menlo}[Scale=MatchLowercase]
 
 \newcommand{\name}{Adarsh Pyarelal}
@@ -164,23 +164,6 @@ Numbers = {OldStyle, Proportional},
 
 \pagestyle{empty}
 
-% Sidebar style
-%{\centering\LARGE\color{Maroon}\scshape adarsh pyarelal}
-%\bigskip
-
-%\sidebar{
-  %%{\large\color{Maroon}\scshape adarsh pyarelal}\\
-  %%\bigskip
-  %{
-    %\normalsize
-    %847 N 2$^{\text{nd}}$ Ave\\
-    %Tucson, Arizona 85705\\
-    %\bigskip
-    %{\footnotesize\faEnvelope}~~\href{mailto:\myemail}{\texttt{\myemail}}\\
-  %}
-  %\bigskip\bigskip\bigskip 
-%}
-
 % Header style
 {\centering
   {
@@ -215,8 +198,8 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
 
 \newcommand{\grant}[5]{\emph{#1} & #2, \emph{#3}, #4, (#5)}
 
-\newcommand{\talk}[4]{
-  \emph{#1} & \emph{#2}, #3, #4
+\newcommand{\talk}[3]{
+  \emph{#1}, #2, #3
 }
 
 \newcommand{\research}[1]{ & #1 }
@@ -252,7 +235,6 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
     {School of Information}%
     {University of Arizona}\\\addlinespace
   \heading{Publications}
-  %& {\nocite{*}{\printbibliography[heading=none]}}\\
   2020 & \fullcite{Pyarelal:2020higgsino}\\\addlinespace
   2019 & \fullcite{sharp-etal-2019-eidos}\\\addlinespace
        & \fullcite{Kling2019}\\\addlinespace
@@ -278,89 +260,37 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
   \entry{}{Graduate College Fellowship in Physics}\\
   \entry{2014-16}{APS 4CS Student Travel Grant}\\&\\
   \heading{Talks}
-  \talk{May 2019}{Eidos, INDRA, \& Delphi: From Free Text to Executable Causal Models}%
-             {TRIPODS 2nd Southwest Summer Conference}
-             {Tucson, AZ}\\\addlinespace
-  \talk{2018}{Causal Analysis Graphs from Text}%
-             {DARPA World Modelers PI Meeting}
-             {Arlington, VA}\\\addlinespace
-  \talk{2016}{Machine Learning and Particle Physics}%
-             {Tucson Data Science Meetup}
-             {Tucson, AZ}\\\addlinespace
-  \talk{}{A Razor Search for Dark Matter at a Future 100 TeV Collider}%
-             {Joint Meeting of the Four Corners and Texas Sections of the American Physical Society}
-             {Las Cruces, NM}\\\addlinespace
-  \talk{2015}{Light Charged Higgs Bosons in Single-Top Production}%
-             {Phenomenology 2015 Symposium}
-             {University of Pittsburgh}\\\addlinespace
-  \talk{}{Light Charged Higgs Bosons in Two Higgs Doublet Models}%
-             {Annual Meeting of the APS Four Corners Section}
-             {Tempe, AZ}\\\addlinespace
-  \talk{2014}{Light Charged Higgs Bosons in Single-Top Production}%
-             {Annual Meeting of the APS Four Corners Section}
-             {Orem, UT}\\\addlinespace
-  \talk{}{Light Charged Higgs Bosons to AW/HW via Top Decay}%
-  {23$^{\text{rd}}$ International Conference on Supersymmetry and Unification of Fundamental Interactions}
-  {Lake Tahoe, CA}\\&\\
-    \heading{Research Experience}
-    \emph{01/2018 - present} & \textsf{\textbf{Research Scientist}}\hfill \textsf{University of Arizona}\newline
-
-      \emph{ASIST: Artificial Social Intelligence for Successful Teams}\newline
-
-        As the principal investigator on the ToMCAT project, I am responsible
-        for leading the UA effort in DARPA's ASIST program, in which we are
-        developing technologies to enable socially-aware AI agents and test
-        theories of human-machine teaming in a virtual testbed based on
-        Minecraft.\\
-
-    \emph{10/2017 - 12/2018} & \textsf{\textbf{Postdoctoral Research Associate}}\hfill \textsf{University of Arizona}\newline
-
-
-      \emph{ASKE - Automated Scientific Knowledge Extraction}\newline
-
-        As a co-PI on the UA effort for DARPA's ASKE program, I am responsible
-        for developing algorithms to translate crop models written in Fortran into
-        dynamic Bayes networks that are semantically enriched with provenance from the
-        scientific literature related to the models.\newline
-
-      \emph{World Modelers}\newline
-
-        For DARPA's World Modelers program, I am designing algorithms to
-        assemble and parameterize quantitative models of food security from machine
-        reading of texts such as agency reports and news
-        articles.\newline
-
-      \emph{Big Mechanism}\newline
-
-        As part of DARPA's Big Mechanism program, I developed and
-        implemented algorithms to infer the structure of chemical reaction pathways
-        within cells, using data automatically extracted from biomedical research
-        papers.
-  %} 
-  \\\addlinespace
-    \textit{2016-17} & \textsf{\textbf{Research Assistant}}\hfill \textsf{ University of Arizona}\\
-
-  & During the course of my doctoral research, I developed three analyses
-  aimed at discovering or constraining new physics models in high-energy
-  particle collision experiments.\\
-  &\project{Exotic Higgs Decays at 14 and 100 TeV}\\
-  &    This analysis aims to determine the prospects of exotic Higgs decay modes
-  at a 100 TeV collider for all physically viable Two-Higgs Doublet Models,
-  using boosted decision tree classifiers and physics-motivated input
-  features.\\
-  &    \project{A Razor Search for Bino Dark Matter at 100 TeV}\\
-  &    I designed an analysis to examined the prospects of finding bino-like
-  dark matter resulting from the decay of pair-produced higgsinos at a 100 TeV
-  collider, using razor variables and boosted decision trees.\\
-  &    \project{Light Charged Higgs Bosons to AW/HW via Top Decay}\\
-  &    This analysis is designed to find a charged Higgs produced via the decay
-  of a top quark at the 14 TeV \textsc{lhc}, in the context of a Type-II Two
-  Higgs Doublet Model, using a unique kinematical angle to discriminate between
-  signal and background events.\\
-  \heading{Teaching Experience}
+   2019 & \talk{Eidos, INDRA, \& Delphi: From Free Text to Executable Causal Models}%
+               {TRIPODS 2nd Southwest Summer Conference}
+               {Tucson, AZ}\\\addlinespace
+        & \talk{Interpreting causal expressions with gradable adjectives to assemble dynamics models}%
+               {Modeling the World's Systems 2019}
+               {Pittsburgh, PA}\\\addlinespace
+   2018 & \talk{Causal Analysis Graphs from Text}%
+               {DARPA World Modelers PI Meeting}
+               {Arlington, VA}\\\addlinespace
+   2016 & \talk{Machine Learning and Particle Physics}%
+               {Tucson Data Science Meetup}
+               {Tucson, AZ}\\\addlinespace
+        & \talk{A Razor Search for Dark Matter at a Future 100 TeV Collider}%
+               {Joint Meeting of the Four Corners and Texas Sections of the American Physical Society}
+               {Las Cruces, NM}\\\addlinespace
+   2015 & \talk{Light Charged Higgs Bosons in Single-Top Production}%
+               {Phenomenology 2015 Symposium}
+               {University of Pittsburgh}\\\addlinespace
+        & \talk{Light Charged Higgs Bosons in Two Higgs Doublet Models}%
+               {Annual Meeting of the APS Four Corners Section}
+               {Tempe, AZ}\\\addlinespace
+   2014 & \talk{Light Charged Higgs Bosons in Single-Top Production}%
+               {Annual Meeting of the APS Four Corners Section}
+               {Orem, UT}\\\addlinespace
+        & \talk{Light Charged Higgs Bosons to AW/HW via Top Decay}%
+               {23$^{\text{rd}}$ International Conference on Supersymmetry and Unification of Fundamental Interactions}
+               {Lake Tahoe, CA}\\
+  \heading{Teaching}
   \textit{2011-17} & \textsf{\textbf{Teaching Assistant}}, \textsf{ University of Arizona}\\
   \teaching{Introduction to Scientific Computing (Spring 2017)}
-  \teaching{Advanced Lab, (Fall 2013-Fall 2016).}
+  \teaching{Advanced Lab (Fall 2013-Fall 2016).}
   \teaching{Introductory Physics for non-majors - Lecturer (Fall 2012).}
   \teaching{Introductory Electricity and Magnetism (2011-12).}
   \teaching{Introductory Physics for non-majors - Lab (Summer 2012 \& Summer 2014).}
@@ -378,19 +308,4 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
   \skill{Languages: English (native), Hindi, Malayalam}\\&\\
 \end{ctabular}
 
-%\customsection{References}
-%\begin{ctabular}{Yp{4.235in}}
-%& Kobus Barnard\\
-%& Professor, Department of Computer Science\\
-%& University of Arizona\\
-%& \texttt{\href{mailto:kobus@cs.arizona.edu}{kobus@cs.arizona.edu}}\\\addlinespace
-%& Clayton Morrison\\
-%& Associate Professor, School of Information\\
-%& University of Arizona\\
-%& \texttt{\href{mailto:claytonm@email.arizona.edu}{claytonm@email.arizona.edu}}\\\addlinespace
-%& Shufang Su\\
-%& Professor, Department of Physics\\
-%& University of Arizona\\
-%& \texttt{\href{mailto:shufang@physics.arizona.edu}{shufang@physics.arizona.edu}}\\
-%\end{ctabular}
 \end{document}
