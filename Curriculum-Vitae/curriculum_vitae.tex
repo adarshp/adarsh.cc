@@ -1,10 +1,35 @@
 \documentclass[final,oneside,12pt]{memoir}
 
+% =============================================================================
+% Metadata
+% =============================================================================
+
+\def\firstname{Adarsh}
+\def\lastname{Pyarelal}
+\def\myemail{adarsh@email.arizona.edu}
+\def\myweb{adarsh.cc}
+\def\department{School of Information}
+\def\university{University of Arizona}
+\def\city{Tucson}
+\def\country{USA}
+\def\state{Arizona}
+\def\zipcode{85705}
+\date{} % not used (revision control instead)
+
+\newcommand{\name}{\firstname \lastname}
+
+% =============================================================================
+
 % Silence some noisy warnings temporarily
 \usepackage{silence}
 \WarningFilter{fontaxes}{I don't know how to decode}
 \usepackage[tracking]{microtype}
 \usepackage{amsmath}
+
+% =============================================================================
+% Bibliography
+% =============================================================================
+
 \usepackage[
   eprint=true,
   url=false,
@@ -22,7 +47,7 @@
   nameorder=given-family,
   mergedate=true
 ]{biblatex}
-\plauthorname[Adarsh][]{Pyarelal}
+\plauthorname[\firstname][]{\lastname}
 
 
 \newbibmacro{string+doiurlisbn}[1]{%
@@ -45,12 +70,15 @@
   }%
 }
 
+
 \DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
 \DeclareFieldFormat[article,online]{journaltitle}{#1}
 \DeclareFieldFormat[inproceedings]{booktitle}{#1}
 \DeclareFieldFormat[article,incollection,inproceedings]{title}%
     {\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
 \addbibresource{bibliography.bib}
+
+% =============================================================================
 
 \usepackage{fontawesome}
 \usepackage{fontspec}
@@ -64,7 +92,6 @@ BoldFont=* Semibold
 ]{Myriad Pro}
 \setmonofont{Menlo}[Scale=MatchLowercase]
 
-\newcommand{\name}{Adarsh Pyarelal}
 % =============================================================================
 % Colors
 % =============================================================================
@@ -100,16 +127,6 @@ BoldFont=* Semibold
     pdfproducer={LaTeX}%
 }   
 
-% =============================================================================
-% Metadata
-% =============================================================================
-
-\def\mytitle{Curriculum Vitae}
-\def\myaffiliation{University of Arizona}
-\def\myaddress{Department of Physics}
-\def\myemail{adarsh@email.arizona.edu}
-\def\myweb{adarsh.cc}
-\date{} % not used (revision control instead)
 
 % =============================================================================
 % Memoir package - layout and styling
@@ -172,7 +189,7 @@ BoldFont=* Semibold
   }
 }
 
-School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizona $\cdot$ USA $\cdot$ 85719
+\department $\cdot$ \university $\cdot$ \city $\cdot$ \state $\cdot$ \country $\cdot$ \zipcode
 
 \faEnvelope~~\texttt{\href{mailto:\myemail}{\myemail}}\hspace{0.3in}\faGlobe~~\texttt{\href{\myweb}{\myweb}}
 
@@ -203,14 +220,11 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
 }
 
 \newcommand{\research}[1]{ & #1 }
-
 \newcommand{\project}[1]{\medskip\textit{#1}\medskip}
-
 \newcommand{\teaching}[1]{&#1\\}
-
 \newcommand{\skill}[1]{ & #1}
-
 \newcommand{\affiliation}[2]{\textsc{#1} & #2}
+\newcommand{\media}[3]{\href{#1}{\emph{#2}}, #3}
 
 \begin{ctabular}{Yp{5.5in}}
   \heading{education}
@@ -260,9 +274,16 @@ School of Information $\cdot$ University of Arizona $\cdot$ Tucson $\cdot$ Arizo
   \entry{}{Graduate College Fellowship in Physics}\\
   \entry{2014-16}{APS 4CS Student Travel Grant}\\
   \heading{Media Coverage}
-  2020 &
-  \href{https://tucson.com/news/local/socially-savvy-artificial-intelligence-to-be-developed-at-ua/article_0f8879d4-3543-56ba-a7dd-12c18c0b3d7b.html}{\emph{Socially
-  savvy artificial intelligence to be developed at UA}}, Arizona Daily Star\\
+
+  2020 &  \media{https://timesofindia.indiatimes.com/home/science/%
+                 desi-scientist-in-us-is-building-ai-that-understands-you/articleshow/73684813.cms}
+                {Desi scientist in US is building AI that `understands' you}
+                {Times of India}\\
+
+       & \media{https://tucson.com/news/local/socially-savvy-artificial-intelligence-to-be-developed-at-ua/%
+                article_0f8879d4-3543-56ba-a7dd-12c18c0b3d7b.html}
+               {Socially savvy artificial intelligence to be developed at UA}
+               {Arizona Daily Star}\\
   \heading{Talks}
    2019 & \talk{Eidos, INDRA, \& Delphi: From Free Text to Executable Causal Models}%
                {TRIPODS 2nd Southwest Summer Conference}
