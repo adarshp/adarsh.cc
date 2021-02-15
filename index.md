@@ -17,7 +17,7 @@ and the automated assembly of executable causal models of complex systems from
 
 [Curriculum Vitae](/assets/cv_adarsh.pdf)
 
-[email: adarsh@email.arizona.edu](mailto:adarsh@email.arizona.edu)
+[email: adarsh@arizona.edu](mailto:adarsh@arizona.edu)
 
 </br>
 </div>
