@@ -226,19 +226,22 @@ BoldFont=* Semibold
 \newcommand{\affiliation}[2]{\textsc{#1} & #2}
 \newcommand{\media}[3]{\href{#1}{\emph{#2}}, #3}
 \newcommand{\sympaper}{%
-    \begin{tikzpicture}
-        \draw [black, fill=black] (0,0) circle [radius=0.1];;
-    \end{tikzpicture}
+    {\small \faFileText}
+    %\begin{tikzpicture}
+        %\draw [black, fill=black] (0,0) circle [radius=0.1];;
+    %\end{tikzpicture}
 }
 \newcommand{\symworkshop}{%
-    \begin{tikzpicture}
-        \draw [black, ultra thick] (0,0) circle [radius=0.09];;
-    \end{tikzpicture}
+    {\small \faGears}
+    %\begin{tikzpicture}
+        %\draw [black, ultra thick] (0,0) circle [radius=0.09];;
+    %\end{tikzpicture}
 }
 \newcommand{\symposter}{%
-    \begin{tikzpicture}
-        \draw [black, ultra thick] (0,0) rectangle (0.18, 0.18);;
-    \end{tikzpicture}
+    {\small \faThumbTack}
+    %\begin{tikzpicture}
+        %\draw [black, ultra thick] (0,0) rectangle (0.18, 0.18);;
+    %\end{tikzpicture}
 }
 
 \newcommand{\publication}[2]{ #1 & \fullcite{#2}\\\addlinespace\addlinespace}
@@ -270,25 +273,23 @@ BoldFont=* Semibold
     {School of Information}%
     {University of Arizona}\\\addlinespace
 \end{ctabular}
-\begin{ctabular}{Yp{0.05in}p{5.45in}}
+\begin{ctabular}{Yp{0.07in}p{5.43in}}
   &\multicolumn{2}{l}{\Large\textsc{\MakeTextLowercase{Publications}}}\\\addlinespace
   \cmidrule{2-3}\addlinespace
   &\multicolumn{2}{c}{\sympaper{} Conference/Journal ~~~~ \symworkshop{}
-      Workshop ~~~~ \symposter{} Poster}\\\addlinespace
+  Workshop ~~~~ \symposter{} Poster}\\\addlinespace
   2021 & \workshop{Zhang.ea:2021}
        & \workshop{Soares.ea:2021}
        & \workshop{Pyarelal.ea:2021}
-  2020 & \paper{alexeeva-etal-2020-mathalign}
-       & \paper{Pyarelal:2020higgsino}
-  2019 %
-       & \paper{Pyarelal.ea:2019}
-       & \paper{sharp-etal-2019-eidos}
-       & \paper{Kling2019}
-  2015 & \paper{Kling:2015uba}\addlinespace
-  2021 %
        & \poster{Erikson_Pyarelal:2021}
        & \poster{Schoelen:2021}
-  2020 & \poster{Morrison:2020}
+  2020 & \paper{alexeeva-etal-2020-mathalign}
+       & \paper{Pyarelal:2020higgsino}
+       & \poster{Morrison:2020}
+  2019 & \paper{Pyarelal.ea:2019}
+       & \paper{sharp-etal-2019-eidos}
+       & \paper{Kling2019}
+  2015 & \paper{Kling:2015uba}
 \end{ctabular}
 \begin{ctabular}{Yp{5.5in}}
   \heading{Grants}
