@@ -25,6 +25,7 @@
 \WarningFilter{fontaxes}{I don't know how to decode}
 \usepackage[tracking]{microtype}
 \usepackage{amsmath}
+\usepackage{tikz}
 
 % =============================================================================
 % Bibliography
@@ -96,8 +97,7 @@ BoldFont=* Semibold
 % Colors
 % =============================================================================
 
-\usepackage[dvipsnames, table]{xcolor}
-\definecolor{webgreen}{rgb}{0,.5,0}
+%\usepackage[dvipsnames, table]{xcolor}
 \definecolor{webbrown}{rgb}{.6,0,0}
 \definecolor{Maroon}{cmyk}{0, 0.87, 0.68, 0.32}
 \definecolor{RoyalBlue}{cmyk}{1, 0.50, 0, 0}
@@ -212,9 +212,6 @@ BoldFont=* Semibold
 }
 
 \newcommand{\me}{\textbf{A. Pyarelal}}
-\newcommand{\publication}[4]{
-  \emph{#1} & #3, {\itshape #2}, #4
-}
 
 \newcommand{\grant}[5]{\emph{#1} & #2, \emph{#3}, #4, (#5)}
 
@@ -228,6 +225,27 @@ BoldFont=* Semibold
 \newcommand{\skill}[1]{ & #1}
 \newcommand{\affiliation}[2]{\textsc{#1} & #2}
 \newcommand{\media}[3]{\href{#1}{\emph{#2}}, #3}
+\newcommand{\sympaper}{%
+    \begin{tikzpicture}
+        \draw [black, fill=black] (0,0) circle [radius=0.1];;
+    \end{tikzpicture}
+}
+\newcommand{\symworkshop}{%
+    \begin{tikzpicture}
+        \draw [black, ultra thick] (0,0) circle [radius=0.09];;
+    \end{tikzpicture}
+}
+\newcommand{\symposter}{%
+    \begin{tikzpicture}
+        \draw [black, ultra thick] (0,0) rectangle (0.18, 0.18);;
+    \end{tikzpicture}
+}
+
+\newcommand{\publication}[2]{ #1 & \fullcite{#2}\\\addlinespace\addlinespace}
+\newcommand{\paper}[1]{\publication{\sympaper{}}{#1}}
+\newcommand{\poster}[1]{\publication{\symposter{}}{#1}}
+\newcommand{\workshop}[1]{\publication{\symworkshop{}}{#1}}
+
 
 \begin{ctabular}{Yp{5.5in}}
   \heading{education}
@@ -251,23 +269,28 @@ BoldFont=* Semibold
     {Postdoctoral Research Associate}%
     {School of Information}%
     {University of Arizona}\\\addlinespace
-  \heading{Publications}
-  \subheading{Papers}
-  2021 & \fullcite{Zhang.ea:2021}\\\addlinespace
-       & \fullcite{Soares.ea:2021}\\\addlinespace
-       & \fullcite{Pyarelal.ea:2021}\\\addlinespace
-  2020 & \fullcite{alexeeva-etal-2020-mathalign}\\\addlinespace
-       & \fullcite{Pyarelal:2020higgsino}\\\addlinespace
+\end{ctabular}
+\begin{ctabular}{Yp{0.05in}p{5.45in}}
+  &\multicolumn{2}{l}{\Large\textsc{\MakeTextLowercase{Publications}}}\\\addlinespace
+  \cmidrule{2-3}\addlinespace
+  &\multicolumn{2}{c}{\sympaper{} Conference/Journal ~~~~ \symworkshop{}
+      Workshop ~~~~ \symposter{} Poster}\\\addlinespace
+  2021 & \workshop{Zhang.ea:2021}
+       & \workshop{Soares.ea:2021}
+       & \workshop{Pyarelal.ea:2021}
+  2020 & \paper{alexeeva-etal-2020-mathalign}
+       & \paper{Pyarelal:2020higgsino}
   2019 %
-       & \fullcite{Pyarelal.ea:2019}\\\addlinespace
-       & \fullcite{sharp-etal-2019-eidos}\\\addlinespace
-       & \fullcite{Kling2019}\\\addlinespace
-  2015 & \fullcite{Kling:2015uba}\\\addlinespace\addlinespace
-  \subheading{Posters}
+       & \paper{Pyarelal.ea:2019}
+       & \paper{sharp-etal-2019-eidos}
+       & \paper{Kling2019}
+  2015 & \paper{Kling:2015uba}\addlinespace
   2021 %
-       & \fullcite{Erikson_Pyarelal:2021}\\\addlinespace
-       & \fullcite{Schoelen:2021}\\\addlinespace
-  2020 & \fullcite{Morrison:2020}\\\addlinespace
+       & \poster{Erikson_Pyarelal:2021}
+       & \poster{Schoelen:2021}
+  2020 & \poster{Morrison:2020}
+\end{ctabular}
+\begin{ctabular}{Yp{5.5in}}
   \heading{Grants}
   \grant{2019-23}%
   {Principal Investigator}%
