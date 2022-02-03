@@ -19,6 +19,8 @@ and the automated assembly of executable causal models of complex systems from
 
 [email: adarsh@arizona.edu](mailto:adarsh@arizona.edu)
 
+[Colophon](https://typekit.com/colophons/teo1mav)
+
 </br>
 </div>
   <div class="col-sm-4">
@@ -31,19 +33,5 @@ and the automated assembly of executable causal models of complex systems from
 </div>
 </div>
 
-</br>
 <hr class="featurette-divider">
 
-## Teaching
-
-Some of the courses I have taught in the past:
-
-* [Methods in Experimental Physics (aka Advanced Lab)](/teaching/phys381/).
-* [Introductory Algebra Based Physics (Lecture)](/teaching/phys102/)
-* [Introductory Mechanics Lab](/teaching/phys141/)
-* [Introductory Electricity and Mechanism Lab](/teaching/phys241/)
-
-I also write about physics, programming, productivity and other random stuff
-sometimes. You can find my previous posts [here](/notes/).
-
-[Colophon](https://typekit.com/colophons/teo1mav)
