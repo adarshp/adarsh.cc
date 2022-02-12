@@ -24,12 +24,7 @@ and the automated assembly of executable causal models of complex systems from
 </br>
 </div>
   <div class="col-sm-4">
-  <img style="height: 7rem;
-      width: 7rem;
-      object-fit:cover;
-      border-radius:50%;
-      margin-top: 1.5rem;"
-    src="/assets/headshot.png"/>
+  <img id="headshot" src="/assets/headshot.png"/>
 </div>
 </div>
 

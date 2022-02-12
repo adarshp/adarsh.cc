@@ -1,6 +1,6 @@
 body {
   font-family: "arno-pro";
-  max-width: 33em;
+  /*max-width: 33em;*/
   margin: auto;
   margin-bottom: 5rem;
   background-color: #fffff8;
@@ -17,6 +17,7 @@ p {
   padding-top: 2.2em;
 letter-spacing: 0.1rem;
 }
+
 .row-featurette {
   padding: 3rem 1.5rem;
   text-align: left;
@@ -74,13 +75,23 @@ a:hover {text-decoration: none; }
 }
 
 .nav-link {}
+
 .sourceCode {
   font-family: Consolas, Menlo, monospace;
   font-size: 0.9em;
 }
+
 code {
   font-size: 0.7em;
   font-family: Consolas, Menlo; 
   background: white;
   color: maroon;
+}
+
+#headshot {
+    height: 9rem;
+    width: 9rem;
+    object-fit:cover;
+    border-radius:50%;
+    margin-top: 1.5rem;"
 }
