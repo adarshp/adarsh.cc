@@ -3,6 +3,12 @@ title: Notes
 layout: page
 ---
 
+HOWTOs
+------
+
+- [Working with MacPorts and Python](/notes/macports_python.html)
+
+
 High Energy Physics (Theory)
 -----------------------------
 
@@ -16,7 +22,7 @@ High Energy Physics (Theory)
 Tools
 -----
 
-- [Git](/notes/git.html)
+- [Git shallow clone](/notes/git.html)
 
 
 Misc.
