@@ -16,9 +16,7 @@ High Energy Physics (Theory)
 Tools
 -----
 
-- [My LaTeX Build System](/notes/latex.html)
 - [Git](/notes/git.html)
-- [Misc.](/notes/tools.html)
 
 
 Misc.

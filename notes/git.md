@@ -1,15 +1,11 @@
 ---
 layout: post
-title: "Git Tips"
+title: "Git shallow clone"
 ---
 
-Here are some miscellaneous tips for using `git` that I've gathered.
-
-How to do a shallow clone
--------------------------
-
-While `git` does not allow you to clone a specific subdirectory like
-`svn` does, you can get kind of close by following this procedure:
+While `git` does not allow you to clone a specific subdirectory like `svn`
+does, you can get kind of close to the desired effect by following this
+procedure:
 
 
 ```bash
