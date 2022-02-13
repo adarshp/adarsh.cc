@@ -43,6 +43,14 @@ sudo port install py310-pip
 To activate a particular version of Python and pip, you would use the `port
 select` command.
 
+```
+activate_py3(){
+  sudo port select --set python python$1
+  sudo port select --set pip pip$1
+
+  sudo port select --set python3 python$1
+}
+```
 
 [^1]: The `sudo` in the invocation is required if you install MacPorts to the
 default location (`/opt/local`). However, if the MacPorts root directory is
