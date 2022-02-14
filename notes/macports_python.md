@@ -24,6 +24,9 @@ compiler](https://docs.conda.io/projects/conda-build/en/latest/resources/compile
 With that said, let's move on to a few practical tips on using MacPorts to
 manage Python versions.
 
+Managing multiple versions of Python and pip
+--------------------------------------------
+
 To install the latest version of Python along with the corresponding version of
 `pip`, do
 
@@ -60,14 +63,23 @@ activate_py() {
 }
 ```
 
-The snippet above defines a function `activate_py` that can be invoked to
+The above snippet defines a function named `activate_py` that can be invoked to
 switch between Python versions. For example:
 
 ```bash
 activate_py 310
 ```
 
-will activate Python 3.10 and the corresponding version of `pip`.
+will activate [Python](Python) 3.10 and the corresponding version of `pip`.
+
+Managing Package
+----------------
+
+Python packages can either be installed within a [virtual
+environment](https://docs.python.org/3/tutorial/venv.html) or system-wide In general, it's a
+good idea to have a Python ) for each project you are working on, so as to
+minimize dependency conflicts.
+
 
 [^1]: The `sudo` in the invocation is required if you install MacPorts to the
 default location (`/opt/local`). However, if the MacPorts root directory is
