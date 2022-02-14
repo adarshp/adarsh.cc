@@ -11,9 +11,9 @@ Working with multiple versions of Python can be a
 [headache](https://xkcd.com/1987/). In this post, I'll describe how I use
 MacPorts to manage Python versions for development purposes.
 
-For context, I've tried a number of different ways to manage Python on my
-computer: Anaconda, Homebrew-provided Python, pyenv, etc., and this is what
-I found works best for me.
+For context, I've tried a number of different ways to manage Python on my macOS
+computers over the years: Anaconda, Homebrew-provided Python packages, pyenv,
+etc., and this is what I found works best for me.
 
 Unlike Homebrew, MacPorts does not clutter up your `/usr/local` directory, by
 default installing packages to `/opt/local` instead. And unlike Anaconda,
@@ -61,6 +61,7 @@ activate_py() {
     sudo port select --set python python"$1"
     sudo port select --set python"$major_version" python"$1"
     sudo port select --set pip pip"$1"
+    sudo port select --set pip"$major_version" pip"$1"
 }
 ```
 
@@ -71,7 +72,7 @@ switch between Python versions. For example:
 activate_py 310
 ```
 
-will activate [Python](Python) 3.10 and the corresponding version of `pip`.
+will activate Python 3.10 and the corresponding version of `pip`.
 
 Managing packages
 -----------------
@@ -89,15 +90,27 @@ environment in a directory called `~/.venvs` (the directory will be created if
 it does not yet exist).
 
 ```bash
-# Create a new Python 3virtual environment
+# Create a new Python virtual environment
 #
 # Usage:
 #
-#    create_new_venv <project_name>
+#    make_venv <project_name>
 #
 make_venv() {
     mkdir -p ~/.venvs
-    python -m venv ~/.venvs/$1
+    
+    # We redirect stderr to stdout for the command 'python --version' since
+    # for Python 2.x, the version is output to stderr instead of stdout.
+    local major_version=$(python --version 2>&1 | cut -c 8)
+
+    if [[ $major_version == "3" ]]; then
+        python -m venv ~/.venvs/$1
+    elif [[ $major_version == "2" ]]; then
+        python -m virtualenv ~/.venvs/$1
+    else
+        echo "Error: Python major version was not determined to be either 2 or 3."
+        return 1
+    fi
 }
 ```
 
@@ -110,11 +123,21 @@ make_venv myproject
 a virtual environment named `myproject` will be created at
 `~/.venvs/myproject`.
 
-I also have the following companion snippet to quickly activate virtual
-environments that have been created with `make_venv`.
+Note that if you are using Python 2[^py2warning], you will also need to install
+the appropriate version of the `virtualenv` package separately in order for the
+above snippet to function. For example, if you are using Python 2.7, you will
+also need to run the following command to enable the creation of Python 2.7
+virtual environments:
 
 ```bash
-# Activate a Python 3virtual environment
+sudo port install py27-virtualenv
+````
+
+I also have the following companion snippet in my `~/.bash_profile` to quickly
+activate virtual environments that have been created with `make_venv`.
+
+```bash
+# Activate a Python virtual environment
 #
 # Usage:
 #
@@ -125,22 +148,53 @@ activate() {
 }
 ```
 
+
 For example, invoking `activate myproject` at the command line will activate
 the `myproject` virtual environment, automatically pointing your `python` and
 `pip` invocations to the correct binaries, and bringing the packages installed
 within the virtual environment into scope for usage in Python scripts. Note
 that you must activate the virtual environment before installing packages in
-order to sandbox the package installations.
+order to correctly isolate the package installations.
 
 
-### Installing packages system-wide
+### Installing packages system-wide (advanced)
 
 If you do not anticipate working on multiple Python projects with potentially
-conflicting dependencies, this route might be the one for you, since you
-would not need to activate virtual environments every time you wanted to do
-anything Python-related that goes beyond Python's standard library. (work in
-progress)
+conflicting dependencies, this route might be the one for you, since you would
+not need to activate virtual environments every time you wanted to do anything
+Python-related that goes beyond Python's standard library. However, if you are
+still new to juggling multiple versions of Python, I would recommend simply
+sticking with the virtual environment approach outlined above. It is easier to
+go from virtual environments to system-wide package installations than the
+other way around[^system-site-packages].
 
+Popular packages such as `numpy` and `matplotlib` have dedicated ports and can
+be installed system-wide by invoking:
+
+```bash
+sudo port install py-<packagename>
+```
+
+For example, running the following command
+
+```bash
+sudo port install py-numpy
+```
+
+will install `numpy` system-wide for the version of Python that you currently
+have active. If you want to check whether a port exists for a given Python
+package, you can use the `port search` command:
+
+```bash
+port search py-<packagename>`
+```
+
+If you want to install a package system-wide that does not have an existing
+port, you can simply use `pip`:
+
+```bash
+sudo pip install <packagename>
+```
 
 [^1]: Ideally, you would also have removed other Python distributions that you
 installed yourself (e.g. the one from Python.org, Anaconda, etc.), unless you
@@ -149,7 +203,17 @@ variable appropriately to work with multiple Python distributions.
 
 [^2]: The `sudo` in the invocation is required if you install MacPorts to the
 default location (`/opt/local`). However, if the MacPorts root directory is
-somewhere else, e.g., in your home directory (`~`), then you may not need to
+somewhere else, e.g., in your home directory (e.g., `~/macports`), then you may not need to
 prefix your invocation with `sudo`.
 
 [^3]: If you are using `zsh`, put the snippet in `~/.zprofile` instead.
+
+[^py2warning]: Python 2 support [ended on January 1,
+2020](https://www.python.org/doc/sunset-python-2/), so you really should not be
+using it unless you are working with legacy code that is completely unfeasible
+to port to Python 3.
+
+[^system-site-packages]: The two methods can also co-exist if you pass the
+command line flag `--system-site-packages` to the `python -m venv` invocation,
+but that is beyond the scope of this post, since it is unlikely that you will
+need to do this.
