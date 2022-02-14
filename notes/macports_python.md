@@ -27,7 +27,7 @@ manage Python versions.
 To install the latest version of Python along with the corresponding version of
 `pip`, do
 
-```
+```bash
 sudo port install py<major><minor>-pip
 ````
 
@@ -36,23 +36,42 @@ that you are trying to install[^1]. For example, if you wanted to install Python
 3.10 (the latest version at the time of writing this (2022-02-12)), you would
 run the following command.
 
-```
+```bash
 sudo port install py310-pip
 ```
 
-To activate a particular version of Python and pip, you would use the `port
-select` command.
+To activate a particular version of Python and pip, you would use the `port select`
+command. You can put the following snippet in your `~/.bash_profile`[^2] to
+simplify the process.
 
-```
-activate_py3(){
-  sudo port select --set python python$1
-  sudo port select --set pip pip$1
-
-  sudo port select --set python3 python$1
+```bash
+# Usage: activate_py <major_version><minor_version>
+# Example:
+#
+#    activate_py 310
+#
+# will activate Python 3.10
+activate_py() {
+    major_version=$(echo $1 | cut -c 1)
+    minor_version=$(echo $1 | cut -d "$major_version" -f2)
+    sudo port select --set python python"$1"
+    sudo port select --set python"$major_version" python"$1"
+    sudo port select --set pip pip"$1"
 }
 ```
+
+The snippet above defines a function `activate_py` that can be invoked to
+switch between Python versions. For example:
+
+```bash
+activate_py 310
+```
+
+will activate Python 3.10 and the corresponding version of `pip`.
 
 [^1]: The `sudo` in the invocation is required if you install MacPorts to the
 default location (`/opt/local`). However, if the MacPorts root directory is
 somewhere else, e.g., in your home directory (`~`), then you may not need to
 prefix your invocation with `sudo`.
+
+[^2]: If you are using `zsh`, put the snippet in `~/.zprofile` instead.
