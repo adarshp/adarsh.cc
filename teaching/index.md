@@ -9,5 +9,3 @@ Some of the courses I have taught in the past:
 * [Introductory Algebra Based Physics (Lecture)](/teaching/phys102/)
 * [Introductory Mechanics Lab](/teaching/phys141/)
 * [Introductory Electricity and Mechanism Lab](/teaching/phys241/)
-
-[Colophon](https://typekit.com/colophons/teo1mav)
