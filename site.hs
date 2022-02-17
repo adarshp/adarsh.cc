@@ -25,7 +25,7 @@ main = hakyllWith cfg $ do
   match ("**.md" .&&. complement "README.md" .&&. complement "**index.md") $ do
     route $ setExtension "html"
     compile $ pandocCompilerWith defaultHakyllReaderOptions withToc
-      >>= loadAndApplyTemplate "templates/page.html" defaultContext
+      >>= loadAndApplyTemplate "templates/post.html" defaultContext
       >>= relativizeUrls
 
   match "**index.md" $ do

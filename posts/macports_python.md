@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Working with MacPorts and Python"
-date: "February 12, 2022"
+date: 2022-02-12
 ---
 
 For a number of reasons, I prefer [MacPorts](https://www.macports.org) over
@@ -28,7 +28,7 @@ already installed MacPorts on your system[^1].
 Managing multiple versions of Python and pip
 --------------------------------------------
 
-To install the latest version of Python along with the corresponding version of
+To install a specific version of of Python along with the corresponding version of
 `pip`, do
 
 ```bash
@@ -56,8 +56,8 @@ simplify the process.
 #
 # will activate Python 3.10
 activate_py() {
-    major_version=$(echo $1 | cut -c 1)
-    minor_version=$(echo $1 | cut -d "$major_version" -f2)
+    local major_version=$(echo $1 | cut -c 1)
+    local minor_version=$(echo $1 | cut -d "$major_version" -f2)
     sudo port select --set python python"$1"
     sudo port select --set python"$major_version" python"$1"
     sudo port select --set pip pip"$1"
