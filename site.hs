@@ -15,6 +15,15 @@ cfg :: Configuration
 cfg = defaultConfiguration
     { deployCommand =  "rsync -avz -e 'ssh -p21098' _site/ \ 
                         \adarycts@server47.web-hosting.com:~/www" }
+postCtx :: Context String
+postCtx =
+  dateField "date" "%B %e, %Y"
+  `mappend` defaultContext
+
+archiveCtx posts =
+  listField "posts" postCtx (return posts)
+  `mappend` constField "title" "Archives"
+  `mappend` defaultContext
 
 main :: IO ()
 main = hakyllWith cfg $ do
@@ -34,8 +43,17 @@ main = hakyllWith cfg $ do
       >>= loadAndApplyTemplate "templates/index.html" defaultContext
       >>= relativizeUrls
 
+
   match "templates/*" $ compile templateCompiler
 
+  create ["posts.html"] $ do
+    route $ setExtension "html"
+    compile $ do
+      posts <- recentFirst =<< loadAll "posts/*"
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/list.html" (archiveCtx posts)
+        >>= loadAndApplyTemplate "templates/index.html" postCtx
+        >>= relativizeUrls
   where
     withToc= defaultHakyllWriterOptions{ 
       writerTableOfContents = True,

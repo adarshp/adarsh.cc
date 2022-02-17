@@ -3,6 +3,7 @@ layout: post
 title: "Simple 1D random walk animation in Python"
 tags:
     - python
+date: 2017-05-01
 --- 
 
 This is a demo I created as part of teaching Physics 105 (Scientific
