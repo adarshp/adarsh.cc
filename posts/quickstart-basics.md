@@ -12,12 +12,28 @@ command line and the Vim text editor for getting started working with me on
 research projects. You can skip any material that you are already familiar
 with.
 
+
+Operating system
+----------------
+
+If you already have macOS or Linux on your laptop, you can skip this section.
+
+Since I am not familiar with programming on Windows, and have run into numerous
+issues in the past while trying to help students develop software on their
+Windows machines, I now ask students who don't have a macOS or Linux laptop to
+install Ubuntu on their laptop in a dual-booting setup. Ubuntu is a popular,
+relatively user-friendly flavor of Linux that I recommend for people who are
+new to Linux. Follow the instructions
+[here](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview) to
+install Ubuntu.
+
+
 Getting comfortable with the command line
 -----------------------------------------
 
 Read the following sections of the [PDF
 version](https://sourceforge.net/projects/linuxcommand/files/TLCL/19.01/TLCL-19.01.pdf/download)
-of [The Linux Command Line](http://linuxcommand.org/index.php):
+of [*The Linux Command Line*](http://linuxcommand.org/index.php):
 
 - Page xvi: Why use the command line?
 - Pages 2-3: Terminal emulators, command history, cursor movement
@@ -38,7 +54,7 @@ need - that is, to create a mental index for quick information retrieval.
 Getting comfortable with Vim
 ----------------------------
 
-In pages 141-143 of the Linux Command Line (see above), you briefly encountered
+In pages 141-143 of *The Linux Command Line* (see above), you briefly encountered
 the Vim text editor. In my personal opinion, if you think you will spend a
 substantial amount of time in your career writing documents and/or programs on
 a computer, learning a bit of Vim will pay off handsomely. Here are my
