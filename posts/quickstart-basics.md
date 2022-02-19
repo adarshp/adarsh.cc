@@ -85,3 +85,15 @@ The two most popular package managers for macOS are
 
 Having tried both, I vastly prefer MacPorts. Follow the instructions
 [here](https://www.macports.org/install.php) to install it.
+
+Version control
+---------------
+
+We will use [`git`](https://git-scm.com) for source code management and version
+control. If you are on macOS, `git` will be installed as part of the Xcode
+Command Line Tools (part of the MacPorts installation process).
+
+We use [Github](https://github.com) to host our git repositories and
+collaborate on developing software. Send me your Github username (if you don't
+already have a Github account, create one) so that I can add you to any
+relevant project-specific repositories.
