@@ -7,14 +7,15 @@ date: "2022-02-18"
 Introduction
 ------------
 
-This post contains 'quickstart' instructions for learning the basics of the
-command line and the Vim text editor for getting started working with me on
-research projects. You can skip any material that you are already familiar
-with.
+This post contains 'quickstart' instructions for setting up a software
+development environment and learning basic skills such as working with the
+command line and using the Vim text editor, all of which you will need to do if
+you are working with me on research projects. Feel free to skip any material
+that you are already familiar with.
 
 
-Operating system
-----------------
+(Windows users only) Operating system
+-------------------------------------
 
 If you already have macOS or Linux on your laptop, you can skip this section.
 
@@ -28,8 +29,8 @@ new to Linux. Follow the instructions
 install Ubuntu.
 
 
-Getting comfortable with the command line
------------------------------------------
+Command Line
+------------
 
 Read the following sections of the [PDF
 version](https://sourceforge.net/projects/linuxcommand/files/TLCL/19.01/TLCL-19.01.pdf/download)
@@ -51,8 +52,8 @@ immediately, but to get a sense of what is possible when interacting with the
 computer via the command line, and to be able to look up stuff later when you
 need - that is, to create a mental index for quick information retrieval.
 
-Getting comfortable with Vim
-----------------------------
+Text editor
+-----------
 
 In pages 141-143 of *The Linux Command Line* (see above), you briefly encountered
 the Vim text editor. In my personal opinion, if you think you will spend a
@@ -72,3 +73,15 @@ file (`~/.vimrc`):
 ```
 set number
 ```
+
+(macOS users only) Package manager
+----------------------------------
+
+You will need a package manager to install libraries and programs required for
+software development.
+
+The two most popular package managers for macOS are
+[MacPorts](https://www.macports.org) and [Homebrew](https://brew.sh).
+
+Having tried both, I vastly prefer MacPorts. Follow the instructions
+[here](https://www.macports.org/install.php) to install it.
