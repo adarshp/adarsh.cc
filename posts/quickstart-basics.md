@@ -19,15 +19,15 @@ Read the following sections of the [PDF
 version](https://sourceforge.net/projects/linuxcommand/files/TLCL/19.01/TLCL-19.01.pdf/download)
 of [The Linux Command Line](http://linuxcommand.org/index.php):
 
-- Page xvi
-- Pages 2-3
-- Chapter 2
-- Pages 25-33
-- Chapter 6
-- Pages 68-70
-- Pages 73-78
-- Pages 128-134
-- Pages 141-143
+- Page xvi: Why use the command line?
+- Pages 2-3: Terminal emulators, command history, cursor movement
+- Chapter 2: Navigation
+- Pages 25-33: Manipulating files and directories
+- Chapter 6: Redirection
+- Pages 68-70: Expansion
+- Pages 73-78: Quoting
+- Pages 128-134: Environment
+- Pages 141-143: Motivation for learning `vi` and some background.
 
 Make sure to try all the commands in the examples, in order to develop some
 muscle memory for them. The goal is not to memorize all the commands
