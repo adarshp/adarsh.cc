@@ -19,7 +19,7 @@ Prerequisite software
 Install OpenJDK 8 and SBT. If you are using MacPorts, you can do this by running the
 following command:
 
-```
+```bash
 sudo port install openjdk8 sbt
 ```
 
