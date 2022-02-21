@@ -38,4 +38,4 @@ cd odin-tutorial
 docker-compose up
 ```
 
-Then, navigate to localhost:8880 in your web browser to access the tutorial.
+Then, navigate to `localhost:8880` in your web browser to access the tutorial.
