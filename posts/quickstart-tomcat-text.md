@@ -11,7 +11,7 @@ This post contains 'quickstart' instructions for getting familiar with the
 [ToMCAT](https://ml4ai.github.io/tomcat) rule-based system for extracting
 entities and events from natural language dialogue.
 
-**Prerequisite**: Complete the steps in [Quickstart: Odin](/posts/quickstart_odin.html).
+**Prerequisite**: Complete the steps in [Quickstart: Odin](/posts/quickstart-odin.html).
 
 Prerequisite software
 ---------------------

@@ -11,7 +11,7 @@ This post contains 'quickstart' instructions for getting familiar with the Odin
 system for extracting information from natural language. We use Odin in a
 number of projects in the [ML4AI Lab](https://ml4ai.github.io).
 
-**Prerequisite**: Complete the steps in [Quickstart: Basics](/posts/quickstart_basics.html).
+**Prerequisite**: Complete the steps in [Quickstart: Basics](/posts/quickstart-basics.html).
 
 
 Reading
