@@ -97,3 +97,7 @@ We use [Github](https://github.com) to host our git repositories and
 collaborate on developing software. Send me your Github username (if you don't
 already have a Github account, create one) so that I can add you to any
 relevant project-specific repositories.
+
+Additionally, please set up an SSH key to use with Github, following the
+instructions
+[here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
