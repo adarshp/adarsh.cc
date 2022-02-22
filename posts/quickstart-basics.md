@@ -4,6 +4,8 @@ title: "Quickstart: Basics"
 date: "2022-02-18"
 ---
 
+*Last updated: 2022-02-21*
+
 Introduction
 ------------
 
@@ -101,3 +103,16 @@ relevant project-specific repositories.
 Additionally, please set up an SSH key to use with Github, following the
 instructions
 [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+
+LaTeX
+-----
+
+- Install a LaTeX distribution on your computer - see Step one
+  [here](https://ctan.org/starter) for instructions.
+- Go through the [*Learn LaTeX in 30
+  minutes*](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+  tutoral. You can use `vim` as a text editor for LaTeX[^vimtex].
+
+[^vimtex]: You may find it useful to install the
+[vimtex](https://github.com/lervag/vimtex) plugin to provide syntax
+highlighting and LaTeX-specific motions in vim.
