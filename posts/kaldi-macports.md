@@ -89,11 +89,11 @@ programs. If you want this setting to persist across terminal sessions, then
 you should add a line to your `~/.bash_profile` to do so:
 
 ```bash
-export PATH=$PATH:$KALDI_ROOT/dist/bin
+export PATH=$PATH:<path_to_kaldi>/dist/bin
 ```
 
-where `KALDI_ROOT` is the location of your local clone of the `kaldi`
-repository.
+where you would replace `<path_to_kaldi>` with the path to your local clone of
+the `kaldi` repository.
 
 This next step took a little while to figure out. You will need to comment out
 line 121 of the file `kaldi/egs/wsj/s5/utils/prepare_lang.sh`:
