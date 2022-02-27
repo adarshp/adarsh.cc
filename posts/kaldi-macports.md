@@ -8,11 +8,12 @@ Introduction
 ------------
 
 This post contains instructions for building the Kaldi programs and libraries
-on macOS[^linux] with the MacPorts package manager. Currently, there are two methods
-for building Kaldi. The first one uses a set of bash scripts and Makefiles,
-while the second, newer one is based on CMake. While the Kaldi documentation
-states that the CMake method is not as well tested and some features are
-missing currently, I chose this route for a couple of reasons:
+on macOS[^linux] assuming you are using MacPorts as your package manager.
+Currently, there are two methods for building Kaldi. The first one uses a set
+of bash scripts and Makefiles, while the second, newer one is based on CMake.
+While the Kaldi documentation states that the CMake method is not as well
+tested and some features are missing currently, I chose this route for a couple
+of reasons:
 
 - The old build process is not robust enough to detect the presence of OpenBLAS
   installed using MacPorts, and suggests that the user download the Intel MKL
