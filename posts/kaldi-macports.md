@@ -33,6 +33,12 @@ git clone https://github.com/kaldi-asr/kaldi
 cd kaldi
 ```
 
+If you don't already have CMake, install it by running:
+
+```bash
+sudo port install cmake
+```
+
 I followed the instructions in `cmake/INSTALL.md` to build with the
 [Ninja](https://ninja-build.org) generator (since Ninja is faster than Make).
 To install Ninja, you can run:
