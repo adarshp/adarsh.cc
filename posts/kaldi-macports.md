@@ -79,49 +79,30 @@ set the output directory for the compiled programs and libraries to the
 `dist` folder (i.e., `kaldi/build/dist`, if your current working directory is
 `build`).
 
-You can then run the `yesno` example to see if Kaldi was built successfully.
-
-First, `cd` into the `kaldi/egs/yesno/s5` folder. At the bottom of the
-`kaldi/cmake/INSTALL.md` file, you'll see a note to modify your `PATH`
-environment variable in order to run the test scripts. If you've been following
-the instructions so far, you can run this command to append the location of the
-Kaldi binaries to your `PATH`:
+You will need to modify your `PATH` environment variable in order to run the
+test scripts. If you've been following the instructions so far, you can run
+this command to append the location of the Kaldi binaries to your `PATH`:
 
 ```bash
-export PATH=$PATH:../../../build/dist/bin
+export PATH=$PATH:<path_to_kaldi>/build/dist/bin
 ```
 
-This will tell your shell to look in the `kaldi/dist/bin` folder for the Kaldi
+In the above, you would replace `<path_to_kaldi>` with the path to your local
+clone of the `kaldi` repository.
+
+This will tell your shell to look in the `kaldi/build/dist/bin` folder for the Kaldi
 programs. If you want this setting to persist across terminal sessions, then
-you should add a line to your `~/.bash_profile` to do so:
+you should add the line to your `~/.bash_profile`.
 
-```bash
-export PATH=$PATH:<path_to_kaldi>/dist/bin
-```
-
-where you would replace `<path_to_kaldi>` with the path to your local clone of
-the `kaldi` repository.
-
-This next step took a little while to figure out. You will need to comment out
-line 121 of the file `kaldi/egs/wsj/s5/utils/prepare_lang.sh`:
-
-```bash
-[ -f path.sh ] && . ./path.sh
-```
-
-The `path.sh` script sets environment variables assuming that you did the
-old-style build rather than the CMake build, which results in a dynamic library
-loading error.
-
-Once you have commented out that line, you should be able to run the following
-command to run the `yesno` example (this assumes you are in the
-`kaldi/egs/yesno/s5` directory):
+You can then run the `yesno` example to see if Kaldi was built successfully.
+To do so, `cd` into the `kaldi/egs/yesno/s5` folder and run the following
+command:
 
 ```bash
 ./run.sh
 ```
 
-Here is the output I get, indicating the program has run successfully.
+Here is the output you should get:
 
 ```bash
 --2022-03-01 13:41:02--  http://www.openslr.org/resources/1/waves_yesno.tar.gz
