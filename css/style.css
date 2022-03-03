@@ -17,6 +17,11 @@ ul {
     max-width: 33em;
 }
 
+ol {
+    line-height: 1.25;
+    max-width: 33em;
+}
+
 .nav-link {
     font-family: "myriad-pro";
     padding-top: 2.2em;
