@@ -15,6 +15,9 @@ cfg :: Configuration
 cfg = defaultConfiguration
     { deployCommand =  "rsync -avz -e 'ssh -p21098' _site/ \ 
                         \adarycts@server47.web-hosting.com:~/www" }
+------------
+-- Contexts
+------------
 postCtx :: Context String
 postCtx =
   dateField "date" "%B %e, %Y"
@@ -25,35 +28,24 @@ archiveCtx posts =
   `mappend` constField "title" "Archives"
   `mappend` defaultContext
 
-main :: IO ()
-main = hakyllWith cfg $ do
-  forM_ ["fonts/*", "assets/*", "css/*", "js/*"] $ \x -> match x $ do
-    route idRoute
-    compile $ copyFileCompiler
+------------
+-- Rules
+------------
+compiler :: Compiler (Item String)
+compiler = pandocCompilerWith defaultHakyllReaderOptions pandocOptions
 
-  match ("**.md" .&&. complement "README.md" .&&. complement "**index.md") $ do
+pandocOptions :: WriterOptions
+pandocOptions = defaultHakyllWriterOptions{ writerHTMLMathMethod = MathJax "" }
+
+templates :: Rules ()
+templates = match "templates/*" $ compile templateCompiler
+
+posts :: Rules ()
+posts = match ("**.md" .&&. complement "README.md" .&&. complement "**index.md") $ do
     route $ setExtension "html"
     compile $ pandocCompilerWith defaultHakyllReaderOptions withToc
       >>= loadAndApplyTemplate "templates/post.html" defaultContext
       >>= relativizeUrls
-
-  match "**index.md" $ do
-     route $ setExtension "html"
-     compile $ compiler
-      >>= loadAndApplyTemplate "templates/index.html" defaultContext
-      >>= relativizeUrls
-
-
-  match "templates/*" $ compile templateCompiler
-
-  create ["posts.html"] $ do
-    route $ setExtension "html"
-    compile $ do
-      posts <- recentFirst =<< loadAll "posts/*"
-      makeItem ""
-        >>= loadAndApplyTemplate "templates/list.html" (archiveCtx posts)
-        >>= loadAndApplyTemplate "templates/index.html" postCtx
-        >>= relativizeUrls
   where
     withToc= defaultHakyllWriterOptions{ 
       writerTableOfContents = True,
@@ -62,9 +54,36 @@ main = hakyllWith cfg $ do
       writerHTMLMathMethod = MathJax "" 
     }
 
+archive :: Rules ()
+archive = create ["posts.html"] $ do
+    route $ setExtension "html"
+    compile $ do
+      posts <- recentFirst =<< loadAll "posts/*"
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/list.html" (archiveCtx posts)
+        >>= loadAndApplyTemplate "templates/index.html" postCtx
+        >>= relativizeUrls
 
-compiler :: Compiler (Item String)
-compiler = pandocCompilerWith defaultHakyllReaderOptions pandocOptions
+indices :: Rules ()
+indices = match "**index.md" $ do
+     route $ setExtension "html"
+     compile $ compiler
+      >>= loadAndApplyTemplate "templates/index.html" defaultContext
+      >>= relativizeUrls
 
-pandocOptions :: WriterOptions
-pandocOptions = defaultHakyllWriterOptions{ writerHTMLMathMethod = MathJax "" }
+static :: Rules ()
+static = forM_ ["fonts/*", "assets/*", "css/*", "js/*"] $ \x -> match x $ do
+    route idRoute
+    compile $ copyFileCompiler
+
+
+------------
+-- Main
+------------
+main :: IO ()
+main = hakyllWith cfg $ do
+  static
+  indices
+  posts
+  templates
+  archive
