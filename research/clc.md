@@ -31,3 +31,6 @@ tasks in a Minecraft-based environment, audio is currently streamed via the web
 browser, with an interface specialized for these particular experiments. In
 order to test our dialogue system in more general contexts, especially ones
 that involve more ambulatory participants, we need a new `frontend'.
+
+References
+----------
