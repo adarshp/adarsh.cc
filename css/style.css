@@ -7,7 +7,19 @@ body {
     color: #555;
 }
 
-/* Ensure that paragraphs and lists respect the margins */
+/* Ensure that paragraphs lists, and images respect the margins */
+
+figcaption {
+    line-height: 1.25;
+    width: 80%;
+    font-family: "myriad-pro";
+    font-size: 0.8rem;
+}
+
+img {
+    width: 33em;
+    margin-bottom: 1rem;
+}
 
 p {
     line-height: 1.25;

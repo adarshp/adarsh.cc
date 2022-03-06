@@ -46,7 +46,7 @@ archiveCtx posts =
 
 withTOC :: WriterOptions
 withTOC = defaultHakyllWriterOptions{ 
-    writerNumberSections  = True,
+    writerNumberSections  = False,
     writerTableOfContents = True,
     writerTemplate = Just "<h2>Table of Contents</h2>$toc$\n$body$",
     writerHTMLMathMethod = MathJax "" 
@@ -105,7 +105,7 @@ indices = match "**index.md" $ do
       >>= relativizeUrls
 
 static :: Rules ()
-static = forM_ ["fonts/*", "assets/*", "css/*", "js/*"] $ \x -> match x $ do
+static = forM_ ["fonts/*", "assets/**", "css/*", "js/*"] $ \x -> match x $ do
     route idRoute
     compile $ copyFileCompiler
 
