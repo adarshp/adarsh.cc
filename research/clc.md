@@ -1,21 +1,21 @@
 ---
 title: Automated real-time detection of closed-loop communication in spoken dialogue
 layout: page
-reference-section-title: "References"
 ---
 
 Good teamwork processes enable teams to perform beyond the sum of their parts
-[@Roberts.ea:2021]. Closed loop communication (CLC) has been proposed in the team science
-literature as one of the coordinating mechanisms for effective teamwork [2],
-and has been demonstrated to improve team outcomes in a variety of domains.
-Currently, CLC in spoken dialogue is identified via retrospective analyses
-involving manual transcription and annotation. However, given the potentially
-catastrophic consequences of poor team communication – especially in complex,
-fast-paced, and high stakes environments such as operating theaters [3] – we
-argue that there is an urgent need for AI technologies that can detect and
-repair breakdowns in CLC as they happen. To address this need, we propose to
-develop an AI system for detecting the presence or absence of CLC in spoken
-dialogue within teams of humans collaborating on shared tasks.
+[@Roberts.ea:2021]. Closed loop communication (CLC) has been proposed in the
+team science literature as one of the coordinating mechanisms for effective
+teamwork [@Salas.ea:2005], and has been demonstrated to improve team outcomes
+in a variety of domains.  Currently, CLC in spoken dialogue is identified via
+retrospective analyses involving manual transcription and annotation. However,
+given the potentially catastrophic consequences of poor team communication –
+especially in complex, fast-paced, and high stakes environments such as
+operating theaters [@Flin.ea:2004] – we argue that there is an urgent need for
+AI technologies that can detect and repair breakdowns in CLC as they happen. To
+address this need, we propose to develop an AI system for detecting the
+presence or absence of CLC in spoken dialogue within teams of humans
+collaborating on shared tasks.
 
 Currently, most dialogue systems that understand and respond to human speech in
 real time (e.g., Siri, Alexa, Google Assistant) are limited to conversing with

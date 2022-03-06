@@ -2,6 +2,7 @@
 layout: post
 title: "Building Kaldi with MacPorts"
 date: 2022-02-27
+toc: true
 ---
 
 *Last updated: 2022-03-01*
@@ -310,7 +311,7 @@ Checking data/local/dict/extra_questions.txt ...
 --> SUCCESS [validating dictionary directory data/local/dict]
 
 **Creating data/local/dict/lexiconp.txt from data/local/dict/lexicon.txt
-fstaddselfloops data/lang/phones/wdisambig_phones.int data/lang/phones/wdisambig_words.int 
+fstaddselfloops data/lang/phones/wdisambig_phones.int data/lang/phones/wdisambig_words.int
 prepare_lang.sh: validating output directory
 utils/validate_lang.pl data/lang
 Checking existence of separator file
@@ -412,11 +413,11 @@ Checking data/lang/oov.{txt, int} ...
 --> data/lang/L_disambig.fst is olabel sorted
 --> SUCCESS [validating lang directory data/lang]
 Preparing language models for test
-arpa2fst --disambig-symbol=#0 --read-symbol-table=data/lang_test_tg/words.txt input/task.arpabo data/lang_test_tg/G.fst 
+arpa2fst --disambig-symbol=#0 --read-symbol-table=data/lang_test_tg/words.txt input/task.arpabo data/lang_test_tg/G.fst
 LOG (arpa2fst[5.5]:Read():lm/arpa-file-parser.cc:94) Reading \data\ section.
 LOG (arpa2fst[5.5]:Read():lm/arpa-file-parser.cc:149) Reading \1-grams: section.
 LOG (arpa2fst[5.5]:RemoveRedundantStates():lm/arpa-lm-compiler.cc:359) Reduced num-states from 1 to 1
-fstisstochastic data/lang_test_tg/G.fst 
+fstisstochastic data/lang_test_tg/G.fst
 1.20397 1.20397
 Succeeded in formatting data.
 steps/make_mfcc.sh --nj 1 data/train_yesno exp/make_mfcc/train_yesno mfcc
@@ -505,29 +506,29 @@ steps/diagnostic/analyze_alignments.sh: see stats in exp/mono0a/log/analyze_alig
 4 warnings in exp/mono0a/log/update.*.log
 exp/mono0a: nj=1 align prob=-81.81 over 0.05h [retry=0.0%, fail=0.0%] states=11 gauss=372
 steps/train_mono.sh: Done training monophone system in exp/mono0a
-tree-info exp/mono0a/tree 
-tree-info exp/mono0a/tree 
-fsttablecompose data/lang_test_tg/L_disambig.fst data/lang_test_tg/G.fst 
-fstminimizeencoded 
-fstdeterminizestar --use-log=true 
-fstpushspecial 
-fstisstochastic data/lang_test_tg/tmp/LG.fst 
+tree-info exp/mono0a/tree
+tree-info exp/mono0a/tree
+fsttablecompose data/lang_test_tg/L_disambig.fst data/lang_test_tg/G.fst
+fstminimizeencoded
+fstdeterminizestar --use-log=true
+fstpushspecial
+fstisstochastic data/lang_test_tg/tmp/LG.fst
 0.534295 0.533859
 [info]: LG not stochastic.
-fstcomposecontext --context-size=1 --central-position=0 --read-disambig-syms=data/lang_test_tg/phones/disambig.int --write-disambig-syms=data/lang_test_tg/tmp/disambig_ilabels_1_0.int data/lang_test_tg/tmp/ilabels_1_0.73784 data/lang_test_tg/tmp/LG.fst 
-fstisstochastic data/lang_test_tg/tmp/CLG_1_0.fst 
+fstcomposecontext --context-size=1 --central-position=0 --read-disambig-syms=data/lang_test_tg/phones/disambig.int --write-disambig-syms=data/lang_test_tg/tmp/disambig_ilabels_1_0.int data/lang_test_tg/tmp/ilabels_1_0.73784 data/lang_test_tg/tmp/LG.fst
+fstisstochastic data/lang_test_tg/tmp/CLG_1_0.fst
 0.534295 0.533859
 [info]: CLG not stochastic.
-make-h-transducer --disambig-syms-out=exp/mono0a/graph_tgpr/disambig_tid.int --transition-scale=1.0 data/lang_test_tg/tmp/ilabels_1_0 exp/mono0a/tree exp/mono0a/final.mdl 
-fstdeterminizestar --use-log=true 
-fsttablecompose exp/mono0a/graph_tgpr/Ha.fst data/lang_test_tg/tmp/CLG_1_0.fst 
-fstrmsymbols exp/mono0a/graph_tgpr/disambig_tid.int 
-fstrmepslocal 
-fstminimizeencoded 
-fstisstochastic exp/mono0a/graph_tgpr/HCLGa.fst 
+make-h-transducer --disambig-syms-out=exp/mono0a/graph_tgpr/disambig_tid.int --transition-scale=1.0 data/lang_test_tg/tmp/ilabels_1_0 exp/mono0a/tree exp/mono0a/final.mdl
+fstdeterminizestar --use-log=true
+fsttablecompose exp/mono0a/graph_tgpr/Ha.fst data/lang_test_tg/tmp/CLG_1_0.fst
+fstrmsymbols exp/mono0a/graph_tgpr/disambig_tid.int
+fstrmepslocal
+fstminimizeencoded
+fstisstochastic exp/mono0a/graph_tgpr/HCLGa.fst
 0.5342 -0.000375572
 HCLGa is not stochastic
-add-self-loops --self-loop-scale=0.1 --reorder=true exp/mono0a/final.mdl exp/mono0a/graph_tgpr/HCLGa.fst 
+add-self-loops --self-loop-scale=0.1 --reorder=true exp/mono0a/final.mdl exp/mono0a/graph_tgpr/HCLGa.fst
 steps/decode.sh --nj 1 --cmd utils/run.pl exp/mono0a/graph_tgpr data/test_yesno exp/mono0a/decode_test_yesno
 decode.sh: feature type is delta
 steps/diagnostic/analyze_lats.sh --cmd utils/run.pl exp/mono0a/graph_tgpr exp/mono0a/decode_test_yesno

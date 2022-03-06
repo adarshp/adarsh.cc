@@ -6,6 +6,7 @@ import Hakyll
 import Text.Pandoc (
       WriterOptions
     , writerTemplate
+    , writerTopLevelDivision
     , writerTableOfContents
     , writerNumberSections
     , writerHTMLMathMethod
@@ -62,7 +63,7 @@ withoutTOC = defaultHakyllWriterOptions{
 
 compiler :: Compiler (Item String)
 compiler = do
-    csl <- load "chicago.csl"
+    csl <- load "apa.csl"
     biblio <- load "refs.bib"
     ident <- getUnderlying
     toc   <- getMetadataField ident "toc"
@@ -114,7 +115,7 @@ static = forM_ ["fonts/*", "assets/*", "css/*", "js/*"] $ \x -> match x $ do
 ------------
 main :: IO ()
 main = hakyllWith cfg $ do
-  match "chicago.csl" $ compile cslCompiler
+  match "apa.csl" $ compile cslCompiler
   match "refs.bib"    $ compile biblioCompiler 
   static
   indices

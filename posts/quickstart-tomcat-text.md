@@ -2,6 +2,7 @@
 layout: post
 title: "Quickstart: ToMCAT Rule-based Information Extraction System"
 date: "2022-02-21"
+toc: true
 ---
 
 Introduction
