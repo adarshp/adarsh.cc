@@ -100,6 +100,7 @@ SensorLab](https://sensorlab.arizona.edu) via two intramural seed grants.
 
 We are also collaborating with the [UArizona
 Holodeck](https://uavip.arizona.edu/teams/standalone-teams/uarizona-holodeck-health-wellbeing-and-design-thinking)
+for this project.
 
 References
 ----------
