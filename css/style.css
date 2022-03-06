@@ -7,6 +7,8 @@ body {
     color: #555;
 }
 
+/* Ensure that paragraphs and lists respect the margins */
+
 p {
     line-height: 1.25;
     max-width: 33em;
@@ -26,6 +28,7 @@ ol {
     font-family: "myriad-pro";
     padding-top: 2.2em;
     letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
 
 .row-featurette {
