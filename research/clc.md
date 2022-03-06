@@ -4,6 +4,12 @@ layout: page
 toc: true
 ---
 
+**Announcement (2022-03-06): Now hiring!**
+
+*We are looking to hire an undergraduate research
+assistant to help with building a graphical user interface for this project.
+Please see the [job posting](/posts/clc-ugrad-hiring.html) for more details.*
+
 Introduction
 ------------
 
@@ -61,13 +67,29 @@ system.](/assets/img/clc.png)
 Task 2: Closed loop communication (CLC) detector
 ------------------------------------------------
 
-The existing ToMCAT dialogue system, is currently able to analyze spoken
+The existing ToMCAT dialogue system is currently able to analyze spoken
 conversations in real time to extract entities and events of interest with a
 powerful rule-based framework [@Valenzuela-Escarcega.ea:2016], classify
 dialogue acts, and detect sentiment.  We propose to extend this system to
 detect closed loop communication as well.  We will start by implementing a set
 of rules in the module, and then explore whether machine learning techniques
 improve its performance.
+
+Team
+----
+
+The team for this consists of the following people:
+
+- **Graduate Research Assistants**
+  - Yuwei Wang
+  - Chen Chen
+  - Gauri Yadav
+- **Undergraduate Research Assistants**
+  - Minh Duong
+  - Aditya Banerjee
+  - Aditya Jadhav
+- **Research Programmers**
+  - Vincent Raymond
 
 
 References
