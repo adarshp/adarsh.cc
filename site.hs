@@ -18,6 +18,9 @@ import qualified Data.Map as M
 import Data.Maybe (isJust, fromMaybe)
 import System.Process (callCommand)
 
+-----------------
+-- Configuration
+-----------------
 
 cfg :: Configuration
 cfg = defaultConfiguration
@@ -39,8 +42,6 @@ archiveCtx posts =
 ------------
 -- Options
 ------------
-pandocOptions :: WriterOptions
-pandocOptions = defaultHakyllWriterOptions{ writerHTMLMathMethod = MathJax "" }
 
 withTOC :: WriterOptions
 withTOC = defaultHakyllWriterOptions{ 
@@ -55,9 +56,9 @@ withoutTOC = defaultHakyllWriterOptions{
     writerHTMLMathMethod = MathJax "" 
 }
 
-------------
+-------------
 -- Compilers
-------------
+-------------
 
 compiler :: Compiler (Item String)
 compiler = do
@@ -71,7 +72,6 @@ compiler = do
     getResourceBody
         >>= readPandocBiblio defaultHakyllReaderOptions csl biblio
         >>= return . writePandocWith writerOptions'
-
 
 ------------
 -- Rules
