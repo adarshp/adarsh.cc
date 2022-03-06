@@ -92,5 +92,14 @@ The team for this consists of the following people:
   - Vincent Raymond
 
 
+Acknowledgments
+---------------
+
+This research is generously supported by the [University of Arizona
+SensorLab](https://sensorlab.arizona.edu) via two intramural seed grants.
+
+We are also collaborating with the [UArizona
+Holodeck](https://uavip.arizona.edu/teams/standalone-teams/uarizona-holodeck-health-wellbeing-and-design-thinking)
+
 References
 ----------
