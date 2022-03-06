@@ -1,6 +1,7 @@
 ---
 title: Automated real-time detection of closed-loop communication in spoken dialogue
 layout: page
+reference-section-title: "References"
 ---
 
 Good teamwork processes enable teams to perform beyond the sum of their parts

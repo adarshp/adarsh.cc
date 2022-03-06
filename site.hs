@@ -3,7 +3,15 @@
 module Main where
 
 import Hakyll
-import Text.Pandoc
+import Text.Pandoc (
+      WriterOptions
+    , writerTemplate
+    , writerTableOfContents
+    , writerNumberSections
+    , writerHTMLMathMethod
+    , HTMLMathMethod(MathJax)
+    , compileTemplate
+    )
 import Control.Monad (forM_)
 import Data.Monoid (mappend)
 import qualified Data.Map as M
@@ -29,30 +37,54 @@ archiveCtx posts =
   `mappend` defaultContext
 
 ------------
--- Rules
+-- Options
 ------------
-compiler :: Compiler (Item String)
-compiler = pandocCompilerWith defaultHakyllReaderOptions pandocOptions
-
 pandocOptions :: WriterOptions
 pandocOptions = defaultHakyllWriterOptions{ writerHTMLMathMethod = MathJax "" }
 
+withTOC :: WriterOptions
+withTOC = defaultHakyllWriterOptions{ 
+    writerNumberSections  = True,
+    writerTableOfContents = True,
+    writerTemplate = Just "<h2>Table of Contents</h2>$toc$\n$body$",
+    writerHTMLMathMethod = MathJax "" 
+}
+
+withoutTOC :: WriterOptions
+withoutTOC = defaultHakyllWriterOptions{ 
+    writerHTMLMathMethod = MathJax "" 
+}
+
+------------
+-- Compilers
+------------
+
+compiler :: Compiler (Item String)
+compiler = do
+    csl <- load "chicago.csl"
+    biblio <- load "refs.bib"
+    ident <- getUnderlying
+    toc   <- getMetadataField ident "toc"
+    let writerOptions' = case toc of
+         Just _ ->  withTOC
+         Nothing -> withoutTOC
+    getResourceBody
+        >>= readPandocBiblio defaultHakyllReaderOptions csl biblio
+        >>= return . writePandocWith writerOptions'
+
+
+------------
+-- Rules
+------------
 templates :: Rules ()
 templates = match "templates/*" $ compile templateCompiler
 
 posts :: Rules ()
 posts = match ("**.md" .&&. complement "README.md" .&&. complement "**index.md") $ do
     route $ setExtension "html"
-    compile $ pandocCompilerWith defaultHakyllReaderOptions withToc
+    compile $ compiler
       >>= loadAndApplyTemplate "templates/post.html" defaultContext
       >>= relativizeUrls
-  where
-    withToc= defaultHakyllWriterOptions{ 
-      writerTableOfContents = True,
-      writerTemplate = Just "$if(toc)$\n<h2>Table of Contents</h2>$toc$\n\
-        \$endif$\n$body$",
-      writerHTMLMathMethod = MathJax "" 
-    }
 
 archive :: Rules ()
 archive = create ["posts.html"] $ do
@@ -82,6 +114,8 @@ static = forM_ ["fonts/*", "assets/*", "css/*", "js/*"] $ \x -> match x $ do
 ------------
 main :: IO ()
 main = hakyllWith cfg $ do
+  match "chicago.csl" $ compile cslCompiler
+  match "refs.bib"    $ compile biblioCompiler 
   static
   indices
   posts
