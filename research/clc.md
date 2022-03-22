@@ -82,7 +82,7 @@ The team for this consists of the following people:
 
 - **Graduate Research Assistants**
   - Yuwei Wang
-  - Chen Chen
+  - [Chen Chen](https://chencc33.github.io/)
   - Gauri Yadav
 - **Undergraduate Research Assistants**
   - Minh Duong
