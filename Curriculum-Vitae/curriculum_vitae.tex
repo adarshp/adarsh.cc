@@ -88,8 +88,8 @@
   SmallCapsFeatures={Letters=SmallCaps,LetterSpace=2},
 ]{Arno Pro}
 \setsansfont[%
-Numbers = {OldStyle, Proportional},
-BoldFont=* Semibold
+    Numbers = {OldStyle, Proportional},
+    BoldFont=* Semibold,
 ]{Myriad Pro}
 \setmonofont{Menlo}[Scale=MatchLowercase]
 
@@ -207,8 +207,7 @@ BoldFont=* Semibold
 }
 
 \newcommand{\appointment}[4]{
-  \emph{#1} & {\bfseries \sffamily #2}\newline
-            #3, #4
+  \emph{#1} & {\bfseries \sffamily #2}, #3, #4
 }
 
 \newcommand{\me}{\textbf{A. Pyarelal}}
@@ -227,21 +226,12 @@ BoldFont=* Semibold
 \newcommand{\media}[3]{\href{#1}{\emph{#2}}, #3}
 \newcommand{\sympaper}{%
     {\small \faFileText}
-    %\begin{tikzpicture}
-        %\draw [black, fill=black] (0,0) circle [radius=0.1];;
-    %\end{tikzpicture}
 }
 \newcommand{\symworkshop}{%
     {\small \faGears}
-    %\begin{tikzpicture}
-        %\draw [black, ultra thick] (0,0) circle [radius=0.09];;
-    %\end{tikzpicture}
 }
 \newcommand{\symposter}{%
     {\small \faThumbTack}
-    %\begin{tikzpicture}
-        %\draw [black, ultra thick] (0,0) rectangle (0.18, 0.18);;
-    %\end{tikzpicture}
 }
 
 \newcommand{\publication}[2]{ #1 & \fullcite{#2}\\\addlinespace\addlinespace}
@@ -267,7 +257,11 @@ BoldFont=* Semibold
     \appointment{2019 - }%
     {Research Scientist}%
     {School of Information}%
-    {University of Arizona}\\&\\
+    {University of Arizona}\\
+    \appointment{2020 - }%
+    {Affiliate Faculty}%
+    {Cognitive Science GIDP}%
+    {University of Arizona}\\
     \appointment{2017 - 18}%
     {Postdoctoral Research Associate}%
     {School of Information}%
@@ -333,6 +327,9 @@ BoldFont=* Semibold
                {Socially savvy artificial intelligence to be developed at UA}
                {Arizona Daily Star}\\
   \heading{Talks}
+   2022 & \talk{Building machines that understand humans}%
+               {SXSW}
+               {Austin, TX}\\\addlinespace
    2020 & \talk{Building machines that understand humans}%
                {Cognitive Science Colloquium Series}
                {Tucson, AZ}\\\addlinespace
@@ -364,6 +361,13 @@ BoldFont=* Semibold
                {23$^{\text{rd}}$ International Conference on Supersymmetry and Unification of Fundamental Interactions}
                {Lake Tahoe, CA}\\
   \heading{Teaching}
+  \textit{2017,20} & \textsf{\textbf{Organizer}}, IVILab Summer Programming Bootcamp\\
+  \teaching{%
+    Organized the IVILab Summer Programming Bootcamp in 2017 and 2020.
+    This involved preparing syllabi, writing up instructional materials,
+    giving lectures, grading assignments, and recruiting and coordinating other
+    lecturers.
+   }&\\
   \textit{2011-17} & \textsf{\textbf{Teaching Assistant}}, \textsf{ University of Arizona}\\
   \teaching{Introduction to Scientific Computing (Spring 2017)}
   \teaching{Advanced Lab (Fall 2013-Fall 2016).}
