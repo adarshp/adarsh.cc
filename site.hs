@@ -37,7 +37,7 @@ postCtx =
 
 archiveCtx posts =
   listField "posts" postCtx (return posts)
-  `mappend` constField "title" "Archives"
+  `mappend` constField "title" "Posts"
   `mappend` defaultContext
 
 ------------
@@ -94,7 +94,7 @@ archive = create ["posts.html"] $ do
       posts <- recentFirst =<< loadAll "posts/*"
       makeItem ""
         >>= loadAndApplyTemplate "templates/list.html" (archiveCtx posts)
-        >>= loadAndApplyTemplate "templates/index.html" postCtx
+        >>= loadAndApplyTemplate "templates/index.html" (archiveCtx posts)
         >>= relativizeUrls
 
 indices :: Rules ()
