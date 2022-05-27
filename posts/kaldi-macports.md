@@ -7,8 +7,7 @@ toc: true
 
 *Last updated: 2022-03-01*
 
-Introduction
-------------
+# Introduction
 
 This post contains instructions for building the Kaldi programs and libraries
 on macOS[^linux] assuming you are using MacPorts as your package manager.
@@ -27,8 +26,7 @@ of reasons:
   *out-of-source* builds, which overcome these limitations.
 
 
-Prerequisites
--------------
+# Prerequisites
 
 You will need CMake, OpenFST, and wget. You can install both with MacPorts:
 
@@ -36,8 +34,7 @@ You will need CMake, OpenFST, and wget. You can install both with MacPorts:
 sudo port install cmake openfst wget
 ```
 
-Steps
------
+# Steps
 
 First, clone the Kaldi repo and `cd` into it.
 

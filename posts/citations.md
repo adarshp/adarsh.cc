@@ -5,13 +5,11 @@ date: "2022-04-27"
 toc: true
 ---
 
-Introduction
-------------
+# Introduction
 
 This post contains miscellaneous tips for handling citations with BibTeX.
 
-My procedure
-------------
+# My procedure
 
 While Google Scholar does offer BibTeX entries for anything you can find on it,
 they tend to be uneven (and often inferior) in quality to the ones you can find

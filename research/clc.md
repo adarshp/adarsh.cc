@@ -10,8 +10,7 @@ toc: true
 assistant to help with building a graphical user interface for this project.
 Please see the [job posting](/posts/clc-ugrad-hiring.html) for more details.*
 
-Introduction
-------------
+# Introduction
 
 Good teamwork processes enable teams to perform beyond the sum of their parts
 [@Roberts.ea:2021]. Closed loop communication (CLC) has been proposed in the
@@ -42,8 +41,7 @@ browser, with an interface specialized for these particular experiments. In
 order to test our dialogue system in more general contexts, especially ones
 that involve more ambulatory participants, we need a new 'frontend'.
 
-Task 1: Wearable audio streaming device (WASD)
-----------------------------------------------
+# Task 1: Wearable audio streaming device (WASD)
 
 From our work on analyzing spoken dialogue datasets, we have learned that
 source separation is a significant challenge when it comes to analyzing spoken
@@ -64,8 +62,7 @@ from participants performing a shared task will be transmitted wirelessly to a
 central processing server running the ToMCAT dialogue
 system.](/assets/img/clc.png)
 
-Task 2: Closed loop communication (CLC) detector
-------------------------------------------------
+# Task 2: Closed loop communication (CLC) detector
 
 The existing ToMCAT dialogue system is currently able to analyze spoken
 conversations in real time to extract entities and events of interest with a
@@ -75,8 +72,7 @@ detect closed loop communication as well.  We will start by implementing a set
 of rules in the module, and then explore whether machine learning techniques
 improve its performance.
 
-Team
-----
+# Team
 
 The team for this consists of the following people:
 
@@ -92,8 +88,8 @@ The team for this consists of the following people:
   - Vincent Raymond
 
 
-Acknowledgments
----------------
+# Acknowledgments
+
 
 This research is generously supported by the [University of Arizona
 SensorLab](https://sensorlab.arizona.edu) via two intramural seed grants.
@@ -102,5 +98,4 @@ We are also collaborating with the [UArizona
 Holodeck](https://uavip.arizona.edu/teams/standalone-teams/uarizona-holodeck-health-wellbeing-and-design-thinking)
 for this project.
 
-References
-----------
+# References

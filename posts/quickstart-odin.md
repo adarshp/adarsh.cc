@@ -5,8 +5,7 @@ date: "2022-02-21"
 toc: true
 ---
 
-Introduction
-------------
+# Introduction
 
 This post contains 'quickstart' instructions for getting familiar with the Odin
 system for extracting information from natural language. We use Odin in a
@@ -15,14 +14,12 @@ number of projects in the [ML4AI Lab](https://ml4ai.github.io).
 **Prerequisite**: Complete the steps in [Quickstart: Basics](/posts/quickstart-basics.html).
 
 
-Reading
--------
+# Reading
 
 Read the [Odin manual](https://arxiv.org/pdf/1509.07513.pdf) to get an overview
 of the Odin framework.
 
-Tutorial
---------
+# Tutorial
 
 Try out the [interactive Odin tutorial](https://github.com/clu-ling/odin-tutorial).
 

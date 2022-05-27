@@ -5,10 +5,9 @@ date: "2022-02-18"
 toc: true
 ---
 
-*Last updated: 2022-02-21*
+*Last updated: 2022-05-27*
 
-Introduction
-------------
+# Introduction
 
 This post contains 'quickstart' instructions for setting up a software
 development environment and learning basic skills such as working with the
@@ -17,23 +16,21 @@ you are working with me on research projects. Feel free to skip any material
 that you are already familiar with.
 
 
-(Windows users only) Operating system
--------------------------------------
+Operating system
+====================================
 
 If you already have macOS or Linux on your laptop, you can skip this section.
 
 Since I am not familiar with programming on Windows, and have run into numerous
 issues in the past while trying to help students develop software on their
 Windows machines, I now ask students who don't have a macOS or Linux laptop to
-install Ubuntu on their laptop in a dual-booting setup. Ubuntu is a popular,
-relatively user-friendly flavor of Linux that I recommend for people who are
-new to Linux. Follow the instructions
-[here](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview) to
-install Ubuntu.
+install a Linux distribution on their laptop using Windows Subsystem for Linux
+(WSL). Follow the instructions
+[here](https://docs.microsoft.com/en-us/windows/wsl/install) to install WSL.
 
 
 Command Line
-------------
+============
 
 Read the following sections of the [PDF
 version](https://sourceforge.net/projects/linuxcommand/files/TLCL/19.01/TLCL-19.01.pdf/download)
@@ -56,7 +53,7 @@ computer via the command line, and to be able to look up stuff later when you
 need - that is, to create a mental index for quick information retrieval.
 
 Text editor
------------
+===========
 
 In pages 141-143 of *The Linux Command Line* (see above), you briefly encountered
 the Vim text editor. In my personal opinion, if you think you will spend a
@@ -78,7 +75,7 @@ set number
 ```
 
 (macOS users only) Package manager
-----------------------------------
+==================================
 
 You will need a package manager to install libraries and programs required for
 software development.
@@ -90,7 +87,7 @@ Having tried both, I vastly prefer MacPorts. Follow the instructions
 [here](https://www.macports.org/install.php) to install it.
 
 Version control
----------------
+===============
 
 We will use [`git`](https://git-scm.com) for source code management and version
 control. If you are on macOS, `git` will be installed as part of the Xcode
@@ -106,7 +103,7 @@ instructions
 [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
 LaTeX
------
+=====
 
 - Install a LaTeX distribution on your computer - see Step one
   [here](https://ctan.org/starter) for instructions.

@@ -5,8 +5,7 @@ date: "2022-02-21"
 toc: true
 ---
 
-Introduction
-------------
+# Introduction
 
 This post contains 'quickstart' instructions for getting familiar with the
 [ToMCAT](https://ml4ai.github.io/tomcat) rule-based system for extracting
@@ -14,8 +13,7 @@ entities and events from natural language dialogue.
 
 **Prerequisite**: Complete the steps in [Quickstart: Odin](/posts/quickstart-odin.html).
 
-Prerequisite software
----------------------
+# Prerequisite software
 
 Install OpenJDK 8 and SBT. If you are using MacPorts, you can do this by running the
 following command:
@@ -24,8 +22,7 @@ following command:
 sudo port install openjdk8 sbt
 ```
 
-Run test suite
---------------
+# Run test suite
 
 Next, run the following commands in your terminal to clone the repository and
 run the test suite.
@@ -36,8 +33,7 @@ cd tomcat-text
 sbt test
 ```
 
-Reading
--------
+# Reading
 
 Next, read [this markdown
 file](https://github.com/clulab/tomcat-text/blob/master/docs/Doc_for_ASIST_Odin.md)

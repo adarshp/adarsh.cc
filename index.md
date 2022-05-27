@@ -30,3 +30,6 @@ and the automated assembly of executable causal models of complex systems from
 
 <hr class="featurette-divider">
 
+*Disclaimer: I may move some pages around as the site grows, which may cause
+old URLs to not work anymore. If you are affected by this, let me know and I
+can point you to the new location.*

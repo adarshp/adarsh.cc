@@ -46,7 +46,7 @@ archiveCtx posts =
 
 withTOC :: WriterOptions
 withTOC = defaultHakyllWriterOptions{ 
-    writerNumberSections  = False,
+    writerNumberSections  = True,
     writerTableOfContents = True,
     writerTemplate = Just "<h2>Table of Contents</h2>$toc$\n$body$",
     writerHTMLMathMethod = MathJax "" 
