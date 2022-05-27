@@ -4,12 +4,6 @@ layout: page
 toc: true
 ---
 
-**Announcement (2022-03-06): Now hiring!**
-
-*We are looking to hire an undergraduate research
-assistant to help with building a graphical user interface for this project.
-Please see the [job posting](/posts/clc-ugrad-hiring.html) for more details.*
-
 # Introduction
 
 Good teamwork processes enable teams to perform beyond the sum of their parts

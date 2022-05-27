@@ -54,12 +54,14 @@ ol {
 }
 
 h1 {
+    font-family: "myriad-pro";
     padding-top: 1.3rem;
     padding-bottom: 1.3rem;
     font-size: 1.3rem;
 }
 
 h2 {
+    font-family: "myriad-pro";
     font-size: 1.2rem;
     padding-top: 1.3rem;
     padding-bottom: 0.7rem;
