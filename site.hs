@@ -12,6 +12,8 @@ import Text.Pandoc (
     , writerHTMLMathMethod
     , HTMLMathMethod(MathJax)
     , compileTemplate
+    , runPure
+    , runWithDefaultPartials
     )
 import Control.Monad (forM_)
 import Data.Monoid (mappend)
@@ -44,13 +46,19 @@ archiveCtx posts =
 -- Options
 ------------
 
+tocTemplate =
+    either error id $ either (error . show) id $
+    runPure $ runWithDefaultPartials $
+    compileTemplate "" "<h2>Table of Contents</h2>$toc$\n$body$"
+
 withTOC :: WriterOptions
 withTOC = defaultHakyllWriterOptions{ 
     writerNumberSections  = True,
     writerTableOfContents = True,
-    writerTemplate = Just "<h2>Table of Contents</h2>$toc$\n$body$",
+    writerTemplate = Just tocTemplate,
     writerHTMLMathMethod = MathJax "" 
 }
+
 
 withoutTOC :: WriterOptions
 withoutTOC = defaultHakyllWriterOptions{ 
