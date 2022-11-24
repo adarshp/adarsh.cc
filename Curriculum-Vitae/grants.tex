@@ -1,0 +1,57 @@
+% grant macro
+% #1: Duration
+% #2: Amount
+% #3: Role
+% #4: Source
+% #5: Title
+% #6: Funding type (internal/external)
+\newcommand{\grant}[6]{%
+    #1 & \emph{#5} & #2\\
+       &  \emph{Source}: #4 & \\
+       &  \emph{Role}: #3 & \\\addlinespace
+    \addlinespace
+    %#1 & #2 & \emph{Title}: & #5\\
+       %&    & \emph{Source}: & #4 \\
+       %&    & \emph{Role}: & #3\\\addlinespace
+}
+
+\bigskip
+\begin{ctabular}{lp{4.3in}r}
+  \multicolumn{3}{l}{\Large\textsc{\MakeTextLowercase{Funding}}}\\\addlinespace
+  \midrule\addlinespace
+
+  \grant{\duration{2022}{07}{2025}{12}}%
+  {\$9,345,747}%
+  {PI on UArizona subaward (\$3,253,997)}%
+  {Defense Advanced Research Projects Agency}%
+  {SKEMA: Scientific Knowledge Extraction and Model Analysis}%
+  {external}
+
+  \grant{\duration{2021}{01}{2022}{06}}%
+  {\$27,288}%
+  {PI}%
+  {\href{https://sensorlab.arizona.edu}{University of Arizona SensorLab}}%
+  {Development of an open-source dashboard for team communication experiments}%
+  {internal}
+
+  \grant{\duration{2021}{01}{2022}{06}}%
+  {\$13,540}%
+  {PI}%
+  {\href{https://sensorlab.arizona.edu}{University of Arizona SensorLab}}%
+  {\href{https://adarsh.cc/research/clc.html}{Automated real-time detection of closed-loop communication in spoken dialogue}}%
+  {internal}
+
+  \grant{\duration{2019}{11}{2023}{10}}%
+  {\$7,497,548}%
+  {PI}%
+  {Defense Advanced Research Projects Agency}%
+  {\href{https://ml4ai.github.io/tomcat}{ToMCAT: Theory of Mind-based Cognitive Architecture for Teams}}%
+  {external}
+
+  \grant{\duration{2018}{11}{2020}{05}}%
+  {\$967,678}
+  {Co-PI}%
+  {Defense Advanced Research Projects Agency}%
+  {\href{https://ml4ai.github.io/automates/}{AutoMATES: Automated Model Assembly from Text, Equations, and Software}}%
+  {external}
+\end{ctabular}

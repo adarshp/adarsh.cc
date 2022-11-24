@@ -1,0 +1,16 @@
+% Skill macro
+% #1: Skill category
+% #2: List of skills
+\newcommand\skill[2]{%
+  \emph{#1} & #2\\
+}
+\begin{tabularx}{\linewidth}{lX}
+  \addlinespace\addlinespace
+  {\Large\textsc{\MakeTextLowercase{Skills}}}\\\addlinespace
+  \midrule
+  \skill{Programming languages}{Python, C++, Rust, Java, Haskell}
+  \skill{Query languages}{SQL, Cypher}
+  \skill{Markup languages}{\LaTeX, Markdown, reStructuredText, HTML, XML, MathML, DOT}
+  \skill{Version control systems}{Git, SVN}
+  \skill{Languages}{English (native), Hindi (near-native), Malayalam (native, spoken)}
+\end{tabularx}

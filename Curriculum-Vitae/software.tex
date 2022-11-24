@@ -1,0 +1,46 @@
+% software macro
+% #1: URL
+% #2: Name
+% #3: Description
+\newcommand\software[3]{%
+    \href{#1}{#2} & #3\\
+}
+\begin{tabularx}{\linewidth}{lX}
+  \multicolumn{2}{l}{\Large\textsc{\MakeTextLowercase{Software}}}\\
+  \addlinespace
+  \midrule
+  \multicolumn{2}{l}{Open-source software repositories I have made significant
+  contributions to.}\\
+  \addlinespace
+  \addlinespace
+    \software{https://github.com/ml4ai/skema}{SKEMA}%
+    {Main repository for the SKEMA project, containing documentation and
+    software for the text reading, structural alignment, and model role
+    efforts.}
+    \software{https://github.com/ml4ai/tomcat}{ToMCAT}%
+    {Main repository containing documentation and software for physio experiments.}
+
+    \software{https://github.com/ml4ai/tomcat-text}{ToMCAT DialogAgent}%
+    {Real-time rule-based extraction of events from natural language.}
+
+    \software{https://github.com/ml4ai/tomcat-planrec}{ToMCAT plan recognition}%
+    {Multi-agent plan recognition}
+
+    \software{https://github.com/ml4ai/tomcat-ASR\_Agent}%
+    {ToMCAT ASR Agent}%
+    {Real-time automatic speech recognition for multiple participants}
+
+    \software{https://github.com/ml4ai/tomcat-speechAnalyzer}%
+    {ToMCAT SpeechAnalyzer}%
+    {Real-time extraction of vocalic features, sentiment and emotion detection, and personality trait labeling.}
+
+    \software{https://github.com/ml4ai/automates}%
+    {AutoMATES}%
+    {Automated Model Assembly from Text, Equations, and Software}
+
+    \software{https://github.com/ml4ai/delphi}%
+    {Delphi}%
+    {Assembling causal, dynamic, probabilistic models from information}
+
+
+\end{tabularx}

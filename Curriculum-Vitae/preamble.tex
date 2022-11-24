@@ -1,0 +1,85 @@
+\input{../common}
+% Smaller margins
+\setlrmarginsandblock{1in}{1in}{*}
+\setulmarginsandblock{1in}{1.1in}{*}
+
+\tightlists % Reduce spacing between list items
+
+\setsecheadstyle{\large\scshape\hspace{0.0in}\MakeTextLowercase}
+
+\newcommand{\heading}[1]{%
+  \addlinespace\addlinespace
+  \multicolumn{2}{l}{\Large\textsc{\MakeTextLowercase{#1}}}\\\addlinespace
+  \midrule
+}
+
+% New column type for year
+\newcolumntype{Y}{>{\raggedright}p{1.2in}}
+
+%\newcolumntype{Y}{>{\raggedleft}p{1.265in}}
+\newcolumntype{R}[1]{>{\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright}p{#1}}
+
+\checkandfixthelayout
+
+
+% =============================================================================
+% Custom macros
+% =============================================================================
+
+% Custom section
+\newcommand{\customsection}[1]{%
+  {\centering \color{gray} \hrule}
+  \section*{#1}%
+}
+
+
+\newcommand{\entry}[2]{#1 & #2}
+
+% Degree macro
+% #1: Duration
+% #2: Degree
+% #3: Major
+% #4: Institution
+% #5: Thesis URL
+% #6: Thesis name
+\newcommand{\degree}[6]{
+    #1 & #2 & #3, #4 \\
+       & & Thesis: \href{#5}{\emph{#6}}\\\addlinespace
+}
+
+\newcommand{\appointment}[4]{
+    #1 & #2 & #3 & #4
+}
+
+\newcommand{\me}{\textbf{A. Pyarelal}}
+
+
+\newcommand{\research}[1]{ & #1 }
+\newcommand{\project}[1]{\medskip\textit{#1}\medskip}
+\newcommand{\affiliation}[2]{\textsc{#1} & #2}
+\newcommand{\media}[3]{\href{#1}{\emph{#2}}, #3}
+\newcommand{\sympaper}{%
+    {\small \faFileText}
+}
+\newcommand{\symworkshop}{%
+    {\small \faGears}
+}
+\newcommand{\symposter}{%
+    {\small \faThumbTack}
+}
+
+
+% Duration macro
+% #1: Start year
+% #2: Start month
+% #3: End year
+% #4: End month
+\newcommand{\ongoingduration}[2]{#1-#2 -- }
+\newcommand{\duration}[4]{#1-#2 -- #3-#4}
+
+%  =============================================================================
+% Misc layout commands
+
+\linespread{1.05}
+% =============================================================================

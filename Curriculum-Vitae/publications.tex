@@ -1,0 +1,46 @@
+\bigskip
+
+\newcommand{\publication}[2]{
+        \fullcite{#2}\\\addlinespace\addlinespace
+}
+\newcommand{\paper}[1]{\publication{\sympaper{}}{#1}}
+\newcommand{\poster}[1]{\publication{\symposter{}}{#1}}
+\newcommand{\workshop}[1]{\publication{\symworkshop{}}{#1}}
+
+\newcommand{\subheading}[1]{\addlinespace\addlinespace{\sffamily\bfseries #1}\\\addlinespace}
+
+\begin{ctabular}{p{\textwidth}}
+    \multicolumn{1}{l}{\Large\textsc{\MakeTextLowercase{Publications}}}\\\addlinespace
+    \midrule
+
+    \subheading{Journal Articles and Conference Papers}
+    \paper{alexeeva-etal-2020-mathalign}
+    \paper{Pyarelal:2020higgsino}
+    \paper{sharp-etal-2019-eidos}
+    \paper{Kling2019}
+    \paper{Kling:2015uba}
+
+    \subheading{Workshop Papers}
+    \workshop{nitschke-etal-2022-rule}
+    \workshop{Kling:2022jcd}
+    \workshop{Zhang.ea:2021}
+    \workshop{Soares.ea:2021}
+    \workshop{Pyarelal.ea:2021}
+    \workshop{Pyarelal.ea:2019}
+    \workshop{Pyarelal.ea:2019b}
+    \workshop{Sharp.ea:2019b}
+
+    \subheading{Works in progress and preprints}
+    \paper{Culnan.ea:2022}
+    \paper{Basavaraj.ea:2022}
+    \paper{Zhang.ea:2022b}
+    \paper{Zhang.ea:2022}
+
+    \subheading{Posters}
+    \poster{Erikson_Pyarelal:2022b}
+    \poster{Erikson_Pyarelal:2022a}
+    \poster{Erikson_Pyarelal:2021}
+    \poster{Schoelen:2021}
+    \poster{Morrison:2020}
+
+\end{ctabular}

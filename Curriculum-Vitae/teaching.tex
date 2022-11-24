@@ -1,0 +1,77 @@
+% Course macro
+% #1: Duration
+% #2: Course title
+% #3: Role
+\newcommand\course[3]{%
+  \emph{#1} & #3 & #2\\
+
+}
+
+% supervisee macro
+% #1: Start
+% #2: End
+% #3: Name
+% #4: Note
+\newcommand\supervisee[4]{%
+    \emph{#1 -- #2} & #3 & #4\\
+}
+
+\centering
+\begin{ctabular}{llp{3in}}
+    \multicolumn{3}{l}{\Large\textsc{\MakeTextLowercase{Teaching \& Mentoring}}}\\\addlinespace
+  \midrule
+
+  \multicolumn{3}{l}{\sffamily \textbf{University of Arizona}}\\\addlinespace
+  \multicolumn{3}{l}{\sffamily Postdocs supervised}\\\addlinespace
+      \supervisee{Fall 2022}{}{Justin Lieffers}{}
+      \supervisee{Spring 2022}{}{John Culnan}{}
+      \supervisee{Fall 2021}{}{Chinmai Basavaraj}{Primary supervisor: Evan Carter (ARL)}
+      \supervisee{Fall 2020}{}{Liang Zhang}{}
+  \addlinespace
+  \addlinespace
+
+  \multicolumn{3}{l}{\sffamily Graduate students supervised}\\\addlinespace
+      \supervisee{Fall 2022}{}{Deepsana Shahi}{Ph.D. Advisor: Clayton Morrison}
+      \supervisee{Spring 2022}{}{Chen Chen}{Ph.D. Advisor: Feng-hsi Liu}
+      \supervisee{Fall 2021}{}{Remo Nitschke}{Ph.D. Advisor: Heidi Harley}
+      \supervisee{Fall 2021}{}{Yuwei Wang}{Ph.D. Advisor: Feng-hsi Liu}
+      \supervisee{Fall 2021}{}{Meghavarshini Krishnaswamy}{Ph.D. Advisor: Andrew Wedel}
+      \supervisee{Fall 2019}{}{Salena Ashton Torres}{Ph.D. Advisor: Clayton Morrison}
+      \supervisee{Fall 2019}{}{Paulo Soares}{Ph.D. Advisor: Kobus Barnard}
+      \supervisee{Summer 2019}{}{Loren Champlin}{Ph.D. Advisor: Clayton Morrison}
+      \supervisee{Spring 2018}{Fall 2018}{Tanya Jeffries}{Ph.D. Advisor: Kobus Barnard}
+      \supervisee{Fall 2018}{Spring 2022}{Manujinda Wathugala}{Ph.D. Advisor: Kobus Barnard}
+  \addlinespace
+  \addlinespace
+
+  \multicolumn{3}{l}{\sffamily Undergraduate students supervised}\\\addlinespace
+      \supervisee{Spring 2020}{Fall 2021}{Shreeya Jain}{Co-supervised with Kobus Barnard}
+      \supervisee{Spring 2020}{Fall 2020}{Da Long}{Co-supervised with Kobus Barnard}
+      \supervisee{Fall 2019}{Summer 2020}{Runnan Zhou}{Co-supervised with Kobus Barnard}
+      \supervisee{Fall 2019}{Spring 2020}{Jiangfeng Li}{Co-supervised with Kobus Barnard}
+      \supervisee{Fall 2019}{}{Aditya Banerjee}{}
+  \addlinespace
+  \addlinespace
+
+\end{ctabular}
+
+\begin{tabularx}{\linewidth}{lX}
+    \multicolumn{2}{l}{\sffamily Organizer, IVILab Summer Programming Bootcamp in 2017 \& 2020}\\
+    \addlinespace
+     \emph{Summers of 2017 \& 2020} & %
+     Organized the IVILab Summer Programming Bootcamp.\newline
+        Prepared syllabi and instructional materials,
+        gave lectures, graded assignments, and recruited and coordinated other
+    lecturers.\\
+  \addlinespace
+ \end{tabularx}
+
+ \begin{tabularx}{\linewidth}{llX}
+    \multicolumn{3}{l}{\sffamily Teaching Assistant, Department of Physics}\\
+    \addlinespace
+    \course{Spring 2017}{Introduction to Scientific Computing}{Lab instructor}
+    \course{Fall 2013 -- Fall 2016}{Advanced Lab}{Lab instructor}
+    \course{Fall 2012}{Introductory Physics for non-majors}{Lecturer}
+    \course{Fall 2011 -- Spring 2012}{Introductory Electricity and Magnetism}{Lab instructor}
+    \course{Summers of 2012 \& 2014}{ Introductory Physics for non-majors}{Lab Instructor}
+\end{tabularx}
