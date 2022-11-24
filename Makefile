@@ -8,5 +8,8 @@ build:
 rebuild:
 	stack exec site rebuild
 
+watch:
+	stack exec site watch
+
 deploy: build assets/cv_adarsh.pdf
 	stack exec site deploy
