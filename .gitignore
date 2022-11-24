@@ -15,6 +15,7 @@ bigmech
 *.run.xml
 stack.yaml.lock
 
-*.pdf
+curriculum_vitae.pdf
+cv_adarsh.pdf
 
 .DS_Store
