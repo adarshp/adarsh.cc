@@ -14,7 +14,7 @@ I've written up some tips and provided some resources for Advanced Lab - I hope 
 - [Hints for deriving the gas flushing equation for \\(C_p/C_v\\)](cp_cv.html)
 - [Speed of Sound](speed-of-sound.html)
 - [Vacuum procedure](vacuum.html)
-- [Counting Statistics](counting_statistics.html) 
+- [Counting Statistics](counting_statistics.html)
 - **Range of $\alpha$ particles:** The formula for converting pressure into effective distance is:
 $$d_{\mathrm{effective}} = \left(\frac{288d}{76 \mathrm{cm Hg}(T+273)}\right)$$
 - **Big G: **There is a typo in question 24 - the correction should be 7.4% instead of 6.9%.
@@ -23,6 +23,6 @@ $$d_{\mathrm{effective}} = \left(\frac{288d}{76 \mathrm{cm Hg}(T+273)}\right)$$
 - [Roger Haar's website with online versions of the lab writeups](http://www.physics.arizona.edu/~haar/ADV_LAB/ADV_writeup.html)
 
 ## Additional resources  provided by Xiaolin Xu:
-- [Photoelectric Effect](photoelectric_effect/)
+- [Photoelectric Effect](photoelectric_effect.html)
 - [Index of Refraction of gases](index_of_refraction.html)
 - [Speed of Light](speed_of_light.html)

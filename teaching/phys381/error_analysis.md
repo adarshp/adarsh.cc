@@ -8,7 +8,7 @@ I have created an example notebook with a fictitious experiment involving findin
 
 You can view the notebook (rendered statically) here:
 
-[Rendered notebook](http://nbviewer.jupyter.org/github/adarshp/website/blob/master/assets/Error_Analysis_Notebook/index.ipynb)
+[Rendered notebook](http://nbviewer.jupyter.org/github/adarshp/adarsh.cc/blob/master/assets/Error_Analysis_Notebook/index.ipynb)
 
 To download it, click the Download icon at the top-right corner of the page. You can modify and run this notebook using Jupyter - you can install it on your computer with the instructions [here](http://jupyter.readthedocs.org/en/latest/install.html)
 
