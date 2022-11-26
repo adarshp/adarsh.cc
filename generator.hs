@@ -27,8 +27,7 @@ import System.Process (callCommand)
 
 cfg :: Configuration
 cfg = defaultConfiguration
-    { deployCommand =  "rsync -avz -e 'ssh -p21098' _site/ \ 
-                        \adarycts@server47.web-hosting.com:~/www" }
+    { deployCommand =  "rsync -avzdP _site/ digitalocean:www" }
 ------------
 -- Contexts
 ------------
@@ -52,17 +51,17 @@ tocTemplate =
     compileTemplate "" "<h2>Table of Contents</h2>$toc$\n$body$"
 
 withTOC :: WriterOptions
-withTOC = defaultHakyllWriterOptions{ 
+withTOC = defaultHakyllWriterOptions{
     writerNumberSections  = True,
     writerTableOfContents = True,
     writerTemplate = Just tocTemplate,
-    writerHTMLMathMethod = MathJax "" 
+    writerHTMLMathMethod = MathJax ""
 }
 
 
 withoutTOC :: WriterOptions
-withoutTOC = defaultHakyllWriterOptions{ 
-    writerHTMLMathMethod = MathJax "" 
+withoutTOC = defaultHakyllWriterOptions{
+    writerHTMLMathMethod = MathJax ""
 }
 
 -------------
@@ -113,7 +112,15 @@ indices = match "**index.md" $ do
       >>= relativizeUrls
 
 static :: Rules ()
-static = forM_ ["fonts/*", "assets/**", "css/*", "js/*"] $ \x -> match x $ do
+static = forM_ [
+    "fonts/*",
+    "assets/**",
+    "css/*",
+    "js/*",
+    "teaching/**.tex",
+    "teaching/**.jpg",
+    "teaching/**.pdf"
+    ] $ \x -> match x $ do
     route idRoute
     compile $ copyFileCompiler
 
@@ -124,7 +131,7 @@ static = forM_ ["fonts/*", "assets/**", "css/*", "js/*"] $ \x -> match x $ do
 main :: IO ()
 main = hakyllWith cfg $ do
   match "apa.csl" $ compile cslCompiler
-  match "refs.bib"    $ compile biblioCompiler 
+  match "refs.bib"    $ compile biblioCompiler
   static
   indices
   posts
