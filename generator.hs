@@ -88,7 +88,12 @@ templates :: Rules ()
 templates = match "templates/*" $ compile templateCompiler
 
 posts :: Rules ()
-posts = match ("**.md" .&&. complement "README.md" .&&. complement "**index.md") $ do
+posts = match (
+            "**.md"
+        .&&. complement "README.md"
+        .&&. complement "**index.md"
+        .&&. complement "Curriculum-Vitae/**"
+    ) $ do
     route $ setExtension "html"
     compile $ compiler
       >>= loadAndApplyTemplate "templates/post.html" defaultContext
