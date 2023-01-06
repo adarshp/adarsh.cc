@@ -1,3 +1,38 @@
+@InProceedings{Zhang.ea:2022c,
+author="Zhang, Liang
+and Lieffers, Justin
+and Pyarelal, Adarsh",
+editor="Gurney, Nikolos
+and Sukthankar, Gita",
+title="Using Features at Multiple Temporal and Spatial Resolutions to Predict Human Behavior in Real Time",
+booktitle="Computational Theory of Mind for Human-Machine Teams",
+year="2022",
+publisher={Springer, Cham},
+doi=https://doi.org/10.1007/978-3-031-21671-8_13,
+volume=13775,
+pages="205--219",
+abstract="When performing complex tasks, humans naturally reason at multiple temporal and spatial resolutions simultaneously. We contend that for an artificially intelligent agent to effectively model human teammates, i.e., demonstrate computational theory of mind (ToM), it should do the same. In this paper, we present an approach for integrating high and low-resolution spatial and temporal information to predict human behavior in real time and evaluate it on data collected from human subjects performing simulated urban search and rescue (USAR) missions in a Minecraft-based environment. Our model composes neural networks for high and low-resolution feature extraction with a neural network for behavior prediction, with all three networks trained simultaneously. The high-resolution extractor encodes dynamically changing goals robustly by taking as input the Manhattan distance difference between the humans' Minecraft avatars and candidate goals in the environment for the latest few actions, computed from a high-resolution gridworld representation. In contrast, the low-resolution extractor encodes participants' historical behavior using a historical state matrix computed from a low-resolution graph representation. Through supervised learning, our model acquires a robust prior for human behavior prediction, and can effectively deal with long-term observations. Our experimental results demonstrate that our method significantly improves prediction accuracy compared to approaches that only use high-resolution information.",
+isbn="978-3-031-21671-8"
+}
+
+@InProceedings{Pyarelal.ea:2022,
+author="Pyarelal, Adarsh
+and Banerjee, Aditya
+and Barnard, Kobus",
+editor="Gurney, Nikolos and Sukthankar, Gita",
+title="Modular Procedural Generation for Voxel Maps",
+booktitle="Computational Theory of Mind for Human-Machine Teams",
+year="2022",
+publisher={Springer, Cham},
+eventtitle="AAAI-FSS 2021",
+volume=13775,
+pages="85--101",
+doi="https://doi.org/10.1007/978-3-031-21671-8_6",
+abstract="Task environments developed in Minecraft are becoming increasingly popular for artificial intelligence (AI) research. However, most of these are currently constructed manually, thus failing to take advantage of procedural content generation (PCG), a capability unique to virtual task environments. In this paper, we present mcg, an open-source library to facilitate implementing PCG algorithms for voxel-based environments such as Minecraft. The library is designed with human-machine teaming research in mind, and thus takes a `top-down' approach to generation, simultaneously generating low and high level machine-readable representations that are suitable for empirical research. These can be consumed by downstream AI applications that consider human spatial cognition. The benefits of this approach include rapid, scalable, and efficient development of virtual environments, the ability to control the statistics of the environment at a semantic level, and the ability to generate novel environments in response to player actions in real time.",
+isbn="978-3-031-21671-8"
+}
+
+
 @inproceedings{Kling:2022jcd,
     author = "Kling, Felix and Li, Honglei and Li, Shuailong and Pyarelal, Adarsh and Song, Huayang and Su, Shufang and Su, Wei",
     title = "{Exotic Higgs Decays in the Type-II 2HDMs at Current and Future pp Colliders}",
@@ -325,7 +360,7 @@
   copyright = {Creative Commons Attribution Share Alike 4.0 International}
 }
 
-@misc{Zhang.ea:2022,
+@misc{Zhang.ea:2022a,
   doi = {10.48550/ARXIV.2211.06733},
   author = {Zhang, Liang and Lieffers, Justin and Pyarelal, Adarsh},
   keywords = {Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
