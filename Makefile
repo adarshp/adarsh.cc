@@ -1,4 +1,5 @@
-assets/cv_adarsh.pdf: Curriculum-Vitae/curriculum_vitae.tex Curriculum-Vitae/bibliography.bib
+.PHONY: assets/cv_adarsh.pdf
+assets/cv_adarsh.pdf:
 	cd Curriculum-Vitae; make
 	cp Curriculum-Vitae/build/curriculum_vitae.pdf assets/cv_adarsh.pdf
 
