@@ -72,9 +72,8 @@
 \DeclareFieldFormat[article,incollection,inproceedings]{title}%
     {\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
 \addbibresource{bibliography.bib}
-
+\newcommand{\addendumasterisk}{\ifbibliography{*}{}}
 % =============================================================================
-
 \usepackage{fontawesome}
 \usepackage{fontspec}
 \setmainfont[%
