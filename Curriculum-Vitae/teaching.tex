@@ -18,6 +18,14 @@
     #1 & #2 & #3 & #4\\
 }
 
+% studentaward
+% #1: Year
+% #2: Name
+% #3: Award
+\newcommand\studentaward[4]{%
+    #1 & #2 & \multicolumn{2}{l}{#3}\\
+}
+
 \centering
 
 \begin{ctabular}{lllp{2.6in}}
@@ -54,10 +62,15 @@
   \addlinespace
   \addlinespace
   \addlinespace
+  \addlinespace
+  \addlinespace
+  \addlinespace
+  \addlinespace
 
-  \multicolumn{3}{l}{\sffamily Undergraduate students supervised}\\\addlinespace
+  \multicolumn{4}{l}{\sffamily Undergraduate students supervised}\\\addlinespace
     \toprule
     Start & End & Name & Notes\\\midrule
+      \supervisee{Spring 2023}{--}{Zach Keyes}{}
       \supervisee{Spring 2020}{Fall 2021}{Shreeya Jain}{Co-supervised with Kobus Barnard}
       \supervisee{Spring 2020}{Fall 2020}{Da Long}{Co-supervised with Kobus Barnard}
       \supervisee{Fall 2020}{Spring 2021}{Siena Schoelen}{}
@@ -70,16 +83,19 @@
 
 \end{ctabular}
 
-\begin{tabularx}{\linewidth}{lX}
-    \multicolumn{2}{l}{\sffamily Organizer, IVILab Summer Programming Bootcamp}\\
-    \addlinespace
-     \emph{Summers of 2017 \& 2020} & %
-     Organized the IVILab Summer Programming Bootcamp.\newline
-        Prepared syllabi and instructional materials,
-        gave lectures, graded assignments, and recruited and coordinated other
-    lecturers.\\
-  \addlinespace
- \end{tabularx}
+\begin{tabularx}{\linewidth}{llX}
+    \multicolumn{3}{l}{\sffamily Selected student successes (other than degrees)}\\\addlinespace
+    \toprule
+    Year & Name & Award \\\midrule
+    2023 & Aditya Banerjee & Computer Science outstanding researcher for his graduating class\\
+    2021 & Aditya Banerjee & Galileo Circle Scholarship in Computer Science\\
+    2021 & Siena Schoelen & Outstanding senior in Speech, Language, and Hearing Sciences\\
+    \bottomrule
+
+\end{tabularx}
+
+\bigskip
+
 
  \begin{tabularx}{\linewidth}{lllXl}
     \multicolumn{5}{l}{\sffamily Teaching Assistant, Department of Physics}\\
@@ -99,4 +115,17 @@
     \course{Spring}{}{PHYS 241/261H}{Introductory Electricity and Magnetism}{Lab instructor}
     \course{Fall}{2011}{PHYS 261H}{Honors Introductory Electricity and Magnetism}{Lab instructor}
     \bottomrule
+\end{tabularx}
+
+\bigskip
+
+\begin{tabularx}{\linewidth}{lX}
+    \multicolumn{2}{l}{\sffamily Organizer, IVILab Summer Programming Bootcamp}\\
+    \addlinespace
+     \emph{Summers of 2017 \& 2020} & %
+     Organized the IVILab Summer Programming Bootcamp.\newline
+        Prepared syllabi and instructional materials,
+        gave lectures, graded assignments, and recruited and coordinated other
+    lecturers.\\
+  \addlinespace
 \end{tabularx}

@@ -27,7 +27,7 @@ import System.Process (callCommand)
 
 cfg :: Configuration
 cfg = defaultConfiguration
-    { deployCommand =  "rsync -avzdP _site/ digitalocean:www" }
+    { deployCommand =  "rsync -avzdP _site/ digitalocean:/var/www" }
 ------------
 -- Contexts
 ------------

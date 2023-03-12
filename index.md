@@ -9,8 +9,8 @@ layout: page
 
 I am an Assistant Research Professor in the [School of
 Information](https://ischool.arizona.edu) at the [University of
-Arizona](https://www.arizona.edu). My research interests include the
-development of [socially-aware AI teammates](https://ml4ai.github.io/tomcat),
+Arizona](https://www.arizona.edu). My research interests include
+the development of [socially-aware AI teammates](https://ml4ai.github.io/tomcat),
 and the automated assembly of executable causal models of complex systems from
 [text](https://ml4ai.github.io/) and
 [software](https://ml4ai.github.io/automates).
