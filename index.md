@@ -7,7 +7,7 @@ layout: page
 <div class="col-sm-8">
 </br>
 
-I am an Assistant Research Professor in the [School of
+I am an Assistant Professor in the [School of
 Information](https://ischool.arizona.edu) at the [University of
 Arizona](https://www.arizona.edu). My research interests include
 the development of [socially-aware AI teammates](https://ml4ai.github.io/tomcat),

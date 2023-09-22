@@ -28,6 +28,7 @@ import System.Process (callCommand)
 cfg :: Configuration
 cfg = defaultConfiguration
     { deployCommand =  "rsync -avzdP _site/ digitalocean:/var/www" }
+
 ------------
 -- Contexts
 ------------
@@ -124,7 +125,8 @@ static = forM_ [
     "js/*",
     "teaching/**.tex",
     "teaching/**.jpg",
-    "teaching/**.pdf"
+    "teaching/**.pdf",
+    "robots.txt"
     ] $ \x -> match x $ do
     route idRoute
     compile $ copyFileCompiler
