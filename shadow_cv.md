@@ -40,3 +40,8 @@ article](https://www.nature.com/articles/nj7322-467a) and others.
 
 - Rejected from 19 out of 21 PhD programs I applied to.
 - Rejected from every single summer REU program I applied to.
+
+# High school
+
+- Rejected from 13 out of the 14 colleges I applied to.
+- Did not make the cutoff for the IITs in the IIT-JEE exam.
