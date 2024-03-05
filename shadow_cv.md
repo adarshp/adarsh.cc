@@ -7,6 +7,8 @@ Here is my Shadow CV, inspired by [Melanie Stefan's
 article](https://www.nature.com/articles/nj7322-467a) and others.
 
 # After grad school
+- January 2024
+  - Two rejections from AISTATS 2024
 - September 2023
   - Two rejections (one second-author paper and one
     last-author paper) from NeurIPS 2023 main track.
