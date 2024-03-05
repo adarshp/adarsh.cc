@@ -1,5 +1,11 @@
-\begin{tabularx}{\linewidth}{llXr}
+\newcommand{\appointment}[4]{
+    #1 & #2 & #3 & #4
+}
+
+\begin{tabularx}{\linewidth}{llXX}
     \heading{Chronology of Employment}
+    \emph{Duration} & \emph{Title} & \emph{Department} & \emph{Institution}\\
+    \midrule
     \appointment{\ongoingduration{2023}{08}}%
     {Assistant Professor}%
     {School of Information}%
@@ -19,5 +25,6 @@
     \appointment{\duration{2017}{10}{2018}{12}}%
     {Postdoctoral Research Associate}%
     {School of Information}%
-    {University of Arizona}\\\addlinespace
+    {University of Arizona}\\
+    %\bottomrule
 \end{tabularx}

@@ -1,0 +1,94 @@
+\newpage
+\begin{tabularx}{\linewidth}{lX}
+  \heading{Service/Outreach}
+  \multicolumn{2}{p{5.9in}}{%
+    \itshape
+    \begin{itemize}
+        \item Items with an \inrank{} to their left correspond to activities performed in rank.
+            \iftoggle{apr}{%
+                \item Items with an \annualreview{} to their left correspond to entries
+                in the last three calendar years (for the annual review process).
+            }{}
+    \end{itemize}
+}
+
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{lX}
+  \subheading{National/International Service}
+  \multicolumn{2}{l}{\emph{Journal Reviewing}}\\
+  \entry{\annualreview{}2021}{Physics (MDPI) (1 paper)}\\
+  \addlinespace
+  \multicolumn{2}{l}{\emph{Conference Reviewing}}\\
+  \entry{\inrank{} \annualreview{} 2024}{ACL 2024 (5 papers)}\\
+  \entry{\inrank{} \annualreview{} 2023}{Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track (3 papers)}\\
+  \addlinespace
+\end{tabularx}
+
+% talk macro
+% #1: Date
+% #2: Title
+% #3: Venue
+% #4: City
+% #5: Invited/Submitted
+\newcommand{\talk}[5]{
+    #1 & #3 & \textit{#2} & #4 & #5\\
+}
+
+\begin{tabularx}{\linewidth}{llXll}
+  \addlinespace
+  \addlinespace
+  \multicolumn{5}{l}{\sffamily\bfseries National/International Outreach}\\
+  \midrule
+  Date & Venue & Talk Title & City & Type\\
+  \midrule
+  \talk{\annualreview{}2022-03-11}
+    {\href{https://www.youtube.com/watch?v=vygzeHrC13Q\&t=40s\&themeRefresh=1}
+    {Building machines that understand humans}}%
+    {SXSW}
+    {Austin, TX}
+    {Invited}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{lXXll}
+  \addlinespace
+  \addlinespace
+  \multicolumn{5}{l}{\sffamily\bfseries Local/State Outreach}\\
+  \midrule
+  Date & Venue & Talk Title & City & Type\\
+  \midrule
+    \talk{2016-11-29}{Machine Learning and Particle Physics}%
+               {Tucson Data Science Meetup}
+               {Tucson, AZ}
+        {Invited}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{lXl}
+    \addlinespace
+    \addlinespace
+    \multicolumn{3}{l}{\sffamily\bfseries University-level Service}\\
+    \addlinespace
+
+  \midrule
+  Dates    & Role                                                                & University \\
+  \midrule
+  \annualreview{}2022     & SensorLab Seed Grant Reviewer                                       & University of Arizona\\
+  2015     & Graduate and Professional Student Council (GPSC) Travel Grant Judge & University of Arizona\\
+  2012--13 & Arizona Assurance Mentor                                            & University of Arizona\\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{lXll}
+    \addlinespace
+    \addlinespace
+    \addlinespace
+  \multicolumn{4}{l}{\sffamily\bfseries Department-level Service}\\
+  %\multicolumn{2}{l}{\emph{Department-level}}\\
+  %\entry{\ongoingduration{2023}{08}}{Member, Faculty Peer Review Committee}\\
+  \midrule
+  Dates     & Role                                                           & Department            & University \\
+  \midrule
+  \inrank{}\annualreview{} 2023-08-- & Member, Faculty Peer Review Committee                          & School of Information & University of Arizona\\
+  2012--13  & Member, Physics Grad Council                                   & Physics               & University of Arizona\\
+  2012--13  & Member, Associated Graduate Council for the College of Science & Physics               & University of Arizona\\
+  2012--13  & Organizer, weekly departmental graduate student seminar series & Physics               & University of Arizona\\
+\end{tabularx}

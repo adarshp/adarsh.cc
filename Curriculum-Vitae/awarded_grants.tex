@@ -1,0 +1,203 @@
+\newpage
+% grant macro
+% #1: Duration
+% #2: Amount
+% #3: Role
+% #4: Effort
+% #5: Co-PIs
+% #6: Source
+% #7: Title
+% #8: Funding type (internal/external)
+% #9: ID
+\newcommand{\grant}[9]{%
+    #9 &
+    \begin{tabular}[t]{rp{3.8in}}
+    \emph{Title}& #7\\
+    \emph{Source}& #6\\
+    \emph{Amount}& #2\\
+    \emph{Role}& #3\\
+    \emph{Effort}& #4\\
+    \emph{Period of Performance} & #1\\
+    #5\\
+    \end{tabular}\\
+    \addlinespace
+}
+
+
+% travelgrant macro
+% #1: Year
+% #2: Amount
+% #3: Source
+% #4: Title
+% #5: ID
+\newcommand{\travelgrant}[5]{%
+    #5 &
+    \begin{tabular}[t]{rp{3.8in}}
+        \emph{Title} & #4\\
+        \emph{Source} & #3\\
+        \emph{Amount} & #2\\
+        \emph{Year} & #1
+    \end{tabular}\\
+    \addlinespace
+}
+
+
+
+\begin{tabularx}{\linewidth}{lX}
+  \heading{Awarded Grants and Contracts}
+\end{tabularx}
+  %\multicolumn{2}{l}{\Large\textsc{\MakeTextLowercase{Awarded Grants and Contracts}}}\\\addlinespace
+\begin{tabularx}{\linewidth}{lX}
+  %\heading{Awarded Grants and Contracts}
+  \multicolumn{2}{p{6.1in}}{\emph{%
+          \begin{itemize}
+            \item The funding amount, period of performance, effort level,
+                  and list of co-PIs are based on the original awarded
+                  contract. In practice, these can vary over the course of the
+                  project.
+            \item Grants are ordered in reverse chronological order based on
+                  the date of receipt of the notice of award.
+            \item For federal grants, total, direct, and indirect funding
+                amounts have been provided. The indirect funding amount is
+                obtained by subtracting the direct funding amount from the
+                full funding amount.
+            \item Items with an \inrank{} to their left correspond to grants
+                whose period of performance overlaps with time in current rank.
+            \iftoggle{apr}{%
+            \item Items with an \annualreview{} to their left correspond to
+                grants received in the last three calendar years (for the
+                annual review process).
+            }{}
+          \end{itemize}
+}}
+\end{tabularx}
+
+\begin{ctabular}{lp{5.6in}}
+  \midrule
+  ID & Title, Funding source and amounts, Role, Effort, co-PIs, and Dates \\
+  \midrule
+
+  \grant{\duration{2023}{12}{2025}{11}}%
+  {%
+    \begin{tabular}[t]{lr}
+      Full     & \$882,546\\
+      Direct   & \$592,852\\
+      Indirect & \$289,654
+    \end{tabular}
+  }%
+  {PI}%
+  {35\% during the academic year \& 1 summer month}%
+  {\emph{Co-PIs} & Kobus Barnard, Clayton Morrison, Winslow Burleson}%
+  {United States Army Contracting Command}%
+  {Next-Generation Teams}%
+  {external}
+  {\inrank{}\annualreview{}G11}
+
+
+  \grant{\duration{2022}{07}{2025}{12}}%
+  {%
+    \begin{tabular}[t]{lr}
+        Total                            & \$9,345,747\\
+        UArizona subaward                & \$3,253,997\\
+        UArizona direct funding amount   & \$2,175,514\\
+        UArizona indirect funding amount & \$1,078,483
+    \end{tabular}
+  }%
+  {PI on UArizona subaward}%
+  {50\% until 2024-04, then 100\% for the remainder of the project.}%
+  {\emph{Co-PIs} &
+          PI on prime award (Lum.AI): Clayton Morrison\newline
+          PI on SIFT subaward: Daniel Bryce\newline
+          co-PIs on UArizona subaward: Enrique Noriega, Mihai Surdeanu, Katherine Isaacs
+  }%
+  {Defense Advanced Research Projects Agency}%
+  {\href{https://skema.sista.arizona.edu}{SKEMA: Scientific Knowledge Extraction and Model Analysis}}%
+  {external}
+  {\inrank{}\annualreview{}G10}
+
+  \grant{\duration{2021}{01}{2022}{06}}%
+  {\$27,288}%
+  {PI}%
+  {N/A (PI salary was not allowed on this intramural seed grant.)}%
+  {}%
+  {\href{https://sensorlab.arizona.edu}{UArizona SensorLab}}%
+  {Development of an open-source dashboard for team communication experiments}%
+  {internal}
+  {\annualreview{}G9}
+
+  \grant{\duration{2021}{01}{2022}{06}}%
+  {\$13,540}%
+  {PI}%
+  {N/A (PI salary was not allowed on this intramural seed grant.)}%
+  {}%
+  {\href{https://sensorlab.arizona.edu}{UArizona SensorLab}}%
+  {\href{https://adarsh.cc/research/clc.html}{Automated real-time detection of closed-loop communication in spoken dialogue}}%
+  {internal}
+  {\annualreview{}G8}%
+
+  \grant{\duration{2019}{11}{2023}{10}}%
+  {
+    \begin{tabular}[t]{lr}
+        Full     & \$7,497,548\\
+        Direct   & \$5,301,783\\
+        Indirect & \$2,195,765
+    \end{tabular}
+}%
+  {PI}%
+  {100\%}%
+  {\emph{Co-PIs} & Clayton Morrison, Kobus Barnard, Mihai Surdeanu, Rebecca Sharp, Marco Valenzuela-Esc{\'a}rcega}%
+  {Defense Advanced Research Projects Agency}%
+  {\href{https://ml4ai.github.io/tomcat}{ToMCAT: Theory of Mind-based Cognitive Architecture for Teams}}%
+  {external}
+  {\inrank{}G7}%
+
+  \grant{\duration{2018}{11}{2020}{05}}%
+  {%
+    \begin{tabular}[t]{lr}
+        Full     & \$961,959\\
+        Direct   & \$643,834\\
+        Indirect & \$318,125
+    \end{tabular}
+  }
+  {Co-PI}%
+  {65\%}%
+  {\emph{Co-PIs} &
+        PI: Clayton Morrison\newline
+        Other Co-PIs: Saumya Debray, Rebecca Sharp, Marco Valenzuela-Esc{\'a}rcega
+  }%
+  {Defense Advanced Research Projects Agency}%
+  {\href{https://ml4ai.github.io/automates/}{AutoMATES: Automated Model Assembly from Text, Equations, and Software}}%
+  {external}
+  {G6}%
+
+  \travelgrant{2016}%
+  {Not available (awarded a long time ago, could not find the amount in my email inbox)}%
+  {American Physical Society}%
+  {American Physical Society 4CS Student Travel Grant}%
+  {G5}%
+
+  \travelgrant{2015}%
+  {\$105}%
+  {American Physical Society}%
+  {American Physical Society 4CS Student Travel Grant}%
+  {G4}%
+
+  \travelgrant{2015}%
+  {\$750}%
+  {Graduate and Professional Student Council (GPSC)}%
+  {GPSC Travel Award}%
+  {G3}%
+
+  \travelgrant{2015}%
+  {\$500}%
+  {UArizona Department of Physics}%
+  {Professor C. Y. Fan `FanFare' Travel Award}%
+  {G2}%
+
+  \travelgrant{2014}%
+  {Not available (awarded a long time ago, could not find the amount in my email inbox)}%
+  {American Physical Society}%
+  {American Physical Society 4CS Student Travel Grant}%
+  {G1}%
+
+\end{ctabular}

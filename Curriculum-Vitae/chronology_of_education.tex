@@ -1,0 +1,41 @@
+
+% Degree macro
+% #1: Duration
+% #2: Degree
+% #3: Major
+% #4: Institution
+% #5: Thesis URL
+% #6: Thesis name
+% #7: Thesis advisor
+\newcommand{\degree}[7]{
+    #1 & #2 & #3 & #4  & \href{#5}{\emph{#6}} & #7\\
+}
+
+\centering
+\begin{tabularx}{\linewidth}{llllXl}
+    \addlinespace
+    \multicolumn{6}{l}{\Large \textsc{\MakeTextLowercase{Chronology of Education}}}\\\addlinespace
+    \toprule
+    \emph{Duration} & \emph{Degree} & \emph{Major} & \emph{Institution} &
+    \emph{Dissertation/Thesis Title} & \emph{Advisor} \\
+    \midrule
+
+    \degree{\duration{2011}{08}{2017}{05}}%
+    {Ph.D.}{Physics}%
+    {University of Arizona}%
+    {https://github.com/adarshp/dissertation}%
+    {Hidden Higgses and Dark Matter at Current and Future Colliders}
+    {Shufang Su}
+
+    \degree{\duration{2007}{08}{2011}{05}}%
+    {B.A.}{Physics}%
+    {Reed College}%
+    {https://www.researchgate.net/profile/Adarsh_Pyarelal/publication/287216785_A_Reggeized_model_for_eta_meson_production_in_high_energy_protonproton_collisions/links/56744cfe08aebcdda0de225e.pdf}%
+    {Contribution of the neutral pion Regge trajectory to the exclusive central
+    production of $\eta$(548) mesons in high energy proton/proton collisions}
+    {Nelia Mann}
+    %\bottomrule
+\end{tabularx}
+
+
+\medskip

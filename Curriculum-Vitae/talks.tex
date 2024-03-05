@@ -2,69 +2,108 @@
 % Talks
 % =====
 
-\newcommand{\talk}[4]{
-    #1 & #3 & \textit{#2}\\
+
+% colloquium macro
+% #1: Date
+% #2: Title
+% #3: University
+% #4: Department
+% #5: City
+% #6: Invited/Submitted
+\newcommand{\colloquium}[6]{
+    #1 & #3 \newline #4 & \textit{#2} & #6\\
 }
 
-\newcommand{\colloquium}[5]{
-    #1 & #3 \newline #4 & \textit{#2}\\
-}
+%\centering
+\begin{tabularx}{\linewidth}{lX}
+    \heading{Scholarly Presentations}
+    \multicolumn{2}{l}{\emph{Entries are limited to the three years 2021, 2022, \& 2023}}\\\addlinespace
+\end{tabularx}
 
-\centering
-\begin{ctabular}{lp{2.58in}p{2.8in}}
-  \heading{Presentations}
+\begin{tabularx}{\linewidth}{llXXl}
   \addlinespace
   \addlinespace
-  \multicolumn{3}{l}{\bfseries\sffamily Public Talks}\\
-  \addlinespace
-    \talk{2022-03-11}
-    {\href{https://www.youtube.com/watch?v=vygzeHrC13Q\&t=40s\&themeRefresh=1}
-    {Building machines that understand humans}}%
-    {SXSW}
-    {Austin, TX}
-
-    \talk{2016-11-29}{Machine Learning and Particle Physics}%
-               {Tucson Data Science Meetup}
-               {Tucson, AZ}
-
-  \addlinespace
-  \addlinespace
-  \addlinespace
-  \multicolumn{3}{l}{\bfseries\sffamily Colloquia}\\
+  \multicolumn{4}{l}{\bfseries\sffamily Colloquia}\\
   \addlinespace
 
-  \colloquium{2020-10-08}{Building machines that understand humans}%
+  \midrule
+  ID & Date & Venue & Title & Type \\
+  \midrule
+
+  \annualreview{}CQ5. & \colloquium{2023-03-16}{From Tools to Teammates: Building machines that understand humans}%
+            {University of Arizona}%
+            {School of Information}%
+            {Tucson, AZ}%
+            {Invited}
+
+  \annualreview{}CQ4. & \colloquium{2023-01-27}{Artificial Social Intelligence}%
+            {University of Arizona}%
+            {School of Information}%
+            {Tucson, AZ}%
+            {Research Blitz}
+
+  \annualreview{}CQ3. & \colloquium{2021-12-09}{Theory of Mind-based Cognitive Architecture for Teams}%
+            {University of Arizona}%
+            {School of Information}%
+            {Tucson, AZ}%
+            {Research Blitz}
+
+  CQ2. & \colloquium{2020-10-08}{Building machines that understand humans}%
             {University of Arizona}%
             {Systems and Industrial Engineering}%
-            {Tucson, AZ}
+            {Tucson, AZ}%
+            {Invited}
 
-  \colloquium{2020-09-04}%
+  CQ1. & \colloquium{2020-09-04}%
         {Building machines that understand humans}%
         {University of Arizona}%
         {Cognitive Science Colloquium Series}%
-        {Tucson, AZ}
+        {Tucson, AZ}%
+        {Invited}
 
-  \addlinespace
-  \addlinespace
-  \multicolumn{3}{l}{\bfseries\sffamily Conferences}\\
-  \addlinespace
+\end{tabularx}
 
-    \talk{2019}{Eidos, INDRA, \& Delphi: From Free Text to Executable Causal Models}%
+\begin{tabularx}{\linewidth}{llXXll}
+  \addlinespace
+  \addlinespace
+  \multicolumn{5}{l}{\bfseries\sffamily Conferences}\\
+  \addlinespace
+  \midrule
+  ID & Date & Venue & Title & City & Type\\
+  \midrule
+
+  CP6. & \talk{2019}{Eidos, INDRA, \& Delphi: From Free Text to Executable Causal Models}%
                {TRIPODS 2nd Southwest Summer Conference}
                {Tucson, AZ}
-    \talk{2016}{A Razor Search for Dark Matter at a Future 100 TeV Collider}%
+               {Submitted}
+  CP5. & \talk{2016}{A Razor Search for Dark Matter at a Future 100 TeV Collider}%
                {Joint Meeting of the Four Corners and Texas Sections of the American Physical Society}
                {Las Cruces, NM}
-    \talk{2015}{Light Charged Higgs Bosons in Single-Top Production}%
+               {Submitted}
+  CP4. & \talk{2015}{Light Charged Higgs Bosons in Single-Top Production}%
                {Phenomenology 2015 Symposium}
                {Pittsburgh, PA}
-    \talk{2015}{Light Charged Higgs Bosons in Two Higgs Doublet Models}%
+               {Submitted}
+  CP3. & \talk{2015}{Light Charged Higgs Bosons in Two Higgs Doublet Models}%
                {Annual Meeting of the APS Four Corners Section}
                {Tempe, AZ}
-    \talk{2014}{Light Charged Higgs Bosons in Single-Top Production}%
+               {Submitted}
+  CP2. & \talk{2014}{Light Charged Higgs Bosons in Single-Top Production}%
                {Annual Meeting of the APS Four Corners Section}
                {Orem, UT}
-    \talk{2014}{Light Charged Higgs Bosons to AW/HW via Top Decay}%
+               {Submitted}
+  CP1. & \talk{2014}{Light Charged Higgs Bosons to AW/HW via Top Decay}%
                {23$^{\text{rd}}$ International Conference on Supersymmetry and Unification of Fundamental Interactions}
                {Lake Tahoe, CA}
-\end{ctabular}
+               {Submitted}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{lX}
+    \subheading{Posters}
+    \publication{\annualreview{}P5.}{Erikson_Pyarelal:2022b}
+    \publication{\annualreview{}P4.}{Erikson_Pyarelal:2022a}
+    \publication{\annualreview{}P3.}{Erikson_Pyarelal:2021}
+    \publication{\annualreview{}P2.}{Schoelen:2021}
+    \publication{P1.}{Morrison:2020}
+
+\end{tabularx}

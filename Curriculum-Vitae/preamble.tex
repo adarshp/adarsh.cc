@@ -1,3 +1,11 @@
+% Conditionals
+
+\usepackage{etoolbox}
+% Conditional typesetting things for annual performance review
+\newtoggle{apr}
+\togglefalse{apr}
+
+
 % =============================================================================
 % Metadata
 % =============================================================================
@@ -17,7 +25,6 @@
 \newcommand{\name}{\firstname{} \lastname{}}
 
 % =============================================================================
-
 \usepackage[tracking]{microtype}
 \usepackage{amsmath}
 
@@ -33,14 +40,14 @@
   maxnames=100,
   giveninits=true,
   hyperref,
-  bibstyle=publist,
   sorting=ddt,
+  bibstyle=publist,
   plauthorhandling=highlight,
   plnumbered=false,
   boldyear=false,
   marginyear=false,
   nameorder=given-family,
-  mergedate=true
+  %mergedate=true
 ]{biblatex}
 \plauthorname[\firstname][]{\lastname}
 
@@ -150,7 +157,7 @@
 \newcommand{\heading}[1]{%
   \addlinespace\addlinespace
   \multicolumn{2}{l}{\Large\textsc{\MakeTextLowercase{#1}}}\\\addlinespace
-  \midrule
+  \toprule
 }
 
 % New column type for year
@@ -176,17 +183,6 @@
 
 \newcommand{\entry}[2]{#1 & #2}
 
-% Degree macro
-% #1: Duration
-% #2: Degree
-% #3: Major
-% #4: Institution
-% #5: Thesis URL
-% #6: Thesis name
-\newcommand{\degree}[6]{
-    #1 & #2 & #3, #4 \\
-       & & Thesis: \href{#5}{\emph{#6}}\\\addlinespace
-}
 
 
 \newcommand{\me}{\textbf{A. Pyarelal}}
@@ -195,7 +191,7 @@
 \newcommand{\research}[1]{ & #1 }
 \newcommand{\project}[1]{\medskip\textit{#1}\medskip}
 \newcommand{\affiliation}[2]{\textsc{#1} & #2}
-\newcommand{\media}[3]{\href{#1}{\emph{#2}}, #3}
+\newcommand{\media}[3]{\href{#1}{\emph{#2}} & #3}
 \newcommand{\sympaper}{%
     {\small \faFileText}
 }
@@ -214,6 +210,21 @@
 % #4: End month
 \newcommand{\ongoingduration}[2]{#1-#2 -- }
 \newcommand{\duration}[4]{#1-#2 -- #3-#4}
+
+\newcommand{\subheading}[1]{%
+    \addlinespace
+    \addlinespace
+    \multicolumn{2}{l}{\sffamily\bfseries #1}\\
+    \addlinespace
+}
+
+\newcommand{\inrank}{\textcolor{Maroon}{\ensuremath{^{\mathcal{R}}}}}
+\newcommand{\annualreview}{%
+    \textcolor{Blue}{%
+    \iftoggle{apr}{%
+        \ensuremath{^{\mathcal{A}}}
+    }{}
+}}
 
 % =============================================================================
 % Misc layout commands
