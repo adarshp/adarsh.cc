@@ -7,6 +7,8 @@ Here is my Shadow CV, inspired by [Melanie Stefan's
 article](https://www.nature.com/articles/nj7322-467a) and others.
 
 # After grad school
+- May 2024
+  - One rejection from ACL 2024
 - January 2024
   - Two rejections from AISTATS 2024
 - September 2023
