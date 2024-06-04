@@ -1,9 +1,6 @@
 % Conditionals
 
 \usepackage{etoolbox}
-% Conditional typesetting things for annual performance review
-\newtoggle{apr}
-\togglefalse{apr}
 
 
 % =============================================================================
@@ -218,13 +215,16 @@
     \addlinespace
 }
 
-\newcommand{\inrank}{\textcolor{Maroon}{\ensuremath{^{\mathcal{R}}}}}
-\newcommand{\annualreview}{%
-    \textcolor{Blue}{%
-    \iftoggle{apr}{%
-        \ensuremath{^{\mathcal{A}}}
+% Conditional typesetting things for promotion and tenure
+\newtoggle{pt}
+\togglefalse{pt}
+
+
+\newcommand{\pt}[1]{%
+    \iftoggle{pt}{%
+        #1
     }{}
-}}
+}
 
 % =============================================================================
 % Misc layout commands

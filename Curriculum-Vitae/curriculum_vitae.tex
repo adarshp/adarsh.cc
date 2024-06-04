@@ -17,9 +17,10 @@
 \input{talks}
 \input{awarded_grants}
 \newpage
-\input{submitted_grants}
+\pt{\input{submitted_grants}}
 \newpage
-\input{teaching}
+\iftoggle{pt}{}{\input{teaching}}
+
 %\input{skills}
 
 \end{document}

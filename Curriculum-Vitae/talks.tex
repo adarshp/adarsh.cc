@@ -14,10 +14,9 @@
     #1 & #3 \newline #4 & \textit{#2} & #6\\
 }
 
-%\centering
+\iftoggle{pt}{}{%
 \begin{tabularx}{\linewidth}{lX}
     \heading{Scholarly Presentations}
-    \multicolumn{2}{l}{\emph{Entries are limited to the three years 2021, 2022, \& 2023}}\\\addlinespace
 \end{tabularx}
 
 
@@ -31,19 +30,19 @@
   ID & Date & Venue & Title & Type \\
   \midrule
 
-  \annualreview{}CQ5 & \colloquium{2023-03-16}{From Tools to Teammates: Building machines that understand humans}%
+  CQ5 & \colloquium{2023-03-16}{From Tools to Teammates: Building machines that understand humans}%
             {University of Arizona}%
             {School of Information}%
             {Tucson, AZ}%
             {Invited}
 
-  \annualreview{}CQ4 & \colloquium{2023-01-27}{Artificial Social Intelligence}%
+  CQ4 & \colloquium{2023-01-27}{Artificial Social Intelligence}%
             {University of Arizona}%
             {School of Information}%
             {Tucson, AZ}%
             {Research Blitz}
 
-  \annualreview{}CQ3 & \colloquium{2021-12-09}{Theory of Mind-based Cognitive Architecture for Teams}%
+  CQ3 & \colloquium{2021-12-09}{Theory of Mind-based Cognitive Architecture for Teams}%
             {University of Arizona}%
             {School of Information}%
             {Tucson, AZ}%
@@ -101,10 +100,11 @@
 
 \begin{tabularx}{\linewidth}{lX}
     \subheading{Posters}
-    \publication{\annualreview{}P5.}{Erikson_Pyarelal:2022b}
-    \publication{\annualreview{}P4.}{Erikson_Pyarelal:2022a}
-    \publication{\annualreview{}P3.}{Erikson_Pyarelal:2021}
-    \publication{\annualreview{}P2.}{Schoelen:2021}
+    \publication{P5.}{Erikson_Pyarelal:2022b}
+    \publication{P4.}{Erikson_Pyarelal:2022a}
+    \publication{P3.}{Erikson_Pyarelal:2021}
+    \publication{P2.}{Schoelen:2021}
     \publication{P1.}{Morrison:2020}
 
 \end{tabularx}
+}

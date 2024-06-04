@@ -1,27 +1,19 @@
 \newpage
 \begin{tabularx}{\linewidth}{lX}
   \heading{Service/Outreach}
-  \multicolumn{2}{p{5.9in}}{%
-    \itshape
-    \begin{itemize}
-        \item Items with an \inrank{} to their left correspond to activities performed in rank.
-            \iftoggle{apr}{%
-                \item Items with an \annualreview{} to their left correspond to entries
-                in the last three calendar years (for the annual review process).
-            }{}
-    \end{itemize}
-}
 
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{lX}
   \subheading{National/International Service}
-  \multicolumn{2}{l}{\emph{Journal Reviewing}}\\
-  \entry{\annualreview{}2021}{Physics (MDPI) (1 paper)}\\
-  \addlinespace
+  \iftoggle{pt}{}{%
+    \multicolumn{2}{l}{\emph{Journal Reviewing}}\\
+    \entry{2021}{Physics (MDPI) (1 paper)}\\
+    \addlinespace
+  }
   \multicolumn{2}{l}{\emph{Conference Reviewing}}\\
-  \entry{\inrank{} \annualreview{} 2024}{ACL ARR February 2024 Cycle (5 papers)}\\
-  \entry{\inrank{} \annualreview{} 2023}{Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track (3 papers)}\\
+  \entry{2024}{ACL ARR February 2024 Cycle (5 papers)}\\
+  \entry{2023}{Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track (3 papers)}\\
   \addlinespace
 \end{tabularx}
 
@@ -42,7 +34,7 @@
   \midrule
   Date & Venue & Talk Title & City & Type\\
   \midrule
-  \talk{\annualreview{}2022-03-11}
+  \talk{2022-03-11}
     {\href{https://www.youtube.com/watch?v=vygzeHrC13Q\&t=40s\&themeRefresh=1}
     {Building machines that understand humans}}%
     {SXSW}
@@ -72,7 +64,7 @@
   \midrule
   Dates    & Role                                                                & University \\
   \midrule
-  \annualreview{}2022     & SensorLab Seed Grant Reviewer                                       & University of Arizona\\
+  2022     & SensorLab Seed Grant Reviewer                                       & University of Arizona\\
   2015     & Graduate and Professional Student Council (GPSC) Travel Grant Judge & University of Arizona\\
   2012--13 & Arizona Assurance Mentor                                            & University of Arizona\\
 \end{tabularx}
@@ -86,8 +78,10 @@
   \midrule
   Dates     & Role                                                           & Department            & University \\
   \midrule
-  \inrank{}\annualreview{} 2023-08 -- 2024-05 & Member, Faculty Peer Review Committee                          & School of Information & University of Arizona\\
+  2023-08 -- 2024-05 & Member, Faculty Peer Review Committee                          & School of Information & University of Arizona\\
+  \iftoggle{pt}{}{%
   2012--13  & Member, Physics Grad Council                                   & Physics               & University of Arizona\\
   2012--13  & Member, Associated Graduate Council for the College of Science & Physics               & University of Arizona\\
   2012--13  & Organizer, weekly departmental graduate student seminar series & Physics               & University of Arizona\\
+  }
 \end{tabularx}
