@@ -7,6 +7,9 @@ Here is my Shadow CV, inspired by [Melanie Stefan's
 article](https://www.nature.com/articles/nj7322-467a) and others.
 
 # After grad school
+
+- June 2024
+  - One rejection from RLC 2024
 - May 2024
   - One rejection from ACL 2024
 - January 2024
