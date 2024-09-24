@@ -8,6 +8,8 @@ article](https://www.nature.com/articles/nj7322-467a) and others.
 
 # After grad school
 
+- September 2024
+  - One rejection from EMNLP 2024
 - July 2024
   - One DARPA proposal rejected
 - June 2024
