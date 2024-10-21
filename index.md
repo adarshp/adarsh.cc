@@ -23,6 +23,8 @@ and the automated assembly of executable causal models of complex systems from
 
 [Colophon](https://typekit.com/colophons/teo1mav)
 
+**Note**: I am not currently accepting new PhD students.
+
 </br>
 </div>
   <div class="col-sm-4">
