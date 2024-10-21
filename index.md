@@ -21,6 +21,8 @@ and the automated assembly of executable causal models of complex systems from
 
 [email: adarsh@arizona.edu](mailto:adarsh@arizona.edu)
 
+**Note**: I am not currently taking on new PhD students.
+
 [Colophon](https://typekit.com/colophons/teo1mav)
 
 </br>
