@@ -19,8 +19,7 @@
 
 #align(center)[
 #smallcaps[#text(size: 20pt, fill: maroon)[#lower[Adarsh Pyarelal]]]\
-
-#emph[Last updated: #datetime.today().display()]
+_Last updated: #datetime.today().display()_
 
 College of Information Science~$dot.op$~University of
 Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719
@@ -58,12 +57,25 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719
 ]
 
 #show bibliography: none
-#bibliography("bibliography.bib", style: "apa")
+#bibliography("bibliography.bib", style:
+"association-for-computational-linguistics.csl")
 
-#show "L. Zhang": name => [#name$degree$]
-#show "J. Lieffers": name => [#name$degree$]
-#show "D. Shahi": name => [#name$degree$]
-#show "A. Pyarelal": name => strong(name)
+
+#let names = (
+  "Aditya Banerjee",
+  "Salena Torres Ashton",
+  "Paulo Soares",
+  "Eric Duong",
+  "Caleb Shibu Jones",
+  "Liang Zhang",
+  "Siena Schoelen",
+  "Justin Lieffers",
+  "Deepsana Shahi"
+)
+
+#show regex(names.join("|")): it => [#it$degree$]
+
+#show "Adarsh Pyarelal": name => strong(name)
 
 
 
@@ -119,6 +131,8 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719
   [2014], [Outstanding Graduate Student Colloquium Presentation],
   [], [Graduate College Fellowship in Physics (\$1500)],
 )
+
+#pagebreak()
 
 = Service/Outreach
 
@@ -198,6 +212,24 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719
   )
 
 = Publications/Creative Activity (Published or Accepted)
+#line(length: 100%)
+
+#emph[
+  - Co-authors who are student advisees or postdoctoral mentees have a $degree$ next to their names.
+  - Publications substantially based on work done as a graduate student have a \*  to their left.
+  - For theoretical particle physics papers (marked with a $dagger$), the
+    convention is to order authors alphabetically by last name.
+  - In my primary fields of machine learning, artificial intelligence, and
+    computational linguistics, conference publications are generally ranked
+    higher than journal articles.  These are full papers that go through the
+    normal peer review process, as in a journal. In general, work that is
+    published as a conference paper may not be submitted for publication
+    elsewhere.  Google Scholar Rankings and h5-indices are provided where
+    available. Note that the acceptance rates, rankings and h5-indices are
+    provided for the venue at the time of publication---thus, you may see
+    different rankings and h5-indices for the same publication venue for
+    different years.
+]
 
 == Chapters in scholarly books and monographs
 
@@ -216,9 +248,18 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719
   align: (right, left),
   stroke: none,
   [J4.], cite(<Erikson.ea:2024>, form: "full"),
-  [\*J3.], cite(<Pyarelal:2020higgsino>, form: "full"),
-  [J2.], cite(<Kling2019>, form: "full"),
-  [\*J1.], cite(<Kling:2015uba>, form: "full")
+  [$dagger$\*J3.], [
+    #cite(<Pyarelal:2020higgsino>, form: "full")\
+    [_h5-index of Science China Physics, Mechanics \& Astronomy: 46 (as of 2024-02)_]
+  ],
+  [$dagger$J2.], [
+    #cite(<Kling2019>, form: "full")\
+    [#emph[Google Scholar Ranking: JHEP ranked \#2 in High Energy and Nuclear Physics as of 2024-02: (h5: 158)]]
+  ],
+  [$dagger$\*J1.], [
+    #cite(<Kling:2015uba>, form: "full")\
+    [#emph[Google Scholar Ranking: JHEP ranked \#2 in High Energy and Nuclear Physics as of 2024-02: (h5: 158)]]
+  ]
 )
 
 == Refereed Conference Articles
@@ -227,13 +268,38 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719
   columns: (auto, auto),
   stroke: none,
   align: (right, left),
-  [C7.], cite(<Noriega.ea:2024>, form: "full"),
-  [C6.], cite(<Soares.ea:2024>, form: "full"),
-  [C5.], cite(<Pyarelal.ea:2023>, form: "full"),
-  [C4.], cite(<qamar-etal-2023-speaking>, form: "full"),
-  [C3.], cite(<miah-etal-2023-hierarchical>, form: "full"),
-  [C2.], cite(<alexeeva-etal-2020-mathalign>, form: "full"),
-  [C1.], cite(<sharp-etal-2019-eidos>, form: "full"),
+  [C7.], [
+    #cite(<Noriega.ea:2024>, form: "full")\
+    [#emph[Google Scholar Ranking: EMNLP ranked \#2 in Computational Linguistics (h5: 193)]]
+  ],
+  [C6.], [
+    #cite(<Soares.ea:2024>, form: "full")\
+    [#emph[Google Scholar Ranking: ICML ranked \#3 in Artificial Intelligence (h5: 254)]]
+  ],
+  [C5.], [
+    #cite(<Pyarelal.ea:2023>, form: "full")\
+    [#emph[Acceptance rate for the Datasets and Benchmarks Track of NeurIPS 2023: 32.7\%]]\
+    [#emph[Google Scholar Ranking: NeurIPS ranked \#1 in Artificial Intelligence (h5: 309)]]
+  ],
+  [C4.], [
+    #cite(<qamar-etal-2023-speaking>, form: "full")
+    [#emph[Combined acceptance rate (Main + Findings) for long papers at EMNLP 2023: 46.2\%]]\
+    [#emph[Google Scholar Ranking: EMNLP ranked \#2 in Computational Linguistics (h5: 176)]]
+  ],
+  [C3.], [
+    #cite(<miah-etal-2023-hierarchical>, form: "full")\
+    [#emph[Combined acceptance rate (Main + Findings) for long papers at EMNLP 2023: 46.2\%]]\
+    [#emph[Google Scholar Ranking: EMNLP ranked \#2 in Computational Linguistics (h5: 176)]]
+  ],
+  [C2.], [
+    #cite(<alexeeva-etal-2020-mathalign>, form: "full")\
+    [#emph[Acceptance rate for LREC 2020: 60\%]]\
+    [#emph[LREC ranked \#4 (by h5-index) in Computational Linguistics as of 2019]]
+  ],
+  [C1.], [
+    #cite(<sharp-etal-2019-eidos>, form: "full")
+    [#emph[Google Scholar Ranking: NAACL-HLT ranked \#3 in Computational Linguistics as of 2024-02: (h5: 133)]]
+  ],
 )
 
 
@@ -243,18 +309,30 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719
   columns: (auto, auto),
   stroke: none,
   align: (right, left),
-  [W9.], cite(<Zhang.ea:2024>, form: "full"),
-  [W8.], cite(<nitschke-etal-2022-rule>, form: "full"),
-  [\*W7.], cite(<Kling:2022jcd>, form: "full"),
-  [W6.], cite(<Zhang.ea:2021>, form: "full"),
-  [W5.], cite(<Soares.ea:2021>, form: "full"),
-  [W4.], cite(<Pyarelal.ea:2021>, form: "full"),
-  [W3.], cite(<Pyarelal.ea:2019>, form: "full"),
-  [W2.], cite(<Pyarelal.ea:2019b>, form: "full"),
-  [W1.], cite(<Sharp.ea:2019b>, form: "full"),
+  [W9.], [
+    #cite(<Zhang.ea:2024>, form: "full")
+  ],
+  [W8.], [
+    #cite(<nitschke-etal-2022-rule>, form: "full")
+    [#emph[Acceptance rate for PAN-DL 2022: 77\%]]
+    [#emph[Google Scholar Ranking: COLING ranked \#5 in Computational Linguistics as of 2024-02: (h5: 73)]]
+  ],
+  [$dagger$\*W7.], [
+    #cite(<Kling:2022jcd>, form: "full")
+  ],
+  [W6.], [#cite(<Zhang.ea:2021>, form: "full")],
+  [W5.], [#cite(<Soares.ea:2021>, form: "full")],
+  [W4.], [#cite(<Pyarelal.ea:2021>, form: "full")],
+  [W3.], [#cite(<Pyarelal.ea:2019>, form: "full")],
+  [W2.], [#cite(<Pyarelal.ea:2019b>, form: "full")],
+  [W1.], [#cite(<Sharp.ea:2019b>, form: "full")],
 )
 
 = Other Scholarship
+
+#line(length: 100%)
+
+== Software
 
 _Open-source software repositories which I have spearheaded or made
 significant contributions to. The entries in the 'Name' column are
@@ -327,8 +405,8 @@ clickable links to the repositories._
 = Media Coverage
 
   #table(
-    columns: 4,
-    align: (left,left,left,left,),
+    columns: (auto, auto, auto, 1fr),
+    align: (left,left,left,right,),
     table.header([ID], [Date], [Title], [Publication]),
     [M2], [2020-01-28], [#link("https://timesofindia.indiatimes.com/home/science/%
                      desi-scientist-in-us-is-building-ai-that-understands-you/articleshow/73684813.cms")[#emph[Desi scientist in US is building AI that 'understands' you];];], [Times
@@ -394,8 +472,7 @@ clickable links to the repositories._
   )
 
 == Posters
-
-  #table(
+#table(
     columns: 2,
     align: (left,left,),
     stroke: none,
@@ -407,7 +484,21 @@ clickable links to the repositories._
     [P1.], cite(<Morrison:2020>, form: "full"),
   )
 
-= Awarded Grants and Contracts
+#include "awarded_grants.typ"
+
+= Submitted Grants and Contracts
+
+#line(length: 100%)
+
+#emph[
+- Grants are ordered in reverse chronological order based on
+  the date of receipt of the notice of award.
+- For federal grants, total, direct, and indirect funding
+  amounts have been provided. The indirect funding amount is
+  obtained by subtracting the direct funding amount from the
+  full funding amount.
+]
+
 
 #table(
     columns: 4,
@@ -452,21 +543,20 @@ clickable links to the repositories._
     [SG3], [#figure(
       align(center)[#table(
         columns: 3,
+        stroke: none,
         align: (right,left,left,),
         [#emph[Title];], [STRONG: Hierarchical Knowledge Integration for
         Swift Command and Control in Dynamic Environments], [],
         [#emph[Source];], [Army Research Lab], [],
-        [#emph[Amount];], [#figure(
-          align(center)[#table(
+        [#emph[Amount];], [
+          #table(
             columns: 2,
+            stroke: none,
             align: (left,right,),
             [Full], [\$99,409],
             [Direct], [\$64,762],
             [Indirect], [\$34,647],
-          )]
-          , kind: table
           )
-
         ], [],
         [#emph[Role];], [Co-PI], [],
         [#emph[Effort];], [0.5 summer months], [],
@@ -476,10 +566,11 @@ clickable links to the repositories._
       , kind: table
       )
 
-    ], [Pending], [],
-    [], [#figure(
+    ], [Unawarded], [],
+    [SG2], [#figure(
       align(center)[#table(
         columns: 3,
+        stroke: none,
         align: (right,left,left,),
         [#emph[Title];], [Multi-player Video Gaming, Sleep, & Cognition
         Among Individuals with Developmental Disabilities], [],
@@ -499,6 +590,7 @@ clickable links to the repositories._
     [SG1], [#figure(
       align(center)[#table(
         columns: 3,
+        stroke: none,
         align: (right,left,left,),
         [#emph[Title];], [Exploring Semantic Clustering in the Human
         Brain during Video Game Tasks using EEG Signals], [],
@@ -635,7 +727,7 @@ Fall 2019 & Spring 2023 & Aditya Banerjee & University of Arizona \
     align: (left,left,),
     table.cell(align: left, colspan: 2)[Organizer, IVILab Summer
     Programming Bootcamp],
-    [#emph[Summers of 2017 & 2020];], [Organized the IVILab Summer
+    [_Summers of 2017 & 2020_;], [Organized the IVILab Summer
     Programming Bootcamp. Prepared syllabi and instructional materials,
     gave lectures, graded assignments, and recruited and coordinated
     other lecturers.],
