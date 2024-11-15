@@ -1,3 +1,5 @@
+#import "functions.typ": pt, promotion_and_tenure
+
 = Awarded Grants and Contracts
 
 #line(length: 100%)
@@ -15,31 +17,9 @@
   full funding amount.
 ]
 
-#table(
-  columns: 2,
-  [ID] , [Title, Funding source and amounts, Role, Effort, co-PIs, and Dates],
-  [G11] ,
-  [
-    #table(
-      columns: 2,
-      stroke: none,
-      align: (right,left,),
-      [#emph[Title];], [Next-Generation Teams],
-      [#emph[Source];], [United States Army Contracting Command],
-      [#emph[Amount];],
-        [#table(
-          columns: 2,
-          align: (left,right,),
-          [Full], [\$882,546],
-          [Direct], [\$592,852],
-          [Indirect], [\$289,654],
-        )],
-      [#emph[Role];], [PI],
-      [#emph[Effort];], [35% during the academic year & 1 summer month],
-      [#emph[Period of Performance];], [],
-      [#emph[Co-PIs];], [Kobus Barnard, Clayton Morrison, Winslow Burleson],
-    )],
-[G10],
+#let past_grants = {
+  if not promotion_and_tenure {
+    ([G10],
   [#table(
     columns: 2,
     stroke: none,
@@ -59,7 +39,7 @@
     [#emph[Role];], [PI on UArizona subaward],
     [#emph[Effort];], [50% until 2024-04, then 100% for the remainder of
     the project.],
-    [#emph[Period of Performance];], [],
+    [#emph[Period of Performance];], [2023-12--2025-11],
     [#emph[Co-PIs];], [PI on prime award (Lum.AI): Clayton Morrison PI
     on SIFT subaward: Daniel Bryce co-PIs on UArizona subaward: Enrique
     Noriega, Mihai Surdeanu, Katherine Isaacs],
@@ -76,7 +56,7 @@
     [#emph[Role];], [PI],
     [#emph[Effort];], [N/A (PI salary was not allowed on this intramural
     seed grant.)],
-    [#emph[Period of Performance];], [],
+    [#emph[Period of Performance];], [2021-01--2022-06],
     [], [],
   )],
 [G8],
@@ -90,7 +70,7 @@
     [#emph[Role];], [PI],
     [#emph[Effort];], [N/A (PI salary was not allowed on this intramural
     seed grant.)],
-    [#emph[Period of Performance];], [],
+    [#emph[Period of Performance];], [2021-01--2022-06],
     [], [],
   )],
 [G7],
@@ -111,7 +91,7 @@
       )],
     [#emph[Role];], [PI],
     [#emph[Effort];], [100%],
-    [#emph[Period of Performance];], [],
+    [#emph[Period of Performance];], [2019-11--2023-10],
     [#emph[Co-PIs];], [Clayton Morrison, Kobus Barnard, Mihai Surdeanu,
     Rebecca Sharp, Marco Valenzuela-Escárcega],
   )],
@@ -125,7 +105,7 @@
     [#emph[Amount];], [\$961,959],
     [#emph[Role];], [Co-PI],
     [#emph[Effort];], [65%],
-    [#emph[Period of Performance];], [],
+    [#emph[Period of Performance];], [2018-11--2020-05],
     [#emph[Co-PIs];], [PI: Clayton Morrison Other Co-PIs: Saumya Debray,
     Rebecca Sharp, Marco Valenzuela-Escárcega],
   )],
@@ -186,4 +166,34 @@
     find the amount in my email inbox)],
     [#emph[Year];], [2014],
   )]
+)}
+}
+
+#table(
+  columns: 2,
+  [ID] , [Title, Funding source and amounts, Role, Effort, co-PIs, and Dates],
+  [G11] ,
+  [
+    #table(
+      columns: 2,
+      stroke: none,
+      align: (right,left,),
+      [#emph[Title];], [Next-Generation Teams],
+      [#emph[Source];], [United States Army Contracting Command],
+      [#emph[Amount];],
+      [
+        #pt(alternative: [\$882,546])[#table(
+          columns: 2,
+          align: (left,right,),
+          [Full], [\$882,546],
+          [Direct], [\$592,852],
+          [Indirect], [\$289,654],
+        )]
+      ],
+      [#emph[Role];], [PI],
+      [#emph[Effort];], [35% during the academic year & 1 summer month],
+      [#emph[Period of Performance];], [2023-12--2025-11],
+      [#emph[Co-PIs];], [Kobus Barnard, Clayton Morrison, Winslow Burleson],
+    )],
+    ..past_grants
 )
