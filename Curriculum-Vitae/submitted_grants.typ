@@ -15,10 +15,68 @@
 
 
 #table(
-    columns: 4,
-    align: (left,left,left,left,),
+    columns: 3,
+    align: (left,left,left,),
     table.header([ID], [Title, Funding source and amounts, Role, Effort,
-      & co-PIs], [Status], [],),
+      & co-PIs], [Status],),
+    [SG6], [#figure(
+      align(center)[#table(
+        columns: 2,
+        stroke: none,
+        align: (right,left,),
+        [#emph[Title];], [Defining a digital phenotype for labor in at-risk
+        pregnancies],
+        [#emph[Source];], [ABRC],
+        [#emph[Amount];], [
+          #table(
+            columns: 2,
+            stroke: none,
+            align: (left,right,),
+            [Total], [\$746,731],
+            [Direct], [\$678,846],
+            [Indirect], [\$67,885],
+          )
+        ],
+        [#emph[Role];], [Co-PI],
+        [#emph[Effort];], [1.75 summer months in 2025],
+        [#emph[Period of Performance];], [2024-01-15--2027-01-14],
+        [#emph[Co-PIs];], [PI: Elise Erickson\
+        Other Co-PIs: Shravan Aras, Sarah Kellerhals
+        ],
+      )]
+      , kind: table
+      )
+
+    ], [Pending],
+    [SG5], [#figure(
+      align(center)[#table(
+        columns: 2,
+        stroke: none,
+        align: (right,left,),
+        [#emph[Title];], [Validating NewDate: promoting maternal health equity with personalized labor prediction],
+        [#emph[Source];], [NIH],
+        [#emph[Amount];], [
+          #table(
+            columns: 2,
+            stroke: none,
+            align: (left,right,),
+            [Total], [\$3,639,222],
+            [Direct], [\$2,583,450],
+            [Indirect], [\$1,055,772],
+          )
+        ],
+        [#emph[Role];], [Co-I],
+        [#emph[Effort];], [1 summer month/year],
+        [#emph[Period of Performance];], [2025-07-01--2030-06-30],
+        [#emph[Co-PIs];], [PI: Elise Erickson\
+        Other Co-PIs: Shravan Aras, Bonnie LaFleur, Steven Calvin
+        ],
+      )]
+      , kind: table
+      )
+
+    ], [Pending],
+
     [SG4], [#figure(
       align(center)[#table(
         columns: 3,
@@ -50,7 +108,7 @@
       , kind: table
       )
 
-    ], [Unawarded], [],
+    ], [Unawarded],
     [SG3], [#figure(
       align(center)[#table(
         columns: 3,
@@ -77,7 +135,7 @@
       , kind: table
       )
 
-    ], [Unawarded], [],
+    ], [Unawarded],
     [SG2], [#figure(
       align(center)[#table(
         columns: 3,
@@ -97,7 +155,7 @@
       , kind: table
       )
 
-    ], [Unawarded], [],
+    ], [Unawarded],
     [SG1], [#figure(
       align(center)[#table(
         columns: 3,
@@ -116,6 +174,6 @@
       , kind: table
       )
 
-    ], [Unawarded], [],
-    [], [], [], [],
+    ], [Unawarded],
+    [], [], [],
   )
