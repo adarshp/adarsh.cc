@@ -1,5 +1,19 @@
+#import "functions.typ": mentee_names
+#show regex(mentee_names.join("|")): it => [#it$degree$]
 = Works in Progress
 #line(length: 100%)
+
+#emph[
+Preprints are non-refereed papers that have been made public.
+They are also technically 'manuscripts in preparation',
+since they are earlier versions of manuscripts that are in the
+process of being revised and resubmitted.
+Manuscripts in preparation that have an associated preprint have
+names in blue, indicating they are clickable links that link to
+their corresponding arXiv page. For preprints, the listed year is
+the year that the preprint was uploaded. However, these papers are
+typically currently under preparation for resubmission.
+]
 
 == Manuscripts under review
 
@@ -7,7 +21,8 @@
   columns: (auto, auto),
   stroke: none,
   align: (right, left),
-  [MR2.], cite(<Pyarelal.ea:2024>, form: "full"),
+  [MR3.], cite(<Pyarelal.ea:2024>, form: "full"),
+  [MR2.], cite(<Liu.ea:2025>, form: "full"),
   [MR1.], cite(<Zhang.ea:2024b>, form: "full"),
 )
 
@@ -17,7 +32,6 @@
   columns: (auto, auto),
   stroke: none,
   align: (right, left),
-  [MP4.], cite(<Liu.ea:2025>, form: "full"),
   [MP3.], cite(<Lieffers.ea:2025>, form: "full"),
   [MP2.], cite(<KC.ea:2024>, form: "full"),
   [MP1.], cite(<Basavaraj.ea:2022>, form: "full"),

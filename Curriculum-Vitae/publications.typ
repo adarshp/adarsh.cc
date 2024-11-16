@@ -1,18 +1,6 @@
 #import "@preview/fontawesome:0.5.0": *
-
-#let names = (
-  "Aditya Banerjee",
-  "Salena Torres Ashton",
-  "Paulo Soares",
-  "Eric Duong",
-  "Caleb Shibu Jones",
-  "Liang Zhang",
-  "Siena Schoelen",
-  "Justin Lieffers",
-  "Deepsana Shahi"
-)
-
-#show regex(names.join("|")): it => [#it$degree$]
+#import "functions.typ": mentee_names
+#show regex(mentee_names.join("|")): it => [#it$degree$]
 
 = Publications/Creative Activity (Published or Accepted)
 #line(length: 100%)

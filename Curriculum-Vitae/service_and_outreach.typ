@@ -1,36 +1,42 @@
 #import "functions.typ": pt, promotion_and_tenure, nonpt
 
-= Service/Outreach
+= Service/Outreach #pt[(limited to period in current rank)]
 
 == National/International Service
 
-#nonpt[
-=== Journal Reviewing
-
-#table(
-    columns: 2,
-    align: (left,left,),
-    stroke: none,
-    [2021], [Physics (MDPI) (1 paper)],
-  )
+#if not promotion_and_tenure [
+  === Journal Reviewing
+  #table(
+      columns: 2,
+      align: (left,left,),
+      stroke: none,
+      [2021], [Physics (MDPI) (1 paper)],
+    )
 ]
 
 === Conference Reviewing
 
+#emph[
+  Note: The Association for Computational Linguistics Rolling Review (ARR) is
+  the new unified peer-review system for most top-tier venues published by the
+  Association for Computational Linguistics.
+]
+
 #table(
-    columns: 2,
-    align: (left,left,),
-    stroke: none,
+    columns: 3,
+    align: (left,left,right),
+    //stroke: none,
+    table.header([Year], [Conference/ARR Cycle], [\# of papers reviewed]),
     [2024],
-    [ACL ARR October 2024 Cycle (4 papers)],
-    [], [NeurIPS Datasets and Benchmarks Track (5 papers)],
-    [], [ACL ARR June 2024 Cycle (4 papers)],
-    [], [ACL ARR February 2024 Cycle (5 papers)],
-    [2023], [NeurIPS Datasets and Benchmarks Track (3 papers)],
-    [], [],
+    [ARR October 2024 Cycle],  [4],
+    [], [NeurIPS Datasets and Benchmarks Track], [5],
+    [], [ARR June 2024 Cycle], [4],
+    [], [ARR February 2024 Cycle], [5],
+    [2023], [NeurIPS Datasets and Benchmarks Track], [3],
   )
 
 
+#if not promotion_and_tenure [
 == National/International Outreach
 
 #table(
@@ -40,7 +46,6 @@
     [2022-03-11], [SXSW], [#emph[#link("https://www.youtube.com/watch?v=vygzeHrC13Q&t=40s&themeRefresh=1")[Building machines that understand humans];];], [Austin,
     TX], [Invited],
   )
-
 == Local/State Outreach
 
   #table(
@@ -50,6 +55,7 @@
     [2016-11-29], [Tucson Data Science Meetup], [#emph[Machine Learning
     and Particle Physics];], [Tucson, AZ], [Invited],
   )
+]
 
 #nonpt[
 == University-level Service
@@ -82,11 +88,12 @@
 == Unit-level Service
 
 #table(
-    columns: (auto, 1fr, auto, auto),
+    columns: (auto, auto, auto, auto),
     align: (left,left,left,left,),
     table.header([Dates], [Role], [Unit], [University]),
-    [2023-08 – 2024-05], [Member, Faculty Peer Review
+    [2024-08 -- present], [Game Dev Faculty Search Committee], [College of Information Science], [University of Arizona],
+    [2024-08 -- present], [Faculty Awards Committee], [College of Information Science], [University of Arizona],
+    [2023-08 -- 2024-05], [Faculty Peer Review
     Committee], [School of Information], [University of Arizona],
     ..past_service,
-    [], [], [], [],
   )
