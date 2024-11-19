@@ -1,6 +1,7 @@
 #import "functions.typ": pt, promotion_and_tenure, nonpt
 
 = Service/Outreach #pt[(limited to period in current rank)]
+#line(length: 100%)
 
 == National/International Service
 
