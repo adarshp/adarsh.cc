@@ -1,9 +1,9 @@
 all:
-	latexmk -lualatex -g -interaction=nonstopmode -outdir=build curriculum_vitae.tex
+	typst compile curriculum_vitae.pdf
 
-# For live previewing on macOS with the Skim PDF reader
+# For live previewing
 watch:
-	latexmk -lualatex -pvc -e '$$pdf_previewer=q[open -a Skim]' -outdir=build curriculum_vitae.tex
+	typst watch curriculum_vitae.pdf
 
 clean:
-	latexmk -C *.tex
+	rm curriculum_vitae.pdf
