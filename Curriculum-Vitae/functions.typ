@@ -1,4 +1,4 @@
-#let promotion_and_tenure = true
+#let promotion_and_tenure = false
 
 #let pt(content, alternative: "") = {
   if promotion_and_tenure == true [
