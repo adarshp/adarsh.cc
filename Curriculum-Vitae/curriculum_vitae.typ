@@ -9,13 +9,10 @@
 
 #set text(
   font: "Arno Pro",
-  size: 11pt,
+  size: 10pt,
 )
 
 #show link: set text(fill: blue)
-#show regex("(\d+\.\d+/.*)"): (it)=>{
-  link("http://doi.org/"+it.text, it)
-}
 
 #set table(
   stroke: (x, y) => if y == 0 {
@@ -103,7 +100,7 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719\
 
 #figure(
   align(center)[#table(
-    columns: 4,
+    columns: (auto, 1fr, auto, auto),
     align: (left,left,left,left,),
     [#emph[Duration];], [#emph[Title];], [#emph[Department];], [#emph[Institution];],
     [2023-08 –], [Assistant Professor], [College of Information

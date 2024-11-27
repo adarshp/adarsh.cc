@@ -1,7 +1,7 @@
 .PHONY: assets/cv_adarsh.pdf
 assets/cv_adarsh.pdf:
 	cd Curriculum-Vitae; make
-	cp Curriculum-Vitae/build/curriculum_vitae.pdf assets/cv_adarsh.pdf
+	cp Curriculum-Vitae/curriculum_vitae.pdf assets/cv_adarsh.pdf
 
 build:
 	stack exec generator build

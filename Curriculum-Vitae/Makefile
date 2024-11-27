@@ -1,5 +1,5 @@
 all:
-	typst compile curriculum_vitae.pdf
+	typst compile curriculum_vitae.typ
 
 # For live previewing
 watch:

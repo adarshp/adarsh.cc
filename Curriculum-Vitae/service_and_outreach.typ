@@ -76,9 +76,9 @@
 #let past_service = {
   if not promotion_and_tenure {
     (
-      [2012--13], [Member, Physics Grad Council], [Physics], [University of
+      [2012--13], [Physics Grad Council], [Physics], [University of
       Arizona],
-      [2012--13], [Member, Associated Graduate Council for the College of
+      [2012--13], [Associated Graduate Council for the College of
       Science], [Physics], [University of Arizona],
       [2012--13], [Organizer, weekly departmental graduate student seminar
       series], [Physics], [University of Arizona],
@@ -92,7 +92,8 @@
     columns: (auto, auto, auto, auto),
     align: (left,left,left,left,),
     table.header([Dates], [Role], [Unit], [University]),
-    [2024-08 -- present], [Game Dev Faculty Search Committee], [College of Information Science], [University of Arizona],
+    [2024-08 -- present], [Faculty Search Committee], [Department of Psychology], [University of Arizona],
+    [2024-08 -- present], [Faculty Search Committee], [College of Information Science], [University of Arizona],
     [2024-08 -- present], [Faculty Awards Committee], [College of Information Science], [University of Arizona],
     [2023-08 -- 2024-05], [Faculty Peer Review
     Committee], [School of Information], [University of Arizona],
