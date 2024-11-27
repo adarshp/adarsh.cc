@@ -15,11 +15,11 @@
     higher than journal articles.  These are full papers that go through the
     normal peer review process, as in a journal. In general, work that is
     published as a conference paper may not be submitted for publication
-    elsewhere.  Google Scholar Rankings and h5-indices are provided where
-    available. Note that the acceptance rates, rankings and h5-indices are
-    provided for the venue at the time of publication---thus, you may see
-    different rankings and h5-indices for the same publication venue for
-    different years.
+    elsewhere.  Google Scholar rankings and h5-indices are provided where
+    available, with the icon #fa-icon("google-scholar"). Note that the
+    acceptance rates, rankings and h5-indices are
+    generally provided for the venue at the time of publication---thus, you may see
+    different rankings and h5-indices for the same venue for different years.
 ]
 
 == Chapters in scholarly books and monographs
@@ -47,15 +47,15 @@
   [2024], [J4.], cite(<Erikson.ea:2024>, form: "full"),
   [2020], [$dagger$\*J3.], [
     #cite(<Pyarelal:2020higgsino>, form: "full")\
-    [_h5-index of Science China Physics, Mechanics \& Astronomy: 46 (as of 2024-02)_]
+    [#fa-icon("google-scholar") _h5-index of Science China Physics, Mechanics \& Astronomy: 46 (as of 2024-02)_]
   ],
   [2019], [$dagger$J2.], [
     #cite(<Kling2019>, form: "full")\
-    [#emph[Google Scholar Ranking: JHEP ranked \#2 in High Energy and Nuclear Physics as of 2024-02: (h5: 158)]]
+    [#emph[#fa-icon("google-scholar") JHEP ranked \#2 in High Energy and Nuclear Physics as of 2024-02: (h5: 158)]]
   ],
   [2015], [$dagger$\*J1.], [
     #cite(<Kling:2015uba>, form: "full")\
-    [#emph[Google Scholar Ranking: JHEP ranked \#2 in High Energy and Nuclear Physics as of 2024-02: (h5: 158)]]
+    [#emph[#fa-icon("google-scholar") JHEP ranked \#2 in High Energy and Nuclear Physics as of 2024-02: (h5: 158)]]
   ]
 )
 
@@ -72,40 +72,49 @@
   table.vline(x: 1, start: 6, end: 7, stroke: .7pt),
   [2024], [C7.], [
     #cite(<Noriega.ea:2024>, form: "full")\
-    [#emph[Google Scholar Ranking: EMNLP ranked \#2 in Computational Linguistics (h5: 193)]]
+    [#emph[#fa-icon("google-scholar") EMNLP ranked \#2 in Computational Linguistics (h5: 193)]]
   ],
   [], [C6.], [
     #cite(<Soares.ea:2024>, form: "full")\
-    [#emph[Google Scholar Ranking: ICML ranked \#3 in Artificial Intelligence (h5: 254)]]
+    [#emph[#fa-icon("google-scholar") ICML ranked \#3 in Artificial Intelligence (h5: 254)]]
   ],
   [2023], [C5.], [
     #cite(<Pyarelal.ea:2023>, form: "full")\
     [#emph[Acceptance rate for the Datasets and Benchmarks Track of NeurIPS 2023: 32.7\%]]\
-    [#emph[Google Scholar Ranking: NeurIPS ranked \#1 in Artificial Intelligence (h5: 309)]]
+    [#emph[#fa-icon("google-scholar") NeurIPS ranked \#1 in Artificial Intelligence (h5: 309)]]
   ],
   [], [C4.], [
     #cite(<qamar-etal-2023-speaking>, form: "full")\
     [#emph[Combined acceptance rate (Main + Findings) for long papers at EMNLP 2023: 46.2\%]]\
-    [#emph[Google Scholar Ranking: EMNLP ranked \#2 in Computational Linguistics (h5: 176)]]
+    [#emph[#fa-icon("google-scholar") EMNLP ranked \#2 in Computational Linguistics (h5: 176)]]
   ],
   [], [C3.], [
     #cite(<miah-etal-2023-hierarchical>, form: "full")\
     [#emph[Combined acceptance rate (Main + Findings) for long papers at EMNLP 2023: 46.2\%]]\
-    [#emph[Google Scholar Ranking: EMNLP ranked \#2 in Computational Linguistics (h5: 176)]]
+    [#emph[#fa-icon("google-scholar") EMNLP ranked \#2 in Computational Linguistics (h5: 176)]]
   ],
   [2020], [C2.], [
     #cite(<alexeeva-etal-2020-mathalign>, form: "full")\
     [#emph[Acceptance rate for LREC 2020: 60\%]]\
-    [#emph[Google Scholar Ranking: LREC ranked \#6 in Computational Linguistics as of 2024-11 (h5: 59)]]
+    [#emph[#fa-icon("google-scholar") LREC ranked \#6 in Computational Linguistics as of 2024-11 (h5: 59)]]
   ],
   [2019], [C1.], [
     #cite(<sharp-etal-2019-eidos>, form: "full")\
-    [#emph[Google Scholar Ranking: NAACL-HLT ranked \#3 in Computational Linguistics as of 2024-02: (h5: 133)]]
+    [#emph[#fa-icon("google-scholar") NAACL-HLT ranked \#3 in Computational Linguistics as of 2024-02: (h5: 133)]]
   ],
 )
 
 
 == Refereed Workshop Articles
+
+#emph[
+    Workshop publications are peer-reviewed publications, but less competitive
+    than conference articles. They are meant for authors to get early feedback
+    on their manuscripts prior to submitting them to competitive conferences.
+    In general, workshops are 'non-archival' venues, i.e., the research
+    presented in a workshop paper can be submitted later to another venue
+    (e.g., an 'archival' venue such as a conference).
+]
 
 #table(
   columns: (auto, auto, auto),
@@ -122,7 +131,7 @@
   [2022], [W8.], [
     #cite(<nitschke-etal-2022-rule>, form: "full")\
     [#emph[Acceptance rate for PAN-DL 2022: 77\%]]\
-    [#emph[Google Scholar Ranking: COLING ranked \#5 in Computational Linguistics as of 2024-02: (h5: 73)]]
+    [#emph[#fa-icon("google-scholar") COLING ranked \#5 in Computational Linguistics as of 2024-02: (h5: 73)]]
   ],
   [], [$dagger$\*W7.], [
     #cite(<Kling:2022jcd>, form: "full")

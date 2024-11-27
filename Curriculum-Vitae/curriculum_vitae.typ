@@ -1,4 +1,5 @@
 #import "@preview/fontawesome:0.5.0": *
+#import "@preview/blinky:0.1.0": link-bib-urls
 #import "functions.typ": pt, promotion_and_tenure, nonpt
 
 #set page(
@@ -11,9 +12,9 @@
   size: 11pt,
 )
 
-#show link: this => {
-  text(this, fill: blue)
-
+#show link: set text(fill: blue)
+#show regex("(\d+\.\d+/.*)"): (it)=>{
+  link("http://doi.org/"+it.text, it)
 }
 
 #set table(
@@ -69,8 +70,14 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719\
 ]
 
 #show bibliography: none
+//#let bibsrc = read("bibliography.bib")
+//#link-bib-urls(bibsrc)[
+  //#bibliography("bibliography.bib", style: "./association-for-computational-linguistics.csl")
+//]
+//#bibliography("bibliography.bib", style: "association-for-computational-linguistics.csl")
 #bibliography("bibliography.bib", style:
-"association-for-computational-linguistics.csl")
+"association-for-computational-linguistics.csl", full: true)
+
 
 #show "Adarsh Pyarelal": name => strong(name)
 
