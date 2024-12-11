@@ -69,11 +69,11 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719\
 #show bibliography: none
 //#let bibsrc = read("bibliography.bib")
 //#link-bib-urls(bibsrc)[
-  //#bibliography("bibliography.bib", style: "./association-for-computational-linguistics.csl")
+  //#bibliography("bibliography.bib", style: "./association-for-computational-linguistics-blinky.csl")
 //]
 //#bibliography("bibliography.bib", style: "association-for-computational-linguistics.csl")
-#bibliography("bibliography.bib", style:
-"association-for-computational-linguistics.csl", full: true)
+#bibliography("bibliography.bib", style: "association-for-computational-linguistics.csl", full: true)
+//#bibliography("bibliography.bib", style: "institute-of-physics-numeric", full: true)
 
 
 #show "Adarsh Pyarelal": name => strong(name)
