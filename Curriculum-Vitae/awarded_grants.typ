@@ -4,6 +4,9 @@
 
 #line(length: 100%)
 
+#if promotion_and_tenure [
+- _List of awarded grants below is limited to the period in rank._
+]
 #emph[
 - The funding amount, period of performance, effort level,
   and list of co-PIs are based on the original awarded
