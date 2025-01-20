@@ -40,9 +40,10 @@
 
 #table(
   columns: 4,
-  [Start], [End], [Name], [University],
-  [Spring 2024], [Spring 2024], [Salena Torres Ashton], [University of Arizona],
-  [Spring 2024], [Fall 2024], [Kadir Bulut Ozler], [University of Arizona],
+  [Semester], [Name], [Student's home department], [University],
+  [Spring 2025], [Yuwei Wang], [East Asian Studies], [University of Arizona],
+  [Spring 2024], [Salena Torres Ashton], [College of Information Science], [University of Arizona],
+  [Fall 2024], [Kadir Bulut Ozler], [College of Information Science], [University of Arizona],
 )
 
 == Doctoral: Research Project Mentor
@@ -109,6 +110,7 @@
     columns: 5,
     align: (left,left,left,left,left,),
     [Year], [Term], [Course No.], [Course Title], [Role],
+    [2025], [Fall], [INFO 521], [Introduction to Machine Learning], [Instructor],
     [2024], [Fall], [INFO 521], [Introduction to Machine Learning], [Instructor],
     [2024], [Spring], [ISTA 421/INFO 521], [Introduction to Machine
     Learning], [Instructor],
