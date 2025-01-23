@@ -21,7 +21,6 @@ typically currently under preparation for resubmission.
   columns: (auto, auto),
   stroke: none,
   align: (right, left),
-  [MR3.], cite(<Pyarelal.ea:2024>, form: "full"),
   [MR2.], cite(<Liu.ea:2025>, form: "full"),
   [MR1.], cite(<Zhang.ea:2024b>, form: "full"),
 )

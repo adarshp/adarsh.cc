@@ -66,10 +66,18 @@
   stroke: none,
   align: (right, right, left),
   row-gutter: 1em,
-  table.vline(x: 1, start: 0, end: 2, stroke: .7pt),
-  table.vline(x: 1, start: 2, end: 5, stroke: .7pt),
+  table.vline(x: 1, start: 0, end: 1, stroke: .7pt),
+  table.vline(x: 1, start: 1, end: 3, stroke: .7pt),
+  table.vline(x: 1, start: 3, end: 5, stroke: .7pt),
   table.vline(x: 1, start: 5, end: 6, stroke: .7pt),
   table.vline(x: 1, start: 6, end: 7, stroke: .7pt),
+  table.vline(x: 1, start: 7, end: 8, stroke: .7pt),
+  [2025], [C8.], [
+    #cite(<Pyarelal.ea:2025>, form: "full")\
+    [#emph[#fa-icon("google-scholar") NAACL ranked \#3 in Computational Linguistics (h5: 132) as of 2025-01-23]]
+  ],
+  // MultiCAT accepted to NAACL 2025 Findings
+  // Rejected from ACL 2023, ACL 2024, EMNLP 2024
   [2024], [C7.], [
     #cite(<Noriega.ea:2024>, form: "full")\
     [#emph[#fa-icon("google-scholar") EMNLP ranked \#2 in Computational Linguistics (h5: 193)]]

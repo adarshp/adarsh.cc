@@ -72,11 +72,13 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719\
   //#bibliography("bibliography.bib", style: "./association-for-computational-linguistics-blinky.csl")
 //]
 //#bibliography("bibliography.bib", style: "association-for-computational-linguistics.csl")
-#bibliography("bibliography.bib", style: "association-for-computational-linguistics.csl", full: true)
-//#bibliography("bibliography.bib", style: "institute-of-physics-numeric", full: true)
+//#bibliography("bibliography.bib", style: "association-for-computational-linguistics.csl", full: true)
+#bibliography("bibliography.bib", style: "acl-modified.csl", full: true)
+//#bibliography("bibliography.bib", style: "american-psychological-association", full: true)
 
 
-#show "Adarsh Pyarelal": name => strong(name)
+#show "Pyarelal, A.": name => strong(name)
+#show "Adarsh Pyarelal": name => text(fill: maroon, strong(name))
 
 = Chronology of Education
 

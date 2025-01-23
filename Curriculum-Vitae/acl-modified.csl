@@ -185,21 +185,21 @@
       <!-- author -->
       <choose>
         <if type="book">
-          <text macro="author-or-editor" suffix="."/>
+          <text macro="author-or-editor" suffix="&#10;"/>
         </if>
         <else>
-          <text macro="author" suffix="."/>
+          <text macro="author" suffix="&#10;"/>
         </else>
       </choose>
       <!-- year -->
-      <date variable="issued" prefix=" " suffix=".">
-        <date-part name="year"/>
-      </date>
+      <!--<date variable="issued" prefix=" " suffix="&#10;">-->
+        <!--<date-part name="year"/>-->
+      <!--</date>-->
       <!-- title and other information -->
       <choose>
         <!-- corresponds to "article" in bibtex -->
         <if type="article-journal">
-          <text variable="title" prefix=" " suffix="."/>
+          <text variable="title" prefix="" suffix="&#10;" font-weight="bold"/>
           <group prefix=" " suffix=".">
             <text variable="container-title" font-style="italic"/>
             <text variable="volume" prefix=", "/>
@@ -209,7 +209,7 @@
         </if>
         <!-- corresponds to "proceedings", "manual", "book", and "periodical" in bibtex -->
         <else-if type="book">
-          <text variable="title" prefix=" " suffix="." font-style="italic"/>
+          <text variable="title" prefix="" suffix="." font-style="italic"/>
           <group delimiter=", " suffix=".">
             <text macro="volume-and-collection-title"/>
           </group>
@@ -221,7 +221,7 @@
         </else-if>
         <!-- corresponds to "inbook" and "incollection" in bibtex -->
         <else-if type="chapter">
-          <text variable="title" prefix=" " suffix="."/>
+          <text variable="title" prefix="" suffix="."/>
           <text term="in" text-case="capitalize-first" prefix=" " suffix=" "/>
           <group delimiter=", " suffix=".">
             <text macro="editor"/>
@@ -251,8 +251,8 @@
         </else-if>
         <!-- corresponds to "inproceedings" and "conference" in bibtex -->
         <else-if type="paper-conference">
-          <text variable="title" prefix=" " suffix=". "/>
-          <text term="in" text-case="capitalize-first" suffix=" "/>
+          <text variable="title" prefix="" suffix="&#10;" font-weight="bold"/>
+          <!--<text term="in" text-case="capitalize-first" suffix=" "/>-->
           <group suffix="." delimiter=", ">
             <text macro="editor"/>
             <text variable="container-title" font-style="italic"/>
