@@ -29,6 +29,29 @@
       </substitute>
     </names>
   </macro>
+  <macro name="access">
+    <choose>
+      <if type="webpage post post-weblog" match="any">
+        <choose>
+          <if variable="URL">
+            <group prefix=" " delimiter=" ">
+              <text variable="URL"/>
+              <group delimiter=" " prefix="(" suffix=").">
+                <text term="accessed"/>
+                <date variable="accessed" form="text"/>
+              </group>
+            </group>
+          </if>
+        </choose>
+      </if>
+      <else-if match="any" variable="DOI">
+        <text variable="DOI" prefix=" doi: " suffix="."/>
+      </else-if>
+      <else-if variable="URL">
+        <text variable="URL" prefix="URL: "/>
+      </else-if>
+    </choose>
+  </macro>
   <macro name="author-short">
     <names variable="author">
       <name form="short" and="text" delimiter=", "/>
@@ -182,19 +205,6 @@
       <key variable="title"/>
     </sort>
     <layout>
-      <!-- author -->
-      <choose>
-        <if type="book">
-          <text macro="author-or-editor" suffix="&#10;"/>
-        </if>
-        <else>
-          <text macro="author" suffix="&#10;"/>
-        </else>
-      </choose>
-      <!-- year -->
-      <!--<date variable="issued" prefix=" " suffix="&#10;">-->
-        <!--<date-part name="year"/>-->
-      <!--</date>-->
       <!-- title and other information -->
       <choose>
         <!-- corresponds to "article" in bibtex -->
@@ -254,20 +264,20 @@
           <text variable="title" prefix="" suffix="&#10;" font-weight="bold"/>
           <!--<text term="in" text-case="capitalize-first" suffix=" "/>-->
           <group suffix="." delimiter=", ">
-            <text macro="editor"/>
+            <!--<text macro="editor"/>-->
             <text variable="container-title" font-style="italic"/>
             <text macro="volume-or-number"/>
-            <group delimiter=" ">
-              <label variable="page"/>
-              <text variable="page"/>
-            </group>
-            <choose>
-              <if variable="event-place publisher-place" match="any">
-                <text macro="event-or-publisher-place"/>
-              </if>
-            </choose>
+            <!--<group delimiter=" ">-->
+              <!--<label variable="page"/>-->
+              <!--<text variable="page"/>-->
+            <!--</group>-->
+            <!--<choose>-->
+              <!--<if variable="event-place publisher-place" match="any">-->
+                <!--<text macro="event-or-publisher-place"/>-->
+              <!--</if>-->
+            <!--</choose>-->
           </group>
-          <text variable="publisher" prefix=" " suffix="."/>
+          <!--<text variable="publisher" prefix=" " suffix="."/>-->
         </else-if>
         <!-- corresponds to "techreport" in bibtex -->
         <else-if type="report">
@@ -293,8 +303,19 @@
           <text variable="title" prefix=" " suffix="."/>
         </else>
       </choose>
+
+      <!-- author -->
+      <choose>
+        <if type="book">
+          <text macro="author-or-editor" prefix="&#10;"/>
+        </if>
+        <else>
+          <text macro="author" prefix="&#10;"/>
+        </else>
+      </choose>
       <!-- note -->
       <text variable="note" prefix=" " suffix="."/>
+      <text macro="access" prefix="&#10;"/>
     </layout>
   </bibliography>
 </style>
