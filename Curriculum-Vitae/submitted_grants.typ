@@ -185,5 +185,5 @@
       , kind: table
       )
 
-    ], [Unawarded],
+    ], [Withdrawn],
   )

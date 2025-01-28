@@ -14,7 +14,7 @@
 #table(
   columns: 4,
 [Start], [End], [Name], [University],
-[Fall 2022], [ – ], [Justin Lieffers], [University of Arizona],
+[Fall 2022], [ Fall 2024 ], [Justin Lieffers], [University of Arizona],
 [Spring 2022], [Spring 2023], [John Culnan], [University of Arizona],
 [Fall 2020], [Fall 2023], [Liang Zhang], [University of Arizona],
 )
