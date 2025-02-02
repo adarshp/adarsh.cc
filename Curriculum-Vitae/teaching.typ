@@ -83,6 +83,16 @@ table.hline()
 table.hline()
 )
 
+== Masters: Research Project Mentor
+
+#table(
+  columns: 4,
+[Start], [End], [Name], [University],
+[Fall 2021], [Fall 2022], [Gauri Yadav], [University of Arizona],
+table.hline()
+)
+
+
 == Undergraduate: Research Project Mentor
 
 #table(
@@ -90,15 +100,22 @@ table.hline()
 [Start], [End], [Name], [University],
 [Fall 2023], [--], [Minglai Yang], [University of Arizona],
 [Spring 2023], [Spring 2023], [Zach Keyes], [University of Arizona],
+[Spring 2022], [Spring 2022], [Stephen Kim], [University of Arizona],
+[Fall 2021], [Summer 2022], [Aditya Jadhav], [University of Arizona],
+[Spring 2021], [Fall 2022], [Shambhavi Singh], [University of Arizona],
 [Spring 2020], [Fall 2021], [Shreeya Jain], [University of Arizona],
 [Spring 2020], [Fall 2020], [Da Long], [University of Arizona],
 [Fall 2020], [Spring 2021], [Siena Schoelen], [University of Arizona],
 [Fall 2019], [Summer 2020], [Runnan Zhou], [University of Arizona],
+[Fall 2019], [Spring 2020], [Lize Chen], [University of Arizona],
 [Fall 2019], [Spring 2020], [Jiangfeng Li], [University of Arizona],
 [Fall 2019], [Spring 2023], [Aditya Banerjee], [University of Arizona],
+[Fall 2018], [Spring 2020], [Nicholas Ziolkowski], [University of Arizona],
+[Spring 2018], [Spring 2019], [David Weinflash], [University of Arizona],
 table.hline()
 )
 
+#nonpt[#pagebreak()]
 == Awards won by mentored students
 
 
