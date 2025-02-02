@@ -127,7 +127,6 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719\
 #include "service_and_outreach.typ"
 #include "publications.typ"
 #include "other_scholarship.typ"
-#pagebreak()
 #include "works_in_progress.typ"
 #include "media.typ"
 

@@ -1,5 +1,9 @@
-#import "functions.typ": mentee_names
+#import "functions.typ": mentee_names, nonpt
+
 #show regex(mentee_names.join("|")): it => [#it$degree$]
+
+#nonpt[#pagebreak()]
+
 = Works in Progress
 #line(length: 100%)
 
@@ -24,7 +28,7 @@ typically currently under preparation for resubmission.
   [MR2.], cite(<Liu.ea:2025>, form: "full"),
   // Rejected from AAAI 2025
   // Submitted to AISD @NAACL 2025
-  [MR1.], cite(<Zhang.ea:2024b>, form: "full"),
+  [MR1.], cite(<Zhang.ea:2025>, form: "full"),
 )
 
 == Manuscripts in preparation and preprints

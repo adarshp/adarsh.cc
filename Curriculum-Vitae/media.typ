@@ -11,4 +11,5 @@
     [M1], [2020-01-22], [#link("https://tucson.com/news/local/socially-savvy-artificial-intelligence-to-be-developed-at-ua/%
                     article_0f8879d4-3543-56ba-a7dd-12c18c0b3d7b.html")[#emph[Socially savvy artificial intelligence to be developed at UA];];], [Arizona
     Daily Star],
+    table.hline()
   )

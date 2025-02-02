@@ -24,16 +24,17 @@
 ]
 
 #table(
-    columns: 3,
-    align: (left,left,right),
+    columns: 4,
+    align: (left,left,right, right),
     //stroke: none,
-    table.header([Year], [Conference/ARR Cycle], [\# of papers reviewed]),
+    table.header([Year], [Conference/ARR Cycle], [\# of new papers reviewed], [\# of revised papers reviewed]),
     [2024],
-    [ARR October 2024 Cycle],  [4],
-    [], [NeurIPS Datasets and Benchmarks Track], [5],
-    [], [ARR June 2024 Cycle], [4],
-    [], [ARR February 2024 Cycle], [5],
-    [2023], [NeurIPS Datasets and Benchmarks Track], [3],
+    [ARR December 2024 Cycle],  [0], [1],
+    [], [ARR October 2024 Cycle],  [4], [0],
+    [], [NeurIPS Datasets and Benchmarks Track], [5], [N/A],
+    [], [ARR June 2024 Cycle], [4], [0],
+    [], [ARR February 2024 Cycle], [5], [0],
+    [2023], [NeurIPS Datasets and Benchmarks Track], [3], [N/A],
   )
 
 
@@ -46,6 +47,7 @@
     table.header([Date], [Venue], [Talk Title], [City], [Type]),
     [2022-03-11], [SXSW], [#emph[#link("https://www.youtube.com/watch?v=vygzeHrC13Q&t=40s&themeRefresh=1")[Building machines that understand humans];];], [Austin,
     TX], [Invited],
+    table.hline()
   )
 == Local/State Outreach
 
@@ -55,6 +57,7 @@
     table.header([Date], [Venue], [Talk Title], [City], [Type]),
     [2016-11-29], [Tucson Data Science Meetup], [#emph[Machine Learning
     and Particle Physics];], [Tucson, AZ], [Invited],
+    table.hline()
   )
 ]
 
@@ -69,6 +72,7 @@
     [2015], [Graduate and Professional Student Council (GPSC) Travel
     Grant Judge], [University of Arizona],
     [2012–13], [Arizona Assurance Mentor], [University of Arizona],
+    table.hline()
   )
 ]
 
@@ -98,4 +102,5 @@
     [2023-08 -- 2024-05], [Faculty Peer Review
     Committee], [School of Information], [University of Arizona],
     ..past_service,
+    table.hline()
   )

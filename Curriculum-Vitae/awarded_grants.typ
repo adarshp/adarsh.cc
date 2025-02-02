@@ -30,6 +30,7 @@
     [#emph[Title];], [#link("https://skema.sista.arizona.edu")[SKEMA: Scientific Knowledge Extraction and Model Analysis];],
     [#emph[Source];], [Defense Advanced Research Projects Agency],
     [#emph[Amount];],
+      if promotion_and_tenure
       [#table(
         columns: 2,
         stroke: none,
@@ -38,7 +39,8 @@
         [UArizona subaward], [\$3,253,997],
         [UArizona direct funding amount], [\$2,175,514],
         [UArizona indirect funding amount], [\$1,078,483],
-      )],
+      )]
+      else [\$9,345,747],
     [#emph[Role];], [PI on UArizona subaward],
     [#emph[Effort];], [50% until 2024-04, then 100% for the remainder of
     the project.],

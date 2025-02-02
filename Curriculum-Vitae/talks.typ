@@ -22,6 +22,7 @@
     [CQ1], [2020-09-04], [University of Arizona Cognitive Science
     Colloquium Series], [#emph[Building machines that understand
     humans];], [Invited],
+    table.hline()
   )
 
 
@@ -51,6 +52,7 @@
     Supersymmetry and Unification of Fundamental
     Interactions], [#emph[Light Charged Higgs Bosons to AW/HW via Top
     Decay];], [Lake Tahoe, CA], [Submitted],
+    table.hline()
   )
 
 == Posters
