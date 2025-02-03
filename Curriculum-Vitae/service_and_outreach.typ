@@ -68,10 +68,11 @@
     columns: (auto, 1fr, auto),
     align: (left,left,left,),
     table.header([Dates], [Role], [University]),
+    [2024--], [Faculty Advisor, UA AI Club], [University of Arizona],
     [2022], [SensorLab Seed Grant Reviewer], [University of Arizona],
     [2015], [Graduate and Professional Student Council (GPSC) Travel
     Grant Judge], [University of Arizona],
-    [2012–13], [Arizona Assurance Mentor], [University of Arizona],
+    [AY 2012-–13], [Arizona Assurance Mentor], [University of Arizona],
     table.hline()
   )
 ]

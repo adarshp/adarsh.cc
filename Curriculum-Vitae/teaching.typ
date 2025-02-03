@@ -134,8 +134,6 @@ table.hline()
 table.hline()
 )
 
-#nonpt[#pagebreak()]
-
 == Courses Taught
 
 #table(

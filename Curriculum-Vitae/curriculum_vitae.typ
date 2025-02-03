@@ -80,6 +80,9 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719\
 #show "Pyarelal, A.": name => strong(name)
 #show "Adarsh Pyarelal": name => text(fill: maroon, strong(name))
 
+//#set heading(numbering: "1.1")
+//#outline(indent: auto, depth: 1)
+
 = Chronology of Education
 
 #figure(
