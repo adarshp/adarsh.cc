@@ -63,41 +63,76 @@
 }
 }
 
+#let submitted_grant(
+  title,
+  source,
+  total,
+  direct,
+  indirect,
+  role,
+  effort,
+  period_of_performance,
+  co_pis
+) = (
+    figure(
+      align(center)[#table(
+        columns: 2,
+        stroke: none,
+        align: (right,left,),
+        [#emph[Title];], [#title],
+        [#emph[Source];], [#source],
+        [#emph[Amount];], [
+          #table(
+            columns: 2,
+            stroke: none,
+            align: (left,right,),
+            [Total], [\$#total],
+            [Direct], [\$#direct],
+            [Indirect], [\$#indirect],
+          )
+        ],
+        [#emph[Role];], [#role],
+        [#emph[Effort];], [#effort],
+        [#emph[Period of Performance];], [#period_of_performance],
+        [#emph[Co-PIs];], [#co_pis],
+      )]
+      , kind: table
+      )
+)
+
 
 #table(
     columns: 3,
     align: (left,left,left,),
     table.header([ID], [Title, Funding source and amounts, Role, Effort,
       & co-PIs], [Status],),
-    [SG6], [#figure(
-      align(center)[#table(
-        columns: 2,
-        stroke: none,
-        align: (right,left,),
-        [#emph[Title];], [Defining a digital phenotype for labor in at-risk
-        pregnancies],
-        [#emph[Source];], [ABRC],
-        [#emph[Amount];], [
-          #table(
-            columns: 2,
-            stroke: none,
-            align: (left,right,),
-            [Total], [\$746,731],
-            [Direct], [\$678,846],
-            [Indirect], [\$67,885],
-          )
-        ],
-        [#emph[Role];], [Co-PI],
-        [#emph[Effort];], [1.75 summer months in 2025],
-        [#emph[Period of Performance];], [2024-01-15--2027-01-14],
-        [#emph[Co-PIs];], [PI: Elise Erickson\
-        Other Co-PIs: Shravan Aras, Sarah Kellerhals
-        ],
-      )]
-      , kind: table
-      )
-
-    ], [Pending],
+    [SG7],
+    submitted_grant(
+      [RI: Small: Enhancing Robustness in Deep Reinforcement Learning Through
+      Semantic Clustering],
+      [NSF],
+      [251,034],
+      [173,120],
+      [77,914],
+      [Co-I],
+      [0.5 summer months/year],
+      [2025-07-01 -- 2027-06-30],
+      [PI: Liang Zhang]
+    ),
+    [Pending],
+    [SG6],
+    submitted_grant(
+      [Defining a digital phenotype for labor in at-risk pregnancies],
+      [ABRC],
+      [746,731],
+      [678,846],
+      [67,885],
+      [Co-PI],
+      [1.75 summer months in 2025],
+      [2024-01-15--2027-01-14],
+      [PI: Elise Erickson\ Other Co-PIs: Shravan Aras, Sarah Kellerhals ],
+    ),
+    [Pending],
     [SG5], [#figure(
       align(center)[#table(
         columns: 2,
