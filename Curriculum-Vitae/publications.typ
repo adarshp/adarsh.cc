@@ -16,11 +16,13 @@
     higher than journal articles.  These are full papers that go through the
     normal peer review process, as in a journal. In general, work that is
     published as a conference paper may not be submitted for publication
-    elsewhere.  Google Scholar rankings and h5-indices are provided where
-    available, with the icon #fa-icon("google-scholar"). Note that the
-    acceptance rates, rankings and h5-indices are
-    generally provided for the venue at the time of publication---thus, you may see
-    different rankings and h5-indices for the same venue for different years.
+    elsewhere.
+  - Google Scholar rankings and h5-indices are provided where
+    available, with the icon #fa-icon("google-scholar"). Impact factors are
+    also provided where available. Note that the
+    metrics are generally provided for the venue at the time of
+    publication---thus, you may see different rankings and h5-indices for the
+    same venue for different years.
   ]
 ]
 
@@ -35,6 +37,13 @@
   [], [B1.], cite(<Pyarelal.ea:2022>, form: "full")
 )
 
+#let metric(content) = [
+  #pt[
+    //#line(length: 100%, stroke: .5pt)
+    #content
+  ]
+]
+
 == Refereed Journal Articles
 
 #table(
@@ -46,10 +55,15 @@
   table.vline(x: 1, start: 2, end: 3, stroke: .7pt),
   table.vline(x: 1, start: 3, end: 4, stroke: .7pt),
   row-gutter: 1em,
-  [2024], [J4.], cite(<Erikson.ea:2024>, form: "full"),
+  [2024], [J4.], [
+    #cite(<Erikson.ea:2024>, form: "full")\
+    #metric[
+      Impact Factor: 2.2 (2023); 2.7 (5-Year)
+    ]
+  ],
   [2020], [$dagger$\*J3.], [
     #cite(<Pyarelal:2020higgsino>, form: "full")\
-    #pt[#fa-icon("google-scholar") _h5-index of Science China Physics, Mechanics \& Astronomy: 46 (as of 2024-02)_]
+    #metric[#fa-icon("google-scholar") _h5-index of Science China Physics, Mechanics \& Astronomy: 46 (as of 2024-02)_]
   ],
   [2019], [$dagger$J2.], [
     #cite(<Kling2019>, form: "full")\
@@ -83,8 +97,8 @@
   // MultiCAT accepted to NAACL 2025 Findings
   // Rejected from ACL 2023, ACL 2024, EMNLP 2024
   [2024], [C7.], [
-    #cite(<Noriega.ea:2024>, form: "full")
-    #pt[\#emph[#fa-icon("google-scholar") EMNLP ranked \#2 in Computational Linguistics (h5: 193)]]
+    #cite(<Noriega.ea:2024>, form: "full")\
+    #pt[#emph[#fa-icon("google-scholar") EMNLP ranked \#2 in Computational Linguistics (h5: 193)]]
   ],
   [], [C6.], [
     #cite(<Soares.ea:2024>, form: "full")\
@@ -111,8 +125,8 @@
     #pt[#emph[#fa-icon("google-scholar") LREC ranked \#6 in Computational Linguistics as of 2024-11 (h5: 59)]]
   ],
   [2019], [C1.], [
-    #cite(<sharp-etal-2019-eidos>, form: "full")
-    #pt[\#emph[#fa-icon("google-scholar") NAACL-HLT ranked \#3 in Computational Linguistics as of 2024-02: (h5: 133)]]
+    #cite(<sharp-etal-2019-eidos>, form: "full")\
+    #pt[#emph[#fa-icon("google-scholar") NAACL-HLT ranked \#3 in Computational Linguistics as of 2024-02: (h5: 133)]]
   ],
 )
 
