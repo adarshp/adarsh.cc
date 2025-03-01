@@ -153,6 +153,9 @@
   table.vline(x: 1, start: 1, end: 3, stroke: .7pt),
   table.vline(x: 1, start: 3, end: 6, stroke: .7pt),
   table.vline(x: 1, start: 6, end: 9, stroke: .7pt),
+  [2025], [W10.], [
+    #cite(<Liu.ea:2025>, form: "full"),
+  ],
   [2024], [W9.], [
     #cite(<Zhang.ea:2024>, form: "full")
   ],

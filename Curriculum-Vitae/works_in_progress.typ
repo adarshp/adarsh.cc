@@ -25,7 +25,7 @@ typically currently under preparation for resubmission.
   columns: (auto, auto),
   stroke: none,
   align: (right, left),
-  [MR2.], cite(<Liu.ea:2025>, form: "full"),
+  [MR2.], 
   // Rejected from AAAI 2025
   // Submitted to AISD @NAACL 2025
   [MR1.], cite(<Zhang.ea:2025>, form: "full"),
