@@ -153,11 +153,14 @@
   align: (right, right, left),
   row-gutter: 1em,
   table.vline(x: 1, start: 0, end: 1, stroke: .7pt),
-  table.vline(x: 1, start: 1, end: 3, stroke: .7pt),
-  table.vline(x: 1, start: 3, end: 6, stroke: .7pt),
-  table.vline(x: 1, start: 6, end: 9, stroke: .7pt),
+  table.vline(x: 1, start: 1, end: 2, stroke: .7pt),
+  table.vline(x: 1, start: 2, end: 4, stroke: .7pt),
+  table.vline(x: 1, start: 4, end: 7, stroke: .7pt),
+  table.vline(x: 1, start: 7, end: 10, stroke: .7pt),
   [2025], [W10.], [
     #cite(<Liu.ea:2025>, form: "full"),
+  // Rejected from AAAI 2025
+  // Submitted to AISD @NAACL 2025
   ],
   [2024], [W9.], [
     #cite(<Zhang.ea:2024>, form: "full")
