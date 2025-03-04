@@ -106,6 +106,45 @@
     align: (left,left,left,),
     table.header([ID], [Title, Funding source and amounts, Role, Effort,
       & co-PIs], [Status],),
+    [SG10],
+    submitted_grant(
+      [Context-Aware and Robust Event Flow Generation from Natural Language Commands],
+      [Air Force Research Laboratory],
+      [544,640],
+      [361,976],
+      [182,664],
+      [Co-I],
+      [1 summer month/year],
+      [2026-01-01 -- 2027-12-31],
+      [PI: Liang Zhang]
+    ),
+    [Pending],
+    [SG9],
+    submitted_grant(
+      [Multimodal Causal Discovery and Temporal Prediction for Human-AI Teaming],
+      [United States Army Contracting Command],
+      [124,876],
+      [83,291],
+      [41,585],
+      [Co-I],
+      [1 summer month/year],
+      [2025-08-01 -- 2028-07-31],
+      [PI: Liang Zhang]
+    ),
+    [Pending],
+    [SG8],
+    submitted_grant(
+      [Adaptive AI Planning and Rapid Response for Command and Control in Dynamic Environments],
+      [Naval Surface Warfare Center],
+      [124,876],
+      [83,291],
+      [41,585],
+      [Co-I],
+      [0.5 summer months/year],
+      [2025-07-01 -- 2027-06-30],
+      [PI: Liang Zhang]
+    ),
+    [Pending],
     [SG7],
     submitted_grant(
       [RI: Small: Enhancing Robustness in Deep Reinforcement Learning Through

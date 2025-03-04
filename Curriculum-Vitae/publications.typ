@@ -58,7 +58,7 @@
   [2024], [J4.], [
     #cite(<Erikson.ea:2024>, form: "full")\
     #metric[
-      Impact Factor: 2.2 (2023); 2.7 (5-Year)
+      LSHSS Impact Factor: 2.2 (2023); 2.7 (5-Year)
     ]
   ],
   [2020], [$dagger$\*J3.], [
@@ -106,17 +106,20 @@
   ],
   [2023], [C5.], [
     #cite(<Pyarelal.ea:2023>, form: "full")
-    #pt[\#emph[Acceptance rate for the Datasets and Benchmarks Track of NeurIPS 2023: 32.7\%]]\
+    #pt[\
+    #emph[Acceptance rate for the Datasets and Benchmarks Track of NeurIPS 2023: 32.7\%]]\
     #pt[#emph[#fa-icon("google-scholar") NeurIPS ranked \#1 in Artificial Intelligence (h5: 309)]]
   ],
   [], [C4.], [
     #cite(<qamar-etal-2023-speaking>, form: "full")
-    #pt[\#emph[Combined acceptance rate (Main + Findings) for long papers at EMNLP 2023: 46.2\%]]\
+    #pt[\
+    #emph[Combined acceptance rate (Main + Findings) for long papers at EMNLP 2023: 46.2\%]]\
     #pt[#emph[#fa-icon("google-scholar") EMNLP ranked \#2 in Computational Linguistics (h5: 176)]]
   ],
   [], [C3.], [
     #cite(<miah-etal-2023-hierarchical>, form: "full")
-    #pt[\#emph[Combined acceptance rate (Main + Findings) for long papers at EMNLP 2023: 46.2\%]]\
+    #pt[\
+    #emph[Combined acceptance rate (Main + Findings) for long papers at EMNLP 2023: 46.2\%]]\
     #pt[#emph[#fa-icon("google-scholar") EMNLP ranked \#2 in Computational Linguistics (h5: 176)]]
   ],
   [2020], [C2.], [
