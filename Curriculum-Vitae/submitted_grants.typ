@@ -106,7 +106,7 @@
     align: (left,left,left,),
     table.header([ID], [Title, Funding source and amounts, Role, Effort,
       & co-PIs], [Status],),
-    [SG10],
+    [SG9],
     submitted_grant(
       [Context-Aware and Robust Event Flow Generation from Natural Language Commands],
       [Air Force Research Laboratory],
@@ -119,7 +119,7 @@
       [PI: Liang Zhang]
     ),
     [Pending],
-    [SG9],
+    [SG8],
     submitted_grant(
       [Multimodal Causal Discovery and Temporal Prediction for Human-AI Teaming],
       [United States Army Contracting Command],
@@ -132,7 +132,7 @@
       [PI: Liang Zhang]
     ),
     [Pending],
-    [SG8],
+    [SG7],
     submitted_grant(
       [Adaptive AI Planning and Rapid Response for Command and Control in Dynamic Environments],
       [Naval Surface Warfare Center],
@@ -145,7 +145,7 @@
       [PI: Liang Zhang]
     ),
     [Pending],
-    [SG7],
+    [SG6],
     submitted_grant(
       [RI: Small: Enhancing Robustness in Deep Reinforcement Learning Through
       Semantic Clustering],
@@ -157,19 +157,6 @@
       [0.5 summer months/year],
       [2025-07-01 -- 2027-06-30],
       [PI: Liang Zhang]
-    ),
-    [Pending],
-    [SG6],
-    submitted_grant(
-      [Defining a digital phenotype for labor in at-risk pregnancies],
-      [ABRC],
-      [746,731],
-      [678,846],
-      [67,885],
-      [Co-PI],
-      [1.75 summer months in 2025],
-      [2024-01-15--2027-01-14],
-      [PI: Elise Erickson\ Other Co-PIs: Shravan Aras, Sarah Kellerhals ],
     ),
     [Pending],
     [SG5], [#figure(

@@ -20,35 +20,56 @@
   full funding amount.
 ]
 
-#let past_grants = {
-  if not promotion_and_tenure {
-    ([G10],
-  [#table(
-    columns: 2,
-    stroke: none,
-    align: (right,left,),
-    [#emph[Title];], [#link("https://skema.sista.arizona.edu")[SKEMA: Scientific Knowledge Extraction and Model Analysis];],
-    [#emph[Source];], [Defense Advanced Research Projects Agency],
-    [#emph[Amount];],
-      if promotion_and_tenure
-      [#table(
+#let awarded_grant(
+  title,
+  source,
+  total,
+  direct,
+  indirect,
+  role,
+  effort,
+  period_of_performance,
+  co_pis
+) = (
+  table.hline(),
+    figure(
+      align(center)[#table(
         columns: 2,
         stroke: none,
-        align: (left,right,),
-        [Total], [\$9,345,747],
-        [UArizona subaward], [\$3,253,997],
-        [UArizona direct funding amount], [\$2,175,514],
-        [UArizona indirect funding amount], [\$1,078,483],
+        align: (right,left,),
+        [#emph[Title];], [#title],
+        [#emph[Source];], [#source],
+        [_Amount #pt[(Total | Direct | Indirect)]_], pt(alternative: [\$#total])[
+          \$#total | \$#direct | \$#indirect
+        ],
+        [#emph[Role];], [#role],
+        [#emph[Effort];], [#effort],
+        [#emph[Period of Performance];], [#period_of_performance],
+        [#emph[Co-PIs];], [#co_pis],
       )]
-      else [\$9,345,747],
-    [#emph[Role];], [PI on UArizona subaward],
-    [#emph[Effort];], [50% until 2024-04, then 100% for the remainder of
+      , kind: table
+      )
+)
+
+
+#let past_grants = {
+  if not promotion_and_tenure {
+    (
+      [G10],
+    ..awarded_grant(
+    [#link("https://skema.sista.arizona.edu")[SKEMA: Scientific Knowledge Extraction and Model Analysis];],
+    [Defense Advanced Research Projects Agency],
+        [3,253,997],
+        [2,175,514],
+        [1,078,483],
+    [PI on UArizona subaward],
+    [50% until 2024-04, then 100% for the remainder of
     the project.],
-    [#emph[Period of Performance];], [2023-12--2025-11],
-    [#emph[Co-PIs];], [PI on prime award (Lum.AI): Clayton Morrison PI
+    [2023-12--2025-11],
+    [PI on prime award (Lum.AI): Clayton Morrison PI
     on SIFT subaward: Daniel Bryce co-PIs on UArizona subaward: Enrique
     Noriega, Mihai Surdeanu, Katherine Isaacs],
-  )],
+  ),
 [G9],
   [#table(
     columns: 2,
@@ -64,6 +85,7 @@
     [#emph[Period of Performance];], [2021-01--2022-06],
     [], [],
   )],
+  table.hline(),
 [G8],
   [#table(
     columns: 2,
@@ -78,28 +100,19 @@
     [#emph[Period of Performance];], [2021-01--2022-06],
     [], [],
   )],
+  table.hline(),
 [G7],
-    [#table(
-    columns: 2,
-    stroke: none,
-    align: (right,left,),
-    [#emph[Title];], [#link("https://ml4ai.github.io/tomcat")[ToMCAT: Theory of Mind-based Cognitive Architecture for Teams];],
-    [#emph[Source];], [Defense Advanced Research Projects Agency],
-    [#emph[Amount];],
-      [#table(
-        columns: 2,
-        stroke: none,
-        align: (left,right,),
-        [Full], [\$7,497,548],
-        [Direct], [\$5,301,783],
-        [Indirect], [\$2,195,765],
-      )],
-    [#emph[Role];], [PI],
-    [#emph[Effort];], [100%],
-    [#emph[Period of Performance];], [2019-11--2023-10],
-    [#emph[Co-PIs];], [Clayton Morrison, Kobus Barnard, Mihai Surdeanu,
-    Rebecca Sharp, Marco Valenzuela-Escárcega],
-  )],
+    ..awarded_grant(
+    [#link("https://ml4ai.github.io/tomcat")[ToMCAT: Theory of Mind-based Cognitive Architecture for Teams];],
+    [Defense Advanced Research Projects Agency],
+    [7,497,548],
+    [5,301,783],
+    [2,195,765],
+    [PI],
+    [100%],
+    [2019-11--2023-10],
+    [Clayton Morrison, Kobus Barnard, Mihai Surdeanu, Rebecca Sharp, Marco Valenzuela-Escárcega],
+  ),
 [G6],
   [#table(
     columns: 2,
@@ -114,6 +127,7 @@
     [#emph[Co-PIs];], [PI: Clayton Morrison Other Co-PIs: Saumya Debray,
     Rebecca Sharp, Marco Valenzuela-Escárcega],
   )],
+  table.hline(),
 [G5],
   [#table(
     columns: 2,
@@ -126,6 +140,7 @@
     find the amount in my email inbox)],
     [#emph[Year];], [2016],
   )],
+  table.hline(),
 [G4],
   [#table(
     columns: 2,
@@ -137,6 +152,7 @@
     [#emph[Amount];], [\$105],
     [#emph[Year];], [2015],
   )],
+  table.hline(),
 [G3],
   [#table(
     columns: 2,
@@ -148,6 +164,7 @@
     [#emph[Amount];], [\$750],
     [#emph[Year];], [2015],
   )],
+  table.hline(),
 [G2],
 [
   #table(
@@ -159,6 +176,7 @@
     [#emph[Amount];], [\$500],
     [#emph[Year];], [2015],
   )],
+  table.hline(),
 [G1],
   [#table(
     columns: 2,
@@ -174,31 +192,33 @@
 )}
 }
 
+
 #table(
   columns: 2,
   [ID] , [Title, Funding source and amounts, Role, Effort, co-PIs, and Dates],
+  [G12],
+    ..awarded_grant(
+      [Defining a digital phenotype for labor in at-risk pregnancies],
+      [ABRC],
+      [746,731],
+      [678,846],
+      [67,885],
+      [Co-PI],
+      [1.75 summer months in 2025],
+      [2025-07-01 -- 2028-06-30],
+      [PI: Elise Erickson\ Other Co-PIs: Shravan Aras, Sarah Kellerhals],
+    ),
   [G11] ,
-  [
-    #table(
-      columns: 2,
-      stroke: none,
-      align: (right,left,),
-      [#emph[Title];], [Next-Generation Teams],
-      [#emph[Source];], [United States Army Contracting Command],
-      [#emph[Amount];],
-      [
-        #pt(alternative: [\$882,546])[#table(
-          columns: 2,
-          align: (left,right,),
-          [Full], [\$882,546],
-          [Direct], [\$592,852],
-          [Indirect], [\$289,654],
-        )]
-      ],
-      [#emph[Role];], [PI],
-      [#emph[Effort];], [35% during the academic year & 1 summer month],
-      [#emph[Period of Performance];], [2023-12--2025-11],
-      [#emph[Co-PIs];], [Kobus Barnard, Clayton Morrison, Winslow Burleson],
-    )],
+  ..awarded_grant(
+      [Next-Generation Teams],
+      [United States Army Contracting Command],
+      [882,546],
+      [592,852],
+      [289,654],
+      [PI],
+      [35% during the academic year & 1 summer month],
+      [2023-12--2025-11],
+      [Kobus Barnard, Clayton Morrison, Winslow Burleson],
+    ),
     ..past_grants
 )
