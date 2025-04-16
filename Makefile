@@ -13,6 +13,4 @@ watch:
 	stack exec generator watch
 
 deploy: build assets/cv_adarsh.pdf
-	stack exec generator deploy
-# Not sure why but we need to do this twice
-	stack exec generator deploy
+	rsync -avzdP _site/ starfish:adarsh_cc
