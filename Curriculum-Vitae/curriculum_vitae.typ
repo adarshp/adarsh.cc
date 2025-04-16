@@ -24,7 +24,14 @@
 )
 
 #align(center)[
-#smallcaps[#text(size: 20pt, fill: maroon)[#lower[Adarsh Pyarelal]]]\
+#smallcaps[
+  #text(
+    size: 20pt,
+    fill: maroon,
+    font: "Arno Pro Display",
+    tracking: 1pt)[#lower[Adarsh Pyarelal]
+  ]
+]\
 _Last updated: #datetime.today().display()_
 
 College of Information Science~$dot.op$~University of
@@ -43,6 +50,7 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719\
     lower(
       smallcaps(
         text(
+          font: "Arno Pro Display",
           weight: "regular",
           tracking: 1pt
         )[
