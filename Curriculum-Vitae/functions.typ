@@ -1,4 +1,11 @@
-#let promotion_and_tenure = true
+// Boolean switch to control whether CV is formatted according to promotion and
+// tenure guidelines.
+#let promotion_and_tenure = false
+
+#if sys.inputs.at("promotion_and_tenure", default: none) == "true" {
+  promotion_and_tenure = true
+}
+
 
 #let pt(content, alternative: "") = {
   if promotion_and_tenure == true [
