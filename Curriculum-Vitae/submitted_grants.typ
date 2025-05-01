@@ -186,7 +186,7 @@
       , kind: table
       )
 
-    ], [Pending],
+    ], [Unawarded],
 
     [SG4], [#figure(
       align(center)[#table(
