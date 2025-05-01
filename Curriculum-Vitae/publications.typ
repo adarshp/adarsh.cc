@@ -92,7 +92,10 @@
   table.vline(x: 1, start: 7, end: 8, stroke: .7pt),
   [2025], [C8.], [
     #cite(<Pyarelal.ea:2025>, form: "full")\
-    #pt[#emph[#fa-icon("google-scholar") NAACL ranked \#3 in Computational Linguistics (h5: 132) as of 2025-01-23]]
+    #pt[\
+      #emph[Combined acceptance rate (Main + Findings) for papers at NAACL 2025: 38.5\%]\
+      #emph[#fa-icon("google-scholar") NAACL ranked \#3 in Computational Linguistics (h5: 132) as of 2025-01-23]
+    ]
   ],
   // MultiCAT accepted to NAACL 2025 Findings
   // Rejected from ACL 2023, ACL 2024, EMNLP 2024
