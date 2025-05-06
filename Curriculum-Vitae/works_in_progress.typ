@@ -26,6 +26,8 @@ typically currently under preparation for resubmission.
   stroke: none,
   align: (right, left),
   [MR1.], cite(<Zhang.ea:2025>, form: "full")
+  // Submitted to NeurIPS 2025
+  // Rejected from ICML 2025
 )
 
 == Manuscripts in preparation and preprints
