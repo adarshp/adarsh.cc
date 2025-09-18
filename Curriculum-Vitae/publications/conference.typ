@@ -10,13 +10,26 @@
   stroke: none,
   align: (right, right, left),
   row-gutter: 1em,
-  table.vline(x: 1, start: 0, end: 1, stroke: .7pt),
-  table.vline(x: 1, start: 1, end: 3, stroke: .7pt),
-  table.vline(x: 1, start: 3, end: 5, stroke: .7pt),
-  table.vline(x: 1, start: 5, end: 6, stroke: .7pt),
-  table.vline(x: 1, start: 6, end: 7, stroke: .7pt),
+  table.vline(x: 1, start: 0, end: 2, stroke: .7pt),
+  table.vline(x: 1, start: 2, end: 4, stroke: .7pt),
+  table.vline(x: 1, start: 4, end: 7, stroke: .7pt),
   table.vline(x: 1, start: 7, end: 8, stroke: .7pt),
-  [2025], [C8.], [
+  table.vline(x: 1, start: 8, end: 9, stroke: .7pt),
+  table.vline(x: 1, start: 9, end: 10, stroke: .7pt),
+  [2025],
+  [C9.],
+  [
+    #cite(<Zhang.ea:2025>, form: "full")
+    #pt[\
+      #emph[#gs NeurIPS ranked \#1 in Artificial Intelligence (h5: 371) as of
+      2025-09-18]\
+      #emph[#ar Acceptance rate for papers at NeurIPS 2025 Main Track: 24.52\%]
+      // Rejected from ICML 2025
+    ]
+  ],
+  [],
+  [C8.],
+  [
     #cite(<Pyarelal.ea:2025>, form: "full")
     #pt[\
       #emph[#gs NAACL ranked \#3 in Computational Linguistics (h5: 132) as of

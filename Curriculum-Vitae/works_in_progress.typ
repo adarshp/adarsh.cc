@@ -19,18 +19,17 @@ the year that the preprint was uploaded. However, these papers are
 typically currently under preparation for resubmission.
 ]
 
-== Manuscripts under review
+//== Manuscripts under review
 
-#show table.cell.where(x: 0): it => smallcaps(lower(it))
+//#show table.cell.where(x: 0): it => smallcaps(lower(it))
 
-#table(
-  columns: (auto, auto),
-  stroke: none,
-  align: (right, left),
-  [MR1.], cite(<Zhang.ea:2025>, form: "full")
-  // Submitted to NeurIPS 2025
-  // Rejected from ICML 2025
-)
+//#table(
+  //columns: (auto, auto),
+  //stroke: none,
+  //align: (right, left),
+  //[MR1.], cite(<Zhang.ea:2025>, form: "full")
+  //// Submitted to NeurIPS 2025
+//)
 
 == Manuscripts in preparation and preprints
 
