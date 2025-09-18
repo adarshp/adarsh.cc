@@ -1,4 +1,7 @@
-#import "functions.typ": pt, promotion_and_tenure
+#import "functions.typ": pt, promotion_and_tenure, refs
+
+#pagebreak()
+
 
 = Submitted Grants and Contracts
 
@@ -10,7 +13,7 @@
 #emph[
 - Grants are ordered in reverse chronological order based on
   the date of submission.
-- For federal grants, total, direct, and indirect funding
+- Total, direct, and indirect funding
   amounts have been provided. The indirect funding amount is
   obtained by subtracting the direct funding amount from the
   full funding amount.
@@ -18,7 +21,7 @@
 #let past_grants = {
   if not promotion_and_tenure {
     (
-    [SG2], [#figure(
+    refs[SG2], [#figure(
       align(center)[#table(
         columns: 3,
         stroke: none,
@@ -38,7 +41,7 @@
       )
 
     ], [Unawarded],
-    [SG1], [#figure(
+    refs[SG1], [#figure(
       align(center)[#table(
         columns: 3,
         stroke: none,
@@ -81,15 +84,16 @@
         align: (right,left,),
         [#emph[Title];], [#title],
         [#emph[Source];], [#source],
-        [#emph[Amount];], [
-          #table(
-            columns: 2,
-            stroke: none,
-            align: (left,right,),
-            [Total], [\$#total],
-            [Direct], [\$#direct],
-            [Indirect], [\$#indirect],
-          )
+        [#emph[Amount (Total | Direct | Indirect)];], [
+          \$#total | \$#direct | \$#indirect
+          //#table(
+            //columns: 2,
+            //stroke: none,
+            //align: (left,right,),
+            //[Total], [\$#total],
+            //[Direct], [\$#direct],
+            //[Indirect], [\$#indirect],
+          //)
         ],
         [#emph[Role];], [#role],
         [#emph[Effort];], [#effort],
@@ -101,12 +105,14 @@
 )
 
 
+== Federal
+
 #table(
     columns: 3,
     align: (left,left,left,),
     table.header([ID], [Title, Funding source and amounts, Role, Effort,
       & co-PIs], [Status],),
-    [SG9],
+    refs[SG9],
     submitted_grant(
       [Context-Aware and Robust Event Flow Generation from Natural Language Commands],
       [Air Force Research Laboratory],
@@ -119,7 +125,7 @@
       [PI: Liang Zhang]
     ),
     [Pending],
-    [SG8],
+    refs[SG8],
     submitted_grant(
       [Multimodal Causal Discovery and Temporal Prediction for Human-AI Teaming],
       [United States Army Contracting Command],
@@ -131,8 +137,8 @@
       [2025-08-01 -- 2028-07-31],
       [PI: Liang Zhang]
     ),
-    [Pending],
-    [SG7],
+    [Unawarded],
+    refs[SG7],
     submitted_grant(
       [Adaptive AI Planning and Rapid Response for Command and Control in Dynamic Environments],
       [Naval Surface Warfare Center],
@@ -144,8 +150,8 @@
       [2025-07-01 -- 2027-06-30],
       [PI: Liang Zhang]
     ),
-    [Pending],
-    [SG6],
+    [Unawarded],
+    refs[SG6],
     submitted_grant(
       [RI: Small: Enhancing Robustness in Deep Reinforcement Learning Through
       Semantic Clustering],
@@ -158,37 +164,23 @@
       [2025-07-01 -- 2027-06-30],
       [PI: Liang Zhang]
     ),
-    [Pending],
-    [SG5], [#figure(
-      align(center)[#table(
-        columns: 2,
-        stroke: none,
-        align: (right,left,),
-        [#emph[Title];], [Validating NewDate: promoting maternal health equity with personalized labor prediction],
-        [#emph[Source];], [NIH],
-        [#emph[Amount];], [
-          #table(
-            columns: 2,
-            stroke: none,
-            align: (left,right,),
-            [Total], [\$3,639,222],
-            [Direct], [\$2,583,450],
-            [Indirect], [\$1,055,772],
-          )
-        ],
-        [#emph[Role];], [Co-I],
-        [#emph[Effort];], [1 summer month/year],
-        [#emph[Period of Performance];], [2025-07-01--2030-06-30],
-        [#emph[Co-PIs];], [PI: Elise Erickson\
+    [Unawarded],
+    refs[SG5],
+    submitted_grant(
+      [Validating NewDate: promoting maternal health equity with personalized labor prediction],
+      [NIH],
+      [3,639,222],
+      [2,583,450],
+      [1,055,772],
+      [Co-I],
+      [1 summer month/year],
+      [2025-07-01--2030-06-30],
+      [PI: Elise Erickson\
         Other Co-PIs: Shravan Aras, Bonnie LaFleur, Steven Calvin
-        ],
-      )]
-      , kind: table
-      )
-
-    ], [Unawarded],
-
-    [SG4], [#figure(
+        ]
+    ),
+    [Unawarded],
+    refs[SG4], [#figure(
       align(center)[#table(
         columns: 3,
         stroke: none,
@@ -220,31 +212,19 @@
       )
 
     ], [Unawarded],
-    [SG3], [#figure(
-      align(center)[#table(
-        columns: 3,
-        stroke: none,
-        align: (right,left,left,),
-        [#emph[Title];], [STRONG: Hierarchical Knowledge Integration for
-        Swift Command and Control in Dynamic Environments], [],
-        [#emph[Source];], [Army Research Lab], [],
-        [#emph[Amount];], [
-          #table(
-            columns: 2,
-            stroke: none,
-            align: (left,right,),
-            [Full], [\$99,409],
-            [Direct], [\$64,762],
-            [Indirect], [\$34,647],
-          )
-        ], [],
-        [#emph[Role];], [Co-PI], [],
-        [#emph[Effort];], [0.5 summer months], [],
-        [#emph[Period of Performance];], [2024-06 – 2025-05], [],
-        [#emph[Co-PIs];], [PI: Liang Zhang], [],
-      )]
-      , kind: table
-      )
-
-    ], [Withdrawn],
+    refs[SG3], 
+    submitted_grant(
+     [STRONG: Hierarchical Knowledge Integration for
+        Swift Command and Control in Dynamic Environments],
+        [Army Research Lab],
+        [99,409],
+        [64,762],
+        [34,647],
+        [Co-PI],
+        [0.5 summer months],
+        [2024-06 – 2025-05],
+        [PI: Liang Zhang],
+    )
+    , [Withdrawn],
+    table.hline()
   )

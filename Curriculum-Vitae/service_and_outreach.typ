@@ -1,9 +1,29 @@
 #import "functions.typ": pt, promotion_and_tenure, nonpt
 
-= Service/Outreach #pt[(limited to period in current rank)]
+= Service/Outreach
 #line(length: 100%)
 
+#pt[_(Entries are limited to period in current rank)_]
+
 == National/International Service
+
+#emph[
+  Note: The Association for Computational Linguistics Rolling Review (ARR) is
+  the new unified peer-review system for most top-tier venues published by the
+  Association for Computational Linguistics.
+]
+
+=== Conference Organization
+
+  #table(
+      columns: 3,
+      align: (left,left,left),
+      //stroke: none,
+      table.header([Year], [Role], [Conference/ARR Cycle]),
+      [2025], [Area Chair], [ARR July 2025 Cycle],
+      table.hline()
+    )
+
 
 #if not promotion_and_tenure [
   === Journal Reviewing
@@ -17,12 +37,6 @@
 
 === Conference Reviewing
 
-#emph[
-  Note: The Association for Computational Linguistics Rolling Review (ARR) is
-  the new unified peer-review system for most top-tier venues published by the
-  Association for Computational Linguistics.
-]
-
 #table(
     columns: 4,
     align: (left,left,right, right),
@@ -35,6 +49,7 @@
     [], [ARR June 2024 Cycle], [4], [0],
     [], [ARR February 2024 Cycle], [5], [0],
     [2023], [NeurIPS Datasets and Benchmarks Track], [3], [N/A],
+    table.hline()
   )
 
 
@@ -97,9 +112,9 @@
     columns: (auto, auto, auto, auto),
     align: (left,left,left,left,),
     table.header([Dates], [Role], [Unit], [University]),
-    [2024-08 -- present], [Faculty Search Committee], [Department of Psychology], [University of Arizona],
-    [2024-08 -- present], [Faculty Search Committee], [College of Information Science], [University of Arizona],
-    [2024-08 -- present], [Faculty Awards Committee], [College of Information Science], [University of Arizona],
+    [2024-08 -- 2025-05], [Faculty Search Committee], [Department of Psychology], [University of Arizona],
+    [2024-08 -- 2025-05], [Faculty Search Committee], [College of Information Science], [University of Arizona],
+    [2024-08 -- 2025-05], [Faculty Awards Committee], [College of Information Science], [University of Arizona],
     [2023-08 -- 2024-05], [Faculty Peer Review
     Committee], [School of Information], [University of Arizona],
     ..past_service,

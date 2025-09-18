@@ -1,13 +1,16 @@
 #import "@preview/fontawesome:0.5.0": *
+#pagebreak()
 = Other Scholarship
 
 #line(length: 100%)
 
-== Software #fa-icon("code-branch")
+== Computer Programs/Open Code #fa-icon("code-branch")
 
 _Open-source software repositories which I have spearheaded or made
 significant contributions to. The entries in the 'Name' column are
 clickable links to the repositories._
+
+#show table.cell.where(x: 0): it => smallcaps(lower(it))
 
 #table(
     columns: 3,

@@ -45,7 +45,7 @@
         </choose>
       </if>
       <else-if match="any" variable="DOI">
-        <text variable="DOI" prefix=" doi: " suffix="."/>
+        <text variable="DOI" prefix="DOI: " suffix="."/>
       </else-if>
       <else-if variable="URL">
         <text variable="URL" prefix="URL: "/>

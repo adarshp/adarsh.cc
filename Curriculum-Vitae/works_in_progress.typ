@@ -2,7 +2,7 @@
 
 #show regex(mentee_names.join("|")): it => [#it$degree$]
 
-#nonpt[#pagebreak()]
+#pagebreak()
 
 = Works in Progress
 #line(length: 100%)
@@ -20,6 +20,8 @@ typically currently under preparation for resubmission.
 ]
 
 == Manuscripts under review
+
+#show table.cell.where(x: 0): it => smallcaps(lower(it))
 
 #table(
   columns: (auto, auto),

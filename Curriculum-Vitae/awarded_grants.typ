@@ -1,23 +1,31 @@
-#import "functions.typ": pt, promotion_and_tenure
+#import "functions.typ": pt, promotion_and_tenure, refs
 
 = Awarded Grants and Contracts
+
 
 #line(length: 100%)
 
 #if promotion_and_tenure [
-- _List of awarded grants below is limited to the period in rank._
+- _List of awarded grants below is limited to the ones whose period of
+  performance overlaps with my period in rank._
 ]
 #emph[
-- The funding amount, period of performance, effort level,
-  and list of co-PIs are based on the original awarded
+- The funding amount, period of performance, effort,
+  credit, and list of co-PIs are based on the original awarded
   contract. In practice, these can vary over the course of the
   project.
-- Grants are ordered in reverse chronological order based on
-  the date of receipt of the notice of award.
-- For federal grants, total, direct, and indirect funding
+- Grants are organized by source of funding (federal/state), and further ordered
+  in reverse chronological order based on the date of receipt of the notice of award.
+- For grants, total, direct, and indirect funding
   amounts have been provided. The indirect funding amount is
   obtained by subtracting the direct funding amount from the
   full funding amount.
+- #pt[The amount of funding going to the University of Arizona is also provided
+  (UA) as well as the amount of funding going to my unit (InfoSci).
+  A dollar value of \$0 going to InfoSci means that the budget is
+  loaded under a different department even if employees in InfoSci are being
+  paid on the grant.
+]
 ]
 
 #let awarded_grant(
@@ -26,8 +34,10 @@
   total,
   direct,
   indirect,
+  departmental_amount: [],
   role,
   effort,
+  percent_credit: [],
   period_of_performance,
   co_pis
 ) = (
@@ -39,11 +49,14 @@
         align: (right,left,),
         [#emph[Title];], [#title],
         [#emph[Source];], [#source],
-        [_Amount #pt[(Total | Direct | Indirect)]_], pt(alternative: [\$#total])[
-          \$#total | \$#direct | \$#indirect
+        [_Amount #pt[(Total | Direct | Indirect | UA | InfoSci)]_],
+        pt(alternative: [\$#total])[
+          \$#total | \$#direct | \$#indirect | \$#total | \$#departmental_amount
         ],
         [#emph[Role];], [#role],
         [#emph[Effort];], [#effort],
+        [#pt[% credit]], 
+        pt[#percent_credit%],
         [#emph[Period of Performance];], [#period_of_performance],
         [#emph[Co-PIs];], [#co_pis],
       )]
@@ -55,22 +68,7 @@
 #let past_grants = {
   if not promotion_and_tenure {
     (
-      [G10],
-    ..awarded_grant(
-    [#link("https://skema.sista.arizona.edu")[SKEMA: Scientific Knowledge Extraction and Model Analysis];],
-    [Defense Advanced Research Projects Agency],
-        [3,253,997],
-        [2,175,514],
-        [1,078,483],
-    [PI on UArizona subaward],
-    [50% until 2024-04, then 100% for the remainder of
-    the project.],
-    [2023-12--2025-11],
-    [PI on prime award (Lum.AI): Clayton Morrison PI
-    on SIFT subaward: Daniel Bryce co-PIs on UArizona subaward: Enrique
-    Noriega, Mihai Surdeanu, Katherine Isaacs],
-  ),
-[G9],
+refs[G9],
   [#table(
     columns: 2,
     stroke: none,
@@ -86,7 +84,7 @@
     [], [],
   )],
   table.hline(),
-[G8],
+refs[G8],
   [#table(
     columns: 2,
     stroke: none,
@@ -101,19 +99,7 @@
     [], [],
   )],
   table.hline(),
-[G7],
-    ..awarded_grant(
-    [#link("https://ml4ai.github.io/tomcat")[ToMCAT: Theory of Mind-based Cognitive Architecture for Teams];],
-    [Defense Advanced Research Projects Agency],
-    [7,497,548],
-    [5,301,783],
-    [2,195,765],
-    [PI],
-    [100%],
-    [2019-11--2023-10],
-    [Clayton Morrison, Kobus Barnard, Mihai Surdeanu, Rebecca Sharp, Marco Valenzuela-Escárcega],
-  ),
-[G6],
+refs[G6],
   [#table(
     columns: 2,
     stroke: none,
@@ -128,7 +114,7 @@
     Rebecca Sharp, Marco Valenzuela-Escárcega],
   )],
   table.hline(),
-[G5],
+refs[G5],
   [#table(
     columns: 2,
     stroke: none,
@@ -141,7 +127,7 @@
     [#emph[Year];], [2016],
   )],
   table.hline(),
-[G4],
+refs[G4],
   [#table(
     columns: 2,
     stroke: none,
@@ -153,7 +139,7 @@
     [#emph[Year];], [2015],
   )],
   table.hline(),
-[G3],
+refs[G3],
   [#table(
     columns: 2,
     stroke: none,
@@ -165,7 +151,7 @@
     [#emph[Year];], [2015],
   )],
   table.hline(),
-[G2],
+refs[G2],
 [
   #table(
     columns: 2,
@@ -177,7 +163,7 @@
     [#emph[Year];], [2015],
   )],
   table.hline(),
-[G1],
+refs[G1],
   [#table(
     columns: 2,
     stroke: none,
@@ -192,23 +178,12 @@
 )}
 }
 
+== Federal
 
 #table(
   columns: 2,
   [ID] , [Title, Funding source and amounts, Role, Effort, co-PIs, and Dates],
-  [G12],
-    ..awarded_grant(
-      [Defining a digital phenotype for labor in at-risk pregnancies],
-      [ABRC],
-      [746,731],
-      [678,846],
-      [67,885],
-      [Co-PI],
-      [1.75 summer months in 2025],
-      [2025-07-01 -- 2028-06-30],
-      [PI: Elise Erickson\ Other Co-PIs: Shravan Aras, Sarah Kellerhals],
-    ),
-  [G11] ,
+  refs[G11] ,
   ..awarded_grant(
       [Next-Generation Teams],
       [United States Army Contracting Command],
@@ -219,6 +194,60 @@
       [35% during the academic year & 1 summer month],
       [2023-12--2025-11],
       [Kobus Barnard, Clayton Morrison, Winslow Burleson],
+      percent_credit: [45],
+      departmental_amount: [882,546]
     ),
-    ..past_grants
+    refs[G10],
+    ..awarded_grant(
+    [#link("https://skema.sista.arizona.edu")[SKEMA: Scientific Knowledge Extraction and Model Analysis];],
+    [Defense Advanced Research Projects Agency],
+    [3,253,997],
+    [2,175,514],
+    [1,078,483],
+    [PI on UArizona subaward],
+    [50% until 2024-04, then 100% for the remainder of
+    the project.],
+    [2023-12--2025-11],
+    [PI on prime award (Lum.AI): Clayton Morrison PI
+    on SIFT subaward: Daniel Bryce co-PIs on UArizona subaward: Enrique
+    Noriega, Mihai Surdeanu, Katherine Isaacs],
+    percent_credit: [60],
+    departmental_amount: [3,253,997]
+  ),
+  refs[G7],
+    ..awarded_grant(
+    [#link("https://ml4ai.github.io/tomcat")[ToMCAT: Theory of Mind-based Cognitive Architecture for Teams];],
+    [Defense Advanced Research Projects Agency],
+    [7,497,548],
+    [5,301,783],
+    [2,195,765],
+    [PI],
+    [100%],
+    [2019-11--2023-10],
+    [Clayton Morrison, Kobus Barnard, Mihai Surdeanu, Rebecca Sharp, Marco Valenzuela-Escárcega],
+    percent_credit: [50],
+    departmental_amount: [7,497,548]
+  ),
+  ..past_grants
+)
+
+== State
+
+#table(
+  columns: 2,
+  [ID] , [Title, Funding source and amounts, Role, Effort, co-PIs, and Dates],
+  refs[G12],
+    ..awarded_grant(
+      [Defining a digital phenotype for labor in at-risk pregnancies],
+      [Arizona Biomedical Research Centre],
+      [746,731],
+      [678,846],
+      [67,885],
+      [Co-PI],
+      [1.75 summer months in 2025],
+      [2025-07-01 -- 2028-06-30],
+      [PI: Elise Erickson\ Other Co-PIs: Shravan Aras, Sarah Kellerhals],
+      percent_credit: [16],
+      departmental_amount: [0]
+    ),
 )

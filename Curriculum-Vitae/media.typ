@@ -1,4 +1,7 @@
 #import "@preview/fontawesome:0.5.0": *
+
+#show table.cell.where(x: 0): it => smallcaps(lower(it))
+
 = Media Coverage #fa-icon("newspaper")
 
   #table(

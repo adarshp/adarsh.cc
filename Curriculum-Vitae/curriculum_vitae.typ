@@ -1,16 +1,18 @@
 #import "@preview/fontawesome:0.5.0": *
 #import "@preview/blinky:0.1.0": link-bib-urls
-#import "functions.typ": pt, promotion_and_tenure, nonpt
+#import "functions.typ": *
 
 #set page(
   paper: "us-letter",
-  numbering: "1",
+  numbering: "- 1 -",
 )
 
 #set text(
   font: "Arno Pro",
   size: 10pt,
+  number-type: "old-style"
 )
+
 
 #show link: set text(fill: blue)
 
@@ -27,7 +29,7 @@
 #smallcaps[
   #text(
     size: 20pt,
-    fill: maroon,
+    fill: chili,
     font: "Arno Pro Display",
     tracking: 1pt)[#lower[Adarsh Pyarelal]
   ]
@@ -86,7 +88,7 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719\
 
 
 #show "Pyarelal, A.": name => strong(name)
-#show "Adarsh Pyarelal": name => text(fill: maroon, strong(name))
+#show "Adarsh Pyarelal": name => text(fill: chili, strong(name))
 
 //#set heading(numbering: "1.1")
 //#outline(indent: auto, depth: 1)
@@ -105,6 +107,8 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719\
     [2007-08 – 2011-05], [B.A.], [Physics], [Reed
     College], [#link("https://www.researchgate.net/profile/Adarsh_Pyarelal/publication/287216785_A_Reggeized_model_for_eta_meson_production_in_high_energy_protonproton_collisions/links/56744cfe08aebcdda0de225e.pdf")[#emph[Contribution of the neutral pion Regge trajectory to the exclusive central production of $eta$(548) mesons in high energy proton/proton collisions];];], [Nelia
     Mann],
+      table.hline()
+
   )]
   , kind: table
   )
@@ -126,6 +130,7 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719\
     Information], [University of Arizona],
     [2017-10 – 2018-12], [Postdoctoral Research Associate], [School of
     Information], [University of Arizona],
+      table.hline()
   )]
   , kind: table
   )
@@ -136,9 +141,13 @@ Arizona~$dot.op$~Tucson~$dot.op$~Arizona~$dot.op$~USA~$dot.op$~85719\
 #pagebreak()
 
 #include "service_and_outreach.typ"
+#show link: set text(font: "CaskaydiaCove Nerd Font", fill: blue, size: 8.5pt)
 #include "publications.typ"
+#show link: set text(font: "Arno Pro", fill: blue, size: 10pt)
 #include "other_scholarship.typ"
+#show link: set text(font: "CaskaydiaCove Nerd Font", fill: blue, size: 8.5pt)
 #include "works_in_progress.typ"
+#show link: set text(font: "Arno Pro", fill: blue, size: 10pt)
 #include "media.typ"
 
 #pagebreak()

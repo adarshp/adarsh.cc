@@ -10,4 +10,5 @@
   [], [Galileo Circle Scholarship (\$1000)],
   [2014], [Outstanding Graduate Student Colloquium Presentation],
   [], [Graduate College Fellowship in Physics (\$1500)],
+  table.hline()
 )
