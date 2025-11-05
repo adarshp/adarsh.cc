@@ -137,38 +137,116 @@ table.hline()
 == Courses Taught
 
 #table(
-    columns: 5,
-    align: (left,left,left,left,left,),
-    [Year], [Term], [Course No.], [Course Title], [Role],
-    [2025], [Spring], [INFO 521], [Introduction to Machine Learning], [Instructor],
-    [2024], [Fall], [INFO 521], [Introduction to Machine Learning], [Instructor],
-    [], [Spring], [ISTA 421/INFO 521], [Introduction to Machine
-    Learning], [Instructor],
-    [2023], [Fall], [ISTA 421/INFO 521], [Introduction to Machine
-    Learning], [Instructor],
-    [2017], [Spring], [PHYS 105A], [Introduction to Scientific
-    Computing], [Lab instructor],
-    [2015], [Fall], [PHYS 381/382], [Methods in Experimental Physics
-    I/II], [Lab instructor],
-    [], [Spring], [PHYS 381/382], [Methods in Experimental Physics
-    I/II], [Lab instructor],
-    [2014], [Fall], [PHYS 381/382], [Methods in Experimental Physics
-    I/II], [Lab Instructor],
-    [], [Summer], [PHYS 141], [Introductory Mechanics], [Lab
-    Instructor],
-    [], [Spring], [PHYS 381/382], [Methods in Experimental Physics
-    I/II], [Lab instructor],
-    [2013], [Fall], [PHYS 381/382], [Methods in Experimental Physics
-    I/II], [Lab instructor],
-    [], [Spring], [PHYS 241], [Introductory Electricity and
-    Magnetism], [Lab instructor],
-    [2012], [Fall], [PHYS 102], [Introductory Physics I], [Lecturer],
-    [], [Summer], [PHYS 181], [Introductory Laboratory I], [Lab
-    Instructor],
-    [], [Spring], [PHYS 241/261H], [Introductory Electricity and
-    Magnetism], [Lab instructor],
-    [2011], [Fall], [PHYS 261H], [Honors Introductory Electricity and
-    Magnetism], [Lab instructor],
+    columns: 6,
+    align: (left,left,left,left,left,left),
+    [Year],
+    [Term],
+    [Course No.],
+    [Course Title],
+    [Role],
+    [Enrollment],
+
+    [2025],
+    [Spring],
+    [INFO 521],
+    [Introduction to Machine Learning],
+    [Instructor],
+    [9],
+
+    [2024],
+    [Fall],
+    [INFO 521],
+    [Introduction to Machine Learning],
+    [Instructor],
+    [15],
+
+    [],
+    [Spring],
+    [ISTA 421/INFO 521],
+    [Introduction to Machine Learning],
+    [Instructor],
+    [16],
+
+    [2023],
+    [Fall],
+    [ISTA 421/INFO 521],
+    [Introduction to Machine Learning],
+    [Instructor],
+    [35],
+
+    [2017],
+    [Spring],
+    [PHYS 105A],
+    [Introduction to Scientific Computing],
+    [Lab instructor],
+    [24],
+
+    [2015],
+    [Fall],
+    [PHYS 381/382],
+    [Methods in Experimental Physics I/II],
+    [Lab instructor],
+    [35],
+
+    [],
+    [Spring],
+    [PHYS 381/382],
+    [Methods in Experimental Physics I/II],
+    [Lab instructor],
+
+    [2014],
+    [Fall],
+    [PHYS 381/382],
+    [Methods in Experimental Physics I/II],
+    [Lab Instructor],
+
+    [],
+    [Summer],
+    [PHYS 141],
+    [Introductory Mechanics],
+    [Lab Instructor],
+
+    [],
+    [Spring],
+    [PHYS 381/382],
+    [Methods in Experimental Physics I/II],
+    [Lab instructor],
+
+    [2013],
+    [Fall],
+    [PHYS 381/382],
+    [Methods in Experimental Physics I/II],
+    [Lab instructor],
+
+    [],
+    [Spring],
+    [PHYS 241],
+    [Introductory Electricity and Magnetism],
+    [Lab instructor],
+
+    [2012],
+    [Fall],
+    [PHYS 102],
+    [Introductory Physics I],
+    [Lecturer],
+
+    [],
+    [Summer],
+    [PHYS 181],
+    [Introductory Laboratory I],
+    [Lab Instructor],
+
+    [],
+    [Spring],
+    [PHYS 241/261H],
+    [Introductory Electricity and Magnetism],
+    [Lab instructor],
+
+    [2011],
+    [Fall],
+    [PHYS 261H],
+    [Honors Introductory Electricity and Magnetism],
+    [Lab instructor],
 table.hline()
   )
 
