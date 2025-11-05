@@ -1,5 +1,11 @@
 #import "functions.typ": nonpt
 
+#show "ISTA": text => lower(smallcaps(text))
+#show "PHYS": text => lower(smallcaps(text))
+#show "105A": text => lower(smallcaps(text))
+#show "261H": text => lower(smallcaps(text))
+#show "INFO": text => lower(smallcaps(text))
+
 = Teaching and Mentoring
 #line(length: 100%)
 
@@ -138,7 +144,7 @@ table.hline()
 
 #table(
     columns: 6,
-    align: (left,left,left,left,left,left),
+    align: (left,left,left,left,left,right),
     [Year],
     [Term],
     [Course No.],
@@ -193,60 +199,70 @@ table.hline()
     [PHYS 381/382],
     [Methods in Experimental Physics I/II],
     [Lab instructor],
+    [37],
 
     [2014],
     [Fall],
     [PHYS 381/382],
     [Methods in Experimental Physics I/II],
     [Lab Instructor],
+    [26],
 
     [],
     [Summer],
     [PHYS 141],
     [Introductory Mechanics],
     [Lab Instructor],
+    [23],
 
     [],
     [Spring],
     [PHYS 381/382],
     [Methods in Experimental Physics I/II],
     [Lab instructor],
+    [34],
 
     [2013],
     [Fall],
     [PHYS 381/382],
     [Methods in Experimental Physics I/II],
     [Lab instructor],
+    [21],
 
     [],
     [Spring],
     [PHYS 241],
     [Introductory Electricity and Magnetism],
     [Lab instructor],
+    [43],
 
     [2012],
     [Fall],
     [PHYS 102],
     [Introductory Physics I],
     [Lecturer],
+    [137],
 
     [],
     [Summer],
     [PHYS 181],
     [Introductory Laboratory I],
     [Lab Instructor],
+    [24],
 
     [],
     [Spring],
     [PHYS 241/261H],
     [Introductory Electricity and Magnetism],
     [Lab instructor],
+    [37],
 
     [2011],
     [Fall],
     [PHYS 261H],
     [Honors Introductory Electricity and Magnetism],
     [Lab instructor],
+    [27],
 table.hline()
   )
 
