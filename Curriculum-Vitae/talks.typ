@@ -56,14 +56,27 @@
   )
 
 == Posters
+
 #table(
-    columns: 2,
-    align: (left,left,),
-    stroke: none,
-    [], [],
-    [P5.], cite(<Erikson_Pyarelal:2022b>, form: "full"),
-    [P4.], cite(<Erikson_Pyarelal:2022a>, form: "full"),
-    [P3.], cite(<Erikson_Pyarelal:2021>, form: "full"),
-    [P2.], cite(<Schoelen:2021>, form: "full"),
-    [P1.], cite(<Morrison:2020>, form: "full"),
-  )
+  columns: (auto,auto, auto),
+  stroke: none,
+  align: (right, right, left),
+  row-gutter: 1em,
+  table.vline(x: 1, start: 0, end: 2, stroke: .7pt),
+  table.vline(x: 1, start: 2, end: 4, stroke: .7pt),
+  table.vline(x: 1, start: 4, end: 7, stroke: .7pt),
+  table.vline(x: 1, start: 7, end: 8, stroke: .7pt),
+  table.vline(x: 1, start: 8, end: 9, stroke: .7pt),
+  table.vline(x: 1, start: 9, end: 10, stroke: .7pt),
+  [2022],
+  [P5.], cite(<Erikson_Pyarelal:2022b>, form: "full"),
+  [],
+  [P4.], cite(<Erikson_Pyarelal:2022a>, form: "full"),
+  [2021],
+  [P3.], cite(<Erikson_Pyarelal:2021>, form: "full"),
+  [],
+  [P2.], cite(<Schoelen:2021>, form: "full"),
+  [2020],
+  [P1.], cite(<Morrison:2020>, form: "full"),
+)
+
