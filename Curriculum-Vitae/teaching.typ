@@ -14,7 +14,7 @@
 #table(
   columns: 4,
   [Start] , [End] , [Name] , [Position],
-  [Fall 2023] , [--],  [Liang Zhang] , [Research Scientist III],
+  [Fall 2023] , [Spring 2026],  [Liang Zhang] , [Research Scientist III],
 table.hline()
 )
 
@@ -48,11 +48,21 @@ table.hline()
 table.hline()
 )
 
+== Doctoral: Member of Dissertation Committee
+
+#table(
+  columns: 4,
+  [Semester], [Name], [Student's home department], [University],
+  [Summer 2025], [Meghavarshini Krishnaswamy], [Linguistics], [University of Arizona],
+table.hline()
+)
+
 == Doctoral: Member of Comprehensive Exam Committee
 
 #table(
   columns: 4,
   [Semester], [Name], [Student's home department], [University],
+  [Summer 2025], [Deepsana Shahi], [College of Information Science], [University of Arizona],
   [Spring 2025], [Yuwei Wang], [East Asian Studies], [University of Arizona],
   [Spring 2024], [Salena Torres Ashton], [College of Information Science], [University of Arizona],
   [Fall 2024], [Kadir Bulut Ozler], [College of Information Science], [University of Arizona],
@@ -70,15 +80,25 @@ table.hline()
   [Spring 2022], [Spring 2023], [Chen Chen], [University of Arizona],
   [Fall 2021], [Spring 2023], [Remo Nitschke], [University of Arizona],
   [Fall 2021], [Spring 2023], [Yuwei Wang], [University of Arizona],
-  [Fall 2021], [ – ], [Meghavarshini Krishnaswamy], [University of Arizona],
-  [Fall 2019], [ – ], [Salena Torres Ashton], [University of Arizona],
+  [Fall 2021], [ Summer 2025 ], [Meghavarshini Krishnaswamy], [University of Arizona],
+  [Fall 2019], [ Fall 2023 ], [Salena Torres Ashton], [University of Arizona],
   [Fall 2019], [Spring 2024], [Paulo Soares], [University of Arizona],
-  [Summer 2019], [ – ], [Loren Champlin], [University of Arizona],
+  [Summer 2019], [ Fall 2023 ], [Loren Champlin], [University of Arizona],
   [Spring 2018], [Fall 2018], [Tanya Jeffries], [University of Arizona],
   [Fall 2018], [Spring 2022], [Manujinda Wathugala], [University of Arizona],
 table.hline()
 )
 
+== Doctoral: Minor Advisor
+
+#table(
+  columns: 4,
+  [Semester], [Name], [Student's home department], [University],
+  [Spring 2025], [Muhammad Jawad], [Hydrology and Atmospheric Sciences], [University of Arizona],
+  [Spring 2025], [Stefanie Boyles], [College of Nursing], [University of Arizona],
+  [Spring 2024], [Yuwei Wang], [East Asian Studies], [University of Arizona],
+  table.hline()
+)
 
 == Masters: Member of Committee
 
@@ -104,7 +124,7 @@ table.hline()
 #table(
   columns: 4,
 [Start], [End], [Name], [University],
-[Fall 2023], [--], [Minglai Yang], [University of Arizona],
+[Fall 2023], [Fall 2025], [Minglai Yang], [University of Arizona],
 [Spring 2023], [Spring 2023], [Zach Keyes], [University of Arizona],
 [Spring 2022], [Spring 2022], [Stephen Kim], [University of Arizona],
 [Fall 2021], [Summer 2022], [Aditya Jadhav], [University of Arizona],

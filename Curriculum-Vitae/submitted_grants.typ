@@ -74,6 +74,7 @@
   indirect,
   role,
   effort,
+  percent_credit,
   period_of_performance,
   co_pis
 ) = (
@@ -97,6 +98,7 @@
         ],
         [#emph[Role];], [#role],
         [#emph[Effort];], [#effort],
+        [_Percent credit_], [#percent_credit],
         [#emph[Period of Performance];], [#period_of_performance],
         [#emph[Co-PIs];], [#co_pis],
       )]
@@ -108,10 +110,27 @@
 == Federal
 
 #table(
-    columns: 3,
+    columns: (auto, auto, 1in),
     align: (left,left,left,),
     table.header([ID], [Title, Funding source and amounts, Role, Effort,
       & co-PIs], [Status],),
+
+    refs[SG10],
+    submitted_grant(
+      [CaTPlan: Causal-Aware, Trustworthy Planning from Natural Language for Human-AI Teaming],
+      [DARPA],
+      [1,233,980],
+      [849,844],
+      [384,136],
+      [Co-I],
+      [1 summer month/year],
+      [20%],
+      [2026-01-01 -- 2027-12-31],
+      [PI: Liang Zhang]
+    ),
+    [Unawarded#footnote[We submitted an abstract, but were not invited to submit a full
+    proposal.]],
+
     refs[SG9],
     submitted_grant(
       [Context-Aware and Robust Event Flow Generation from Natural Language Commands],
@@ -121,10 +140,12 @@
       [182,664],
       [Co-I],
       [1 summer month/year],
+      [25%],
       [2026-01-01 -- 2027-12-31],
       [PI: Liang Zhang]
     ),
-    [Pending],
+    [Unawarded],
+
     refs[SG8],
     submitted_grant(
       [Multimodal Causal Discovery and Temporal Prediction for Human-AI Teaming],
@@ -134,10 +155,12 @@
       [41,585],
       [Co-I],
       [1 summer month/year],
+      [25%],
       [2025-08-01 -- 2028-07-31],
       [PI: Liang Zhang]
     ),
     [Unawarded],
+
     refs[SG7],
     submitted_grant(
       [Adaptive AI Planning and Rapid Response for Command and Control in Dynamic Environments],
@@ -147,10 +170,12 @@
       [41,585],
       [Co-I],
       [0.5 summer months/year],
+      [25%],
       [2025-07-01 -- 2027-06-30],
       [PI: Liang Zhang]
     ),
     [Unawarded],
+
     refs[SG6],
     submitted_grant(
       [RI: Small: Enhancing Robustness in Deep Reinforcement Learning Through
@@ -160,11 +185,13 @@
       [173,120],
       [77,914],
       [Co-I],
+      [25%],
       [0.5 summer months/year],
       [2025-07-01 -- 2027-06-30],
       [PI: Liang Zhang]
     ),
     [Unawarded],
+
     refs[SG5],
     submitted_grant(
       [Validating NewDate: promoting maternal health equity with personalized labor prediction],
@@ -174,12 +201,14 @@
       [1,055,772],
       [Co-I],
       [1 summer month/year],
+      [9%],
       [2025-07-01--2030-06-30],
       [PI: Elise Erickson\
         Other Co-PIs: Shravan Aras, Bonnie LaFleur, Steven Calvin
         ]
     ),
     [Unawarded],
+
     refs[SG4], [#figure(
       align(center)[#table(
         columns: 3,
@@ -203,10 +232,14 @@
         [#emph[Role];], [PI on UArizona subaward], [],
         [#emph[Effort];], [1 summer month in 2025, 2 summer months in
         2026, 10% effort in AY 2026-27], [],
+        [_Percent credit_], [40%], [],
         [#emph[Period of Performance];], [2024-08 – 2027-03], [],
-        [#emph[Co-PIs];], [PI on prime award (Lum.AI): Clayton Morrison
-        PI on SIFT subaward: Daniel Bryce co-PIs on UArizona subaward:
-        Enrique Noriega, Mihai Surdeanu], [],
+        [#emph[Co-PIs];], [
+          PI on prime award (Lum.AI): Clayton Morrison
+
+         PI on SIFT subaward: Daniel Bryce 
+
+         co-PIs on UArizona subaward: Enrique Noriega, Mihai Surdeanu], [],
       )]
       , kind: table
       )
@@ -222,9 +255,38 @@
         [34,647],
         [Co-PI],
         [0.5 summer months],
+        [10%],
         [2024-06 – 2025-05],
         [PI: Liang Zhang],
     )
     , [Withdrawn],
+    table.hline()
+  )
+
+#pagebreak()
+
+== State
+
+#table(
+    columns: 3,
+    align: (left,left,left,),
+    table.header([ID], [Title, Funding source and amounts, Role, Effort,
+      & co-PIs], [Status],),
+
+    refs[SG11],
+    submitted_grant(
+      [Integrating Peripheral Immune Signatures and AI to Guide Immunomodulatory Therapy in Heart Failure],
+      [ABRC],
+      [750,000],
+      [681,819],
+      [68,181],
+      [Key Person],
+      [0.45 summer months/year],
+      [0%],
+      [2026-04-01 -- 2029-03-31],
+      [PI: Steven Goldman]
+    ),
+    [Pending],
+
     table.hline()
   )

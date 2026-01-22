@@ -112,9 +112,9 @@
     columns: (auto, auto, auto, auto),
     align: (left,left,left,left,),
     table.header([Dates], [Role], [Unit], [University]),
+    [2024-08 -- 2026-05], [Faculty Awards Committee], [College of Information Science], [University of Arizona],
     [2024-08 -- 2025-05], [Faculty Search Committee], [Department of Psychology], [University of Arizona],
-    [2024-08 -- 2025-05], [Faculty Search Committee], [College of Information Science], [University of Arizona],
-    [2024-08 -- 2025-05], [Faculty Awards Committee], [College of Information Science], [University of Arizona],
+    [2024-08 -- 2026-05], [Faculty Search Committee], [College of Information Science], [University of Arizona],
     [2023-08 -- 2024-05], [Faculty Peer Review
     Committee], [School of Information], [University of Arizona],
     ..past_service,
